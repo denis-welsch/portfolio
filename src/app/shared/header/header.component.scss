@@ -1,0 +1,18 @@
+* {
+    background: #08463B;
+    // background: linear-gradient(180deg, #1C1C1C , #08463B );
+}
+
+section{
+    height: 98px;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    font-family: 'Fira Code';
+    font-size: 20px;
+    margin: 0px;
+    gap: 24px;
+}
