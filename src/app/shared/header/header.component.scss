@@ -1,18 +1,98 @@
 * {
-    background: #08463B;
-    // background: linear-gradient(180deg, #1C1C1C , #08463B );
+    background:#1C1C1C
+    // background: linear-gradient(180deg, #1C1C1C , #08463B);
 }
 
-section{
+section {
     height: 98px;
     width: 1440px;
     display: flex;
     align-items: center;
+    justify-content: space-around; // Füge Abstand zwischen den Elementen hinzu
 }
 
-a{
+a {
     font-family: 'Fira Code';
     font-size: 20px;
-    margin: 0px;
+    margin: 0;
     gap: 24px;
+    position: relative; // Wichtig für das Pseudoelement
+    color: white; // Farbe für die Links
+    text-decoration: none; // Entferne Standard-Unterstreichung
+    transition: color 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        color: #3DCFB6; // Farbe beim Hovern ändern
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -5px; // Abstand vom Link
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #3DCFB6;
+        opacity: 0; // Unsichtbar, solange nicht gehovt wird
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+        opacity: 1; // Sichtbar beim Hovern
+    }
+}
+
+div {
+    display: flex;
+    gap: 24px; // Abstand zwischen den Links
+}
+
+img {
+    height: 50px; // Beispielhöhe für das Logo, anpassen nach Bedarf
+}
+
+.language-switch {
+    display: flex;
+    gap: 10px;
+
+    .lang-btn {
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: #08463B;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        position: relative;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover::after {
+            opacity: 1;
+        }
+
+        &.active {
+            background-color: #3DCFB6;
+            color: white;
+        }
+    }
 }
