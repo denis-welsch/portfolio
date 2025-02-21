@@ -19,6 +19,6 @@ export class SkillsComponent {
     { name: 'GIT', logo: './assets/img/skillSet/git.png' },
     { name: 'Rest-Api', logo: './assets/img/skillSet/Api.png' },
     { name: 'Scrum', logo: './assets/img/skillSet/scrum.png' },
-    { name: 'Growth Mindset', logo: './assets/img/skillSet/Property 1=Default.png' }
+    { name: 'Growth Mindset', logo: './assets/img/skillSet/Tech.png' }
   ];
 }

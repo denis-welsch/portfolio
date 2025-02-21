@@ -3,11 +3,11 @@
 }
 
 section {
-    height: 800px;
+    padding: 0px 100px;
+    height: 100vh;
     display: flex;
     align-items: center; // Zentriert die Elemente vertikal
-    justify-content: center; // Zentriert die Elemente horizontal
-    padding: 20px; // Optional, fügt etwas Abstand rund um die Sektion hinzu
+    justify-content: space-between;// Zentriert die Elemente horizontal
     gap: 40px; // Abstand zwischen Bild und Text
 }
 

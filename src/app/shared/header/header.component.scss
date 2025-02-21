@@ -1,9 +1,11 @@
 * {
-    background:#1C1C1C
+    // background:#1C1C1C;
+    background: #3DCFB6;
     // background: linear-gradient(180deg, #1C1C1C , #08463B);
 }
 
 section {
+    padding: 0px 100px;
     position: fixed;
     height: 98px;
     width: 1440px;
@@ -52,7 +54,7 @@ div {
 }
 
 img {
-    height: 50px; // Beispielhöhe für das Logo, anpassen nach Bedarf
+    height: 64px; // Beispielhöhe für das Logo, anpassen nach Bedarf
 }
 
 .language-switch {
