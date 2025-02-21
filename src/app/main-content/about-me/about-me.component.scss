@@ -1,13 +1,12 @@
-*{
-    background: #1C1C1C;
+* {
+    background-color: #1C1C1C;
 }
 
 section {
-    padding: 0px 100px;
+    padding: 100px;
     height: 100vh;
     display: flex;
-    align-items: center; // Zentriert die Elemente vertikal
-    justify-content: space-between;// Zentriert die Elemente horizontal
+    justify-content: space-between; // Zentriert die Elemente horizontal
     gap: 40px; // Abstand zwischen Bild und Text
 }
 
@@ -15,40 +14,74 @@ section {
     height: 568px;
     width: 568px;
     object-fit: cover; // Stellt sicher, dass das Bild gut in den Bereich passt
-    border-radius: 30px; // Rundes Bild
+    border-radius: 30px;
+}
+
+.about-me-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .about-me-text {
     width: 568px;
     height: 750px;
     border-radius: 30px;
+    padding: 32px;
     display: flex;
     flex-direction: column; // Vertikale Anordnung von Text und Überschrift
     align-items: flex-start; // Text linksbündig ausrichten
-    color: white; // Textfarbe
+    background-color: rgba(61, 207, 182, 0.1);
+    border: 2px solid #3DCFB6;
     font-family: 'Fira Code', monospace; // Schriftart
-
-    p {
-        font-size: 18px; // Schriftgröße für den Text
-        margin: 0 0 10px 0; // Abstand unter dem Text
-    }
 
     h1 {
         font-size: 64px; // Schriftgröße für die Überschrift
         font-family: "Fira Code";
         margin: 0 0 20px 0; // Abstand unter der Überschrift
-        color: #3DCFB6
-
+        color: #3DCFB6;
+        background: none;
     }
 
-    h2 {
-        font-weight: 500;
-        font-size: 24px;
-        color: #3DCFB6
+    p {
+        font-size: 18px; // Schriftgröße für den Text
+        background: none;
+        color: #FFFFFF;
     }
 
     .description {
         font-size: 18px;
         line-height: 1.5; // Zeilenhöhe für bessere Lesbarkeit
     }
+
+    // Neue Klasse für Icon-Text-Blöcke
+    .about-me-item {
+        display: flex;
+        align-items: flex-start; // Vertikale Ausrichtung
+        gap: 10px; // Abstand zwischen Icon und Text
+        margin-bottom: 10px; // Abstand zwischen den Elementen
+        background: none;
+
+        .icon {
+            width: 24px; // Einheitliche Größe der Icons
+            height: auto;
+            background: none;
+        }
+
+        span {
+            font-size: 18px;
+            line-height: 1.5;
+            background: none;
+            color: #FFFFFFCC;
+            &:hover {
+                color: #FFFFFF; // Farbe bei Hover auf Weiß ändern
+            }
+        }
+    }
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #3DCFB6;
 }
