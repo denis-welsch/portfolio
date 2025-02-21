@@ -1,3 +1,78 @@
 .image {
   height: 64px;
 }
+
+* {
+  background: #1C1C1C;
+}
+
+section {
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly; // Zentriert die Elemente horizontal
+  padding: 20px; // Optional, fügt etwas Abstand rund um die Sektion hinzu
+}
+
+.skillSetText {
+  width: 568px;
+  height: 750px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column; // Vertikale Anordnung von Text und Überschrift
+  align-items: flex-start; // Text linksbündig ausrichten
+  color: white; // Textfarbe
+  font-family: 'Fira Code', monospace; // Schriftart
+
+  p {
+    font-size: 18px; // Schriftgröße für den Text
+    margin: 0 0 10px 0; // Abstand unter dem Text
+  }
+
+  h1 {
+    font-size: 64px; // Schriftgröße für die Überschrift
+    font-family: "Fira Code";
+    margin: 0 0 20px 0; // Abstand unter der Überschrift
+    color: #3DCFB6
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #3DCFB6
+  }
+}
+
+.container {
+  display: flex;
+  justify-content:space-between;
+}
+
+.skillSetText {
+  width: 568px;
+  margin-right: 10px;
+}
+
+.skillIconBox {
+  width: 632px;
+  height: 428px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #3DCFB6;
+    color: #3DCFB6;
+  }
+}
