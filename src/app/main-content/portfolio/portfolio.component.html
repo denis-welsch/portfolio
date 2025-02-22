@@ -1,7 +1,44 @@
-<section>
-    <h2>Portfolio</h2><br>
-    <h1>Featured Projects</h1><br>
+<section class="portfolio">
+    <h2>Portfolio</h2>
+    <h1>Featured Projects</h1>
     <p>
         Explore a selection of my work here - Interact with <br> projects to see my skills in action
     </p>
+
+    <div class="portfolio-container">
+        <!-- Projektliste mit @for() -->
+        <ul class="project-list">
+            @for (project of projects; track project.id) {
+                <li 
+                    (mouseenter)="hoverProject(project)" 
+                    (mouseleave)="hoverProject(null)" 
+                    (click)="openProject(project)">
+                    <span>{{ project.title }}</span>
+                    <span class="technologies">{{ project.technologies.join(' | ') }}</span>
+                </li>
+            }
+        </ul>
+
+        <!-- Hover-Vorschau -->
+        @if (hoveredProject) {
+            <div class="preview">
+                <img [src]="hoveredProject.image" alt="Project Preview">
+            </div>
+        }
+    </div>
+
+    <!-- Modal für Projekt-Details -->
+    @if (selectedProject) {
+        <div class="modal" (click)="closeProject()">
+            <div class="modal-content" (click)="$event.stopPropagation()">
+                <button class="close" (click)="closeProject()">X</button>
+                <h3>{{ selectedProject.title }}</h3>
+                <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
+                <p>{{ selectedProject.description }}</p>
+                <p><strong>Technologies:</strong> {{ selectedProject.technologies.join(', ') }}</p>
+                <a [href]="selectedProject.github" target="_blank">GitHub</a> |
+                <a [href]="selectedProject.live" target="_blank">Live Test</a>
+            </div>
+        </div>
+    }
 </section>
