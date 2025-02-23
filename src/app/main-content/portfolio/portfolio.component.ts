@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio',
-  standalone: true,
-  imports: [],
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+    selector: 'app-portfolio',
+    standalone: true,
+    imports: [],
+    templateUrl: './portfolio.component.html',
+    styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
     projects = [
@@ -14,7 +14,7 @@ export class PortfolioComponent {
             title: 'Join',
             description: 'Task manager inspired by the Kanban System...',
             technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-            image: 'assets/images/join.png',
+            image: './assets/img/portfolio/join.png',
             github: 'https://github.com/yourrepo/join',
             live: 'https://yourliveapp.com/join'
         },
@@ -23,16 +23,16 @@ export class PortfolioComponent {
             title: 'El Pollo Loco',
             description: 'Jump and run game based on object-oriented programming...',
             technologies: ['HTML', 'CSS', 'JavaScript'],
-            image: 'assets/images/el_pollo_loco.png',
-            github: 'https://github.com/yourrepo/elpollo',
-            live: 'https://yourliveapp.com/elpollo'
+            image: './assets/img/portfolio/elPolloLoco.png',
+            github: 'https://github.com/Denisator82/El-Pollo-Loco',
+            live: 'https://denis-welsch.developerakademie.net/modul12_el_pollo_loco/'
         },
         {
             id: 3,
             title: 'DABubble',
             description: 'A Slack Clone for team collaboration...',
             technologies: ['Angular', 'Firebase', 'TypeScript'],
-            image: 'assets/images/dabubble.png',
+            image: './assets/img/portfolio/daBubble.png',
             github: 'https://github.com/yourrepo/dabubble',
             live: 'https://yourliveapp.com/dabubble'
         }

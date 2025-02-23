@@ -4,6 +4,8 @@
     <p>
         Explore a selection of my work here - Interact with <br> projects to see my skills in action
     </p>
+    <br>
+    <br>
 
     <div class="portfolio-container">
         <!-- Projektliste mit @for() -->
@@ -13,8 +15,8 @@
                     (mouseenter)="hoverProject(project)" 
                     (mouseleave)="hoverProject(null)" 
                     (click)="openProject(project)">
-                    <span>{{ project.title }}</span>
-                    <span class="technologies">{{ project.technologies.join(' | ') }}</span>
+                    <h3>{{ project.title }}</h3>
+                    <p class="technologies">{{ project.technologies.join(' | ') }}</p>
                 </li>
             }
         </ul>

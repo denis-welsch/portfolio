@@ -1,25 +1,27 @@
 <section id="skills">
-    <h2>Technologies</h2><br>
-    <div class="skillContainer">
-      <div class="skillSetText">
-        <h1>Skill Set</h1>
-        <p>
-          A short introduction of your skills. Highlight your experience of  using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.<br><br>
-        </p>
-        <h3>
-          <span style="color: #FFFFFF;">You need</span> <span style="color: #3DCFB6;"> another skill?</span>
-        </h3>
-        <span>
-          Feel free to contact me. I look forward to <br> expanding on my previous knowledge.
-        </span>
-        <button>Let´s Talk</button>
-      </div>
-      <div class="skillIconBox">
-        <div class="skill" *ngFor="let skill of skills; let i = index">
+  <h2>Technologies</h2><br>
+  <div class="skillContainer">
+    <div class="skillSetText">
+      <h1>Skill Set</h1>
+      <p>
+        A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.<br><br>
+      </p>
+      <h3>
+        <span style="color: #FFFFFF;">You need</span> <span style="color: #3DCFB6;"> another skill?</span>
+      </h3>
+      <span>
+        Feel free to contact me. I look forward to <br> expanding on my previous knowledge.
+      </span>
+      <button>Let´s Talk</button>
+    </div>
+    <div class="skillIconBox">
+      @for (skill of skills; track skill) {
+        <div class="skill">
           <img class="image" [src]="skill.logo" [alt]="skill.name">
           <br>
           <div>{{ skill.name }}</div>
         </div>
-      </div>
+      }
     </div>
+  </div>
 </section>
