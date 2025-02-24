@@ -1,0 +1,74 @@
+* {
+    background: #1C1C1C;
+}
+
+section {
+    padding: 0px 100px;
+    height: 695px;
+    
+}
+
+.references {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    width: 1440px;
+}
+
+.references h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3DCFB6;
+}
+
+.references h2 span {
+    color: #3DCFB6;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.testimonial {
+    background-color: #204d45;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 300px;
+    text-align: left;
+    color: white;
+    position: relative;
+}
+
+.quote {
+    font-size: 40px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: white;
+}
+
+.author {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.slider-controls {
+    margin-top: 20px;
+}
+
+.slider-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dots {
+    color: white;
+    font-size: 18px;
+}
