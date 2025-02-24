@@ -1,0 +1,42 @@
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 100px;
+    text-align: center;
+    width: 1440px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+.footer-center p {
+    color: #00ffaa;
+    font-size: 14px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.logo-m {
+    color: #3DCFB6;
+    font-size: 24px;
+}

@@ -7,6 +7,7 @@ section {
     height: 100vh;
     display: flex;
     justify-content: space-between; // Zentriert die Elemente horizontal
+    align-items: flex-start;
     gap: 40px; // Abstand zwischen Bild und Text
     width: 1440px;
 }
