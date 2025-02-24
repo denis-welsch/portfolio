@@ -1,4 +1,4 @@
-<section class="portfolio">
+<section id="projects" class="portfolio">
     <h2>Portfolio</h2>
     <h1>Featured Projects</h1>
     <p>
@@ -31,15 +31,19 @@
 
     <!-- Modal für Projekt-Details -->
     @if (selectedProject) {
-        <div class="modal" (click)="closeProject()">
-            <div class="modal-content" (click)="$event.stopPropagation()">
-                <button class="close" (click)="closeProject()">X</button>
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <a class="close" (click)="closeProject()">X</a>
+            <div class="modal-left">
+                <h1>{{ selectedProject.id }}</h1>
                 <h3>{{ selectedProject.title }}</h3>
-                <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
+                <h4>What is this project about?</h4><br>
                 <p>{{ selectedProject.description }}</p>
-                <p><strong>Technologies:</strong> {{ selectedProject.technologies.join(', ') }}</p>
-                <a [href]="selectedProject.github" target="_blank">GitHub</a> |
-                <a [href]="selectedProject.live" target="_blank">Live Test</a>
+                <p class="technologies">{{ selectedProject.technologies.join(', ') }}</p>
+                <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
+                <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
+            </div>
+            <div class="modal-right">
+                <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
             </div>
         </div>
     }

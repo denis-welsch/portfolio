@@ -10,28 +10,42 @@ import { Component } from '@angular/core';
 export class PortfolioComponent {
     projects = [
         {
-            id: 1,
+            id: '01',
             title: 'Join',
-            description: 'Task manager inspired by the Kanban System...',
-            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+            description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'
+                // {name:'Angular', icon: './assets/icons/Angular_Vector.png'},
+                // {name:'TypeScript', icon: './assets/icons/TS_Vector.png'},
+                // {name:'HTML', icon: './assets/icons/HTML_Vector.png'},
+                // {name:'CSS', icon: './assets/icons/CSS_Vector.png'},
+                // {name:'Firebase',icon: './assets/icons/Firebase_Vector.png'}
+            ],
             image: './assets/img/portfolio/join.png',
             github: 'https://github.com/yourrepo/join',
             live: 'https://yourliveapp.com/join'
         },
         {
-            id: 2,
+            id: '02',
             title: 'El Pollo Loco',
-            description: 'Jump and run game based on object-oriented programming...',
-            technologies: ['HTML', 'CSS', 'JavaScript'],
+            description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+            technologies: ['HTML', 'CSS', 'JavaScript'
+                // {name:'HTML', icon: './assets/icons/HTML_Vector.png'},
+                // {name:'CSS', icon: './assets/icons/CSS_Vector.png'},
+                // {name:'JavaScript', icon: './assets/icons/Javascript_Vector.png'}
+            ],
             image: './assets/img/portfolio/elPolloLoco.png',
             github: 'https://github.com/Denisator82/El-Pollo-Loco',
             live: 'https://denis-welsch.developerakademie.net/modul12_el_pollo_loco/'
         },
         {
-            id: 3,
+            id: '03',
             title: 'DABubble',
             description: 'A Slack Clone for team collaboration...',
-            technologies: ['Angular', 'Firebase', 'TypeScript'],
+            technologies: ['Angular', 'Firebase', 'TypeScript'
+                // {name:'Angular', icon: './assets/icons/Angular_Vector.png'},
+                // {name:'Firebase',icon: './assets/icons/Firebase_Vector.png'},
+                // {name:'TypeScript', icon: './assets/icons/TS_Vector.png'}
+            ],
             image: './assets/img/portfolio/daBubble.png',
             github: 'https://github.com/yourrepo/dabubble',
             live: 'https://yourliveapp.com/dabubble'
@@ -51,5 +65,13 @@ export class PortfolioComponent {
 
     closeProject() {
         this.selectedProject = null;
+    }
+
+    openLink(url: string): void {
+        if (url) {
+        window.open(url, '_blank');
+        } else {
+        console.error('Keine URL gefunden!');
+        }
     }
 }
