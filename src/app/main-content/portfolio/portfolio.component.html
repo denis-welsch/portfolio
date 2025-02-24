@@ -20,31 +20,31 @@
                 </li>
             }
         </ul>
-
+        
         <!-- Hover-Vorschau -->
         @if (hoveredProject) {
             <div class="preview">
                 <img [src]="hoveredProject.image" alt="Project Preview">
             </div>
         }
-    </div>
 
-    <!-- Modal für Projekt-Details -->
-    @if (selectedProject) {
-        <div class="modal-content" (click)="$event.stopPropagation()">
-            <a class="close" (click)="closeProject()">X</a>
-            <div class="modal-left">
-                <h1>{{ selectedProject.id }}</h1>
-                <h3>{{ selectedProject.title }}</h3>
-                <h4>What is this project about?</h4><br>
-                <p>{{ selectedProject.description }}</p>
-                <p class="technologies">{{ selectedProject.technologies.join(', ') }}</p>
-                <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
-                <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
+        <!-- Modal für Projekt-Details -->
+        @if (selectedProject) {
+            <div class="modal-content" (click)="$event.stopPropagation()">
+                <a class="close" (click)="closeProject()">X</a>
+                <div class="modal-left">
+                    <h1>{{ selectedProject.id }}</h1>
+                    <h3>{{ selectedProject.title }}</h3>
+                    <h4>What is this project about?</h4><br>
+                    <p>{{ selectedProject.description }}</p>
+                    <p class="technologies">{{ selectedProject.technologies.join(', ') }}</p>
+                    <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
+                    <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
+                </div>
+                <div class="modal-right">
+                    <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
+                </div>
             </div>
-            <div class="modal-right">
-                <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
-            </div>
-        </div>
-    }
+        }
+    </div>
 </section>
