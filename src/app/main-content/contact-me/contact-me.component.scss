@@ -17,13 +17,8 @@ section.contact-me {
 
 .contact-form {
     width: 45%;
-    background: #232323;
+    background: none;
     padding: 20px;
-    border-width: 1px 0 1px 0; // obere und untere Ränder
-    border-style: solid;
-    border-color: #3DCFB6; // Aqua-grüne Farbe
-    border-radius: 0; // Falls vorher Rundungen waren
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 
@@ -53,19 +48,32 @@ a {
     font-weight: bold;
 }
 
+// span {
+//     display: flex;
+//     justify-content: flex-start;
+// }
+
 label {
     display: block;
     font-weight: bold;
     margin: 10px 0 5px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #3DCFB6;
+    border-width: 1px 0 0px 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
+    border-style: solid; // durchgezogene Linie
+    border-color: #3DCFB6; // Aqua-grüne Farbe
 }
 
 input, textarea {
-    padding: 10px;
+    font-size: 18px;
+    font-family: 'Karla';
+    width: 350px;
+    padding: 10px 0px;
     margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #2E2E2E;
-    color: white;
+    resize: none;
+    color: #FFFFFFCC;
+    border-style: none;
 }
 
 textarea {
@@ -76,6 +84,9 @@ textarea {
     display: flex;
     align-items: center;
     margin: 10px 0;
+    border-width: 1px 0 0px 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
+    border-style: solid; // durchgezogene Linie
+    border-color: #3DCFB6; // Aqua-grüne Farbe
 }
 
 button {

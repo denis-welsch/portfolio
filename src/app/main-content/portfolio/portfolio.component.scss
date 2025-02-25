@@ -70,7 +70,7 @@ p {
 .modal-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #3DCFB6;
     color: white;
     padding: 50px;
@@ -88,7 +88,7 @@ p {
 .modal-right {
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
 }
 
 .modal-right img {
