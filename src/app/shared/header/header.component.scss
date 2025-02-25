@@ -1,9 +1,3 @@
-* {
-    background:#1C1C1C;
-    // background: #3DCFB6;
-    // background: linear-gradient(180deg, #1C1C1C , #08463B);
-}
-
 section {
     padding: 0px 100px;
     position: fixed;
@@ -12,6 +6,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between; // Füge Abstand zwischen den Elementen hinzu
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+
 }
 
 a {
@@ -19,6 +15,7 @@ a {
     font-size: 20px;
     margin: 0;
     gap: 24px;
+    background: none;
     position: relative; // Wichtig für das Pseudoelement
     color: white; // Farbe für die Links
     text-decoration: none; // Entferne Standard-Unterstreichung
@@ -51,10 +48,12 @@ a {
 div {
     display: flex;
     gap: 24px; // Abstand zwischen den Links
+    background: none;
 }
 
 img {
     height: 48px; // Beispielhöhe für das Logo, anpassen nach Bedarf
+    background: none;
 }
 
 .language-switch {
