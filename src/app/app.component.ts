@@ -5,6 +5,11 @@ import { HeaderComponent } from "./shared/header/header.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { MainContentComponent } from './main-content/main-content.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import {
+  TranslateService,
+  TranslatePipe,
+  TranslateDirective
+} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -15,11 +20,18 @@ import { ImprintComponent } from './imprint/imprint.component';
     HeaderComponent,
     MainContentComponent,
     FooterComponent,
-    ImprintComponent
+    ImprintComponent,
+    TranslatePipe,
+    TranslateDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'portfolio';
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+}
 }

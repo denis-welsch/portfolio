@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -10,4 +11,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor(private translate: TranslateService){}
+  changeLanguage(language: string){
+    this.translate.use(language);
+  }
 }

@@ -51,9 +51,8 @@ div {
 }
 
 .email-section {
-    position: fixed;
-    right: 0;
-    top: 50%;
+    display: flex;
+    justify-content: flex-end;
     transform: translateY(-50%);
     text-align: center;
 }
