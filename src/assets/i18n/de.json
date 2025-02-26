@@ -1,6 +1,25 @@
 {
-    "about-me":{
-        "hello": "Guten Tag {{name}}",
-        "title": "Übersetzung Deutsch"
+    "about-me": {
+        "alt": "Über mich",
+        "who-i-am": "Wer ich bin",
+        "about-me": "Über mich",
+        "introduction": "Hallo, ich bin Denis! Seit meiner Weiterbildung zum Frontend-Entwickler habe ich eine große Leidenschaft für Web-Technologien und kreative Problemlösungen entwickelt. Besonders fasziniert mich die Verbindung von Design und Funktionalität – ein gut durchdachtes UI/UX ist für mich genauso wichtig wie sauberer Code.",
+        "location-alt": "Standort",
+        "location": "Ich lebe in Deutschland und bin offen für Remote-Arbeit sowie spannende Projekte, die mich fachlich herausfordern und weiterbringen.",
+        "cognition-alt": "Kognition",
+        "cognition": "Ständiges Lernen ist für mich essenziell. Ich liebe es, neue Technologien zu entdecken und meine Fähigkeiten kontinuierlich zu verbessern – sei es durch eigene Projekte, Weiterbildung oder den Austausch mit der Entwickler-Community.",
+        "problem-solving-alt": "Problemlösung",
+        "problem-solving": "Mein Ansatz zur Problemlösung basiert auf analytischem Denken, Kreativität und Durchhaltevermögen. Ich suche stets nach effizienten und eleganten Lösungen und arbeite gerne im Team, um Herausforderungen gemeinsam zu meistern."
+    },
+
+    "skills": {
+        "technologies": "Technologien",
+        "skill-set": "Fähigkeiten",
+        "introduction": "Eine kurze Einführung in deine Fähigkeiten. Betone deine Erfahrung mit verschiedenen Frontend-Technologien und hebe deine Offenheit hervor, neue Technologien zu erlernen und dich anzupassen. Zeige, wie wichtig es für dich ist, mit den schnellen Veränderungen in der Webentwicklung Schritt zu halten.",
+        "need": "Brauchst du",
+        "another-skill": "eine weitere Fähigkeit?",
+        "contact-me": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+        "lets-talk": "Lass uns reden",
+        "logo-alt": "Logo von {{name}}"
     }
 }

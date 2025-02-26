@@ -1,29 +1,28 @@
 <section id="aboutMe">
-    <div>{{ 'about-me.title' | translate }}</div>
-    <div>{{ 'about-me.hello' | translate:{name} }}</div>
-    <img class="profil" src="./assets/img/aboutMe/profilbild.jpg" alt="About Me">
+    <img class="profil" src="./assets/img/aboutMe/profilbild.jpg" alt="{{ 'about-me.alt' | translate }}">
     <div class="about-me-box">
-        <h2>Who I Am</h2><br>
+        <h2>{{ 'about-me.who-i-am' | translate }}</h2><br>
         <div class="about-me-text">
-            <h1>About me</h1>
+            <h1>{{ 'about-me.about-me' | translate }}</h1>
             <p class="description">
-                Hallo, ich bin Denis!<br> Seit meiner Weiterbildung zum Frontend-Entwickler habe ich eine große Leidenschaft für Web-Technologien und kreative Problemlösungen entwickelt. Besonders fasziniert mich die Verbindung von Design und Funktionalität – ein gut durchdachtes UI/UX ist für mich genauso wichtig wie sauberer Code.
+                {{ 'about-me.introduction' | translate }}
             </p>
             <br>
             <div class="about-me-item">
-                <img class="icon" src="./assets/img/aboutMe/Property 1=location_on.png" alt="Location">
-                <span>Ich lebe in Deutschland und bin offen für Remote-Arbeit sowie spannende Projekte, die mich fachlich herausfordern und weiterbringen.</span>
+                <img class="icon" src="./assets/img/aboutMe/Property 1=location_on.png" alt="{{ 'about-me.location-alt' | translate }}">
+                <span>{{ 'about-me.location' | translate }}</span>
             </div>
 
             <div class="about-me-item">
-                <img class="icon" src="./assets/img/aboutMe/Property 1=cognition.png" alt="Cognition">
-                <span>Ständiges Lernen ist für mich essenziell. Ich liebe es, neue Technologien zu entdecken und meine Fähigkeiten kontinuierlich zu verbessern – sei es durch eigene Projekte, Weiterbildung oder den Austausch mit der Entwickler-Community.</span>
+                <img class="icon" src="./assets/img/aboutMe/Property 1=cognition.png" alt="{{ 'about-me.cognition-alt' | translate }}">
+                <span>{{ 'about-me.cognition' | translate }}</span>
             </div>
 
             <div class="about-me-item">
-                <img class="icon" src="./assets/img/aboutMe/new_releases.png" alt="Problem Solving">
-                <span>Mein Ansatz zur Problemlösung basiert auf analytischem Denken, Kreativität und Durchhaltevermögen. Ich suche stets nach effizienten und eleganten Lösungen und arbeite gerne im Team, um Herausforderungen gemeinsam zu meistern.</span>
+                <img class="icon" src="./assets/img/aboutMe/new_releases.png" alt="{{ 'about-me.problem-solving-alt' | translate }}">
+                <span>{{ 'about-me.problem-solving' | translate }}</span>
             </div>
         </div>
     </div>
 </section>
+

@@ -1,12 +1,9 @@
-* {
-  background: #1C1C1C;
-}
-
 section {
   padding: 0px 100px;
   height: 695px;
   width: 1440px;
-  background: radial-gradient(45deg, #08463B4D 30%, #1C1C1C);
+  background: rgb(8,70,59);
+  background: radial-gradient(circle at right, rgba(28,28,28,1) 100%, rgba(8,70,59,1) 30%);
 }
 
 .skillContainer{
@@ -32,7 +29,6 @@ section {
   p {
     font-size: 18px; // Schriftgröße für den Text
     background: none;
-    padding: 32px 0px;
   }
 
   span{

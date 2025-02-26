@@ -1,6 +1,25 @@
 {
     "about-me": {
-        "hello": "hello {{name}}",
-        "title": "Translation Demo"
+        "alt": "About Me",
+        "who-i-am": "Who I Am",
+        "about-me": "About me",
+        "introduction": "Hello, I'm Denis! Since my training as a frontend developer, I've developed a great passion for web technologies and creative problem-solving. I am particularly fascinated by the connection between design and functionality – a well-thought-out UI/UX is just as important to me as clean code.",
+        "location-alt": "Location",
+        "location": "I live in Germany and am open to remote work as well as exciting projects that challenge and advance me professionally.",
+        "cognition-alt": "Cognition",
+        "cognition": "Continuous learning is essential for me. I love discovering new technologies and continuously improving my skills – whether through personal projects, further training, or exchanging ideas with the developer community.",
+        "problem-solving-alt": "Problem Solving",
+        "problem-solving": "My approach to problem-solving is based on analytical thinking, creativity, and perseverance. I always look for efficient and elegant solutions and enjoy working in a team to tackle challenges together."
+    },
+
+    "skills": {
+        "technologies": "Technologies",
+        "skill-set": "Skill Set",
+        "introduction": "A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.",
+        "need": "You need",
+        "another-skill": "another skill?",
+        "contact-me": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "lets-talk": "Let's Talk",
+        "logo-alt": "Logo of {{name}}"
     }
 }

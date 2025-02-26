@@ -9,5 +9,4 @@ import {TranslatePipe, TranslateDirective} from "@ngx-translate/core";
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-  name = "Andreas"
 }
