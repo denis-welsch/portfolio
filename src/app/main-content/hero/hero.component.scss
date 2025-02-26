@@ -1,6 +1,6 @@
 section {
     padding: 0px 100px;
-    width: 1440px;
+    min-height: 100vh;
     height: calc(100dvh - 98px);
     display: flex;
     justify-content: center;
@@ -10,41 +10,47 @@ section {
     position: relative;
 }
 
+.main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 marquee {
-    position: absolute;
-    top: 840px;
-    width: 1480px;
+    display: flex;
+    margin-top: 50px;
+    max-width: 1480px;
     height: 62px;
-    left: 0px;
     transform: rotate(-3deg);
-    padding-top: 12px;
-    padding-right: 32px;
-    padding-bottom: 12px;
-    padding-left: 32px;
+    padding: 12px 32px;
     gap: 56px;
     text-align: center;
     backdrop-filter: blur(5.3px);
     color: #3DCFB6;
     font-size: 32px;
+
+    &.marquee-text {
+        word-spacing: 12px;
+    }
 }
 
 h1 {
     font-family: 'Karla';
     font-weight: 700;
     font-size: 128px;
-    background: none;
+    text-align: center;
 }
 
 h2 {
     font-family: 'Fira Code';
     font-weight: 400;
     font-size: 40px;
-    background: none;
+    text-align: center;
 }
 
 div {
     display: flex;
-    gap: 48px; // Gap zwischen den buttons
+    gap: 48px; // Gap zwischen den Buttons
     background: none;
 }
 
@@ -67,30 +73,112 @@ div {
     }
 }
 
-.email-section {
-    display: flex;
-    justify-content: flex-end;
-    transform: translateY(-50%);
-    text-align: center;
+// 🔥 **Responsive Anpassungen**
+@media screen and (max-width: 1440px) {
+    section {
+        padding: 0px 50px;
+    }
 }
-.email-section .email {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    margin-bottom: 10px;
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 96px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    marquee {
+        font-size: 28px;
+        gap: 32px;
+    }
 }
-.email-section .icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 0px 20px;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    marquee {
+        font-size: 24px;
+        gap: 24px;
+    }
+
+    div {
+        gap: 24px;
+        flex-direction: column;
+    }
 }
-.email-section .icons a {
-    color: #fff;
-    text-decoration: none;
-    margin: 5px 0;
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    marquee {
+        font-size: 18px;
+        height: 48px;
+    }
 }
-.email-section .line {
-    width: 1px;
-    height: 186px;
-    background-color: #fff;
-    margin: 10px 0;
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    marquee {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
 }
+
+
+// .email-section {
+//     display: flex;
+//     justify-content: flex-end;
+//     transform: translateY(-50%);
+//     text-align: center;
+// }
+// .email-section .email {
+//     writing-mode: vertical-rl;
+//     text-orientation: mixed;
+//     margin-bottom: 10px;
+// }
+// .email-section .icons {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+// .email-section .icons a {
+//     color: #fff;
+//     text-decoration: none;
+//     margin: 5px 0;
+// }
+// .email-section .line {
+//     width: 1px;
+//     height: 186px;
+//     background-color: #fff;
+//     margin: 10px 0;
+// }

@@ -1,17 +1,29 @@
 section {
   padding: 0px 100px;
   height: 695px;
-  width: 1440px;
-  background: rgb(8,70,59);
   background: radial-gradient(circle at right, rgba(28,28,28,1) 100%, rgba(8,70,59,1) 30%);
+
+  @media screen and (max-width: 1024px) {
+    padding: 50px; // Weniger Padding auf kleineren Screens
+    height: auto; // Höhe flexibel anpassen
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+  }
 }
 
-.skillContainer{
+.skillContainer {
   display: flex;
   justify-content: space-between;
-  
-}
+  align-items: center;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column; // Stapelt die Elemente untereinander
+    align-items: center; // Zentriert die Elemente in der mobilen Ansicht
+    gap: 20px;
+  }
+}
 
 .skillSetText {
   width: 520px;
@@ -19,45 +31,47 @@ section {
   border-radius: 30px;
   padding: 32px;
   display: flex;
-  flex-direction: column; // Vertikale Anordnung von Text und Überschrift
-  align-items: flex-start; // Text linksbündig ausrichten
-  font-family: 'Fira Code', monospace; // Schriftart
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Fira Code', monospace;
   background-color: rgba(61, 207, 182, 0.1);
   border: 2px solid #3DCFB6;
 
+  h1 {
+    font-size: 64px;
+    color: #3DCFB6;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
 
   p {
-    font-size: 18px; // Schriftgröße für den Text
-    background: none;
+    font-size: 18px;
   }
 
-  span{
-    background: none;
-  }
-
-  h1 {
-    font-size: 64px; // Schriftgröße für die Überschrift
-    font-family: "Fira Code";
-    color: #3DCFB6;
-    background: none;
-  }
-
-  h3{
-    background: none;
-    font-size: 24px;
-    font-family: "Fira Code";
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    text-align: center;
   }
 }
 
 h2 {
   font-weight: 500;
   font-size: 24px;
-  color: #3DCFB6
+  color: #3DCFB6;
 }
 
 .container {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .skillIconBox {
@@ -65,6 +79,13 @@ h2 {
   height: 428px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; // Zentriert Icons in mobiler Ansicht
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
 }
 
 .skill {
@@ -75,15 +96,14 @@ h2 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  transition: transform 0.2s; /* Übergang hinzufügen */
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.skill:hover {
-  transform: scale(1.05); /* Bild vergrößern bei Hover */
-}
-
-
-button {
+.button {
   display: inline-block;
   background-color: rgba(61, 207, 182, 0.1);
   padding: 10px 24px;
@@ -93,6 +113,7 @@ button {
   font-size: 18px;
   text-align: center;
   margin-top: 32px;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 

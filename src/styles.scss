@@ -1,44 +1,75 @@
 * {
-    margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    max-width: 1440px;
-    background: #1C1C1C;
     color: #D9D9D9;
-    font-family: "Fira Code";
-    font-family: "Karla";
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* fira-code-regular - latin */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1C1C1C;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh; // Falls nötig, um Inhalte vertikal zu zentrieren
+    padding: 0 10px; // Verhindert, dass der Inhalt am Rand klebt
+}
+
+// Schriften
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Fira Code';
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/fira-code-v22-latin-regular.woff2') format('woff2');
 }
 
-/* karla-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
-    src: url('./assets/fonts/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/karla-v31-latin-regular.woff2') format('woff2');
 }
-/* karla-700 - latin */
+
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-display: swap;
     font-family: 'Karla';
     font-style: normal;
     font-weight: 700;
-    src: url('./assets/fonts/karla-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('./assets/fonts/karla-v31-latin-700.woff2') format('woff2');
 }
 
+// Klassen für Schriftarten
 .fontFiraCode {
-    font-family: "Fira Code";
+    font-family: "Fira Code", monospace;
 }
 
 .fontKarla {
-    font-family: "Karla";
+    font-family: "Karla", sans-serif;
+}
+
+// 🌍 RESPONSIVE DESIGN für max. 320px
+@media screen and (max-width: 320px) {
+    body {
+        flex-direction: column;
+        padding: 0 5px; // Etwas weniger Rand auf kleinen Displays
+    }
+
+    h1, h2, h3 {
+        font-size: smaller; // Überschriften verkleinern
+    }
+
+    p {
+        font-size: 14px; // Lesbarkeit auf kleinen Displays verbessern
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
 }

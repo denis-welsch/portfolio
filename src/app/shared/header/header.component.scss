@@ -1,100 +1,68 @@
-section {
-    z-index: 100;
-    padding: 0px 100px;
-    position: fixed;
-    height: 98px;
-    width: 1440px;
+header {
+    height: 96px; // Beibehaltung der Größe
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; // Füge Abstand zwischen den Elementen hinzu
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+    justify-content: space-between;
+}
+
+section {
+    padding: 0px 100px; // Beibehaltung des Paddings für Laptop
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 a {
     font-family: 'Fira Code';
-    font-size: 20px;
-    margin: 0;
-    gap: 24px;
-    background: none;
-    position: relative; // Wichtig für das Pseudoelement
-    color: white; // Farbe für die Links
-    text-decoration: none; // Entferne Standard-Unterstreichung
+    font-size: 20px; // Beibehaltung der Größe
+    color: white;
+    text-decoration: none;
+    position: relative;
     transition: color 0.3s ease;
 
     &:hover {
         cursor: pointer;
-        color: #3DCFB6; // Farbe beim Hovern ändern
     }
 
     &::after {
         content: '';
         position: absolute;
         left: 50%;
-        bottom: -5px; // Abstand vom Link
+        bottom: -5px;
         transform: translateX(-50%);
         width: 6px;
         height: 6px;
         border-radius: 50%;
         background-color: #3DCFB6;
-        opacity: 0; // Unsichtbar, solange nicht gehovt wird
+        opacity: 0;
         transition: opacity 0.3s ease;
     }
 
     &:hover::after {
-        opacity: 1; // Sichtbar beim Hovern
+        opacity: 1;
     }
 }
 
 div {
     display: flex;
-    gap: 24px; // Abstand zwischen den Links
-    background: none;
+    gap: 24px; // Beibehaltung des Abstands
 }
 
 img {
-    height: 48px; // Beispielhöhe für das Logo, anpassen nach Bedarf
-    background: none;
+    height: 48px; // Beibehaltung des Logos
+    max-width: 100%;
 }
 
-.language-switch {
-    display: flex;
-    gap: 10px;
-
-    .lang-btn {
-        padding: 10px 20px;
-        border: 2px solid white;
-        border-radius: 5px;
-        background-color: #08463B;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        position: relative;
-
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -5px;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        &:hover::after {
-            opacity: 1;
-        }
-
-        &.active {
-            background-color: #3DCFB6;
-            color: white;
-        }
+// 🌍 **Media Query für Laptop mit max-width: 1440px**
+@media screen and (max-width: 1440px) {
+    section {
+        padding: 0px 50px; // Weniger Padding für kleinere Laptop-Bildschirme
+    }
+    
+    div {
+        gap: 20px; // Leicht reduzierter Abstand zwischen Links
     }
 }
+

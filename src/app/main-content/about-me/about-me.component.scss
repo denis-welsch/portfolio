@@ -2,23 +2,43 @@ section {
     background: #1C1C1C;
     padding: 100px;
     display: flex;
-    justify-content: space-between; // Zentriert die Elemente horizontal
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 40px; // Abstand zwischen Bild und Text
-    width: 1440px;
+    gap: 40px;
+    
+    @media screen and (max-width: 1024px) {
+        padding: 50px; // Weniger Padding auf kleineren Screens
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column; // Stackt die Elemente untereinander
+        align-items: center; // Zentriert Inhalte für eine bessere Optik
+        gap: 20px; // Reduziert den Abstand für eine kompaktere Ansicht
+    }
 }
 
 .profil {
     height: 568px;
     width: 568px;
-    object-fit: cover; // Stellt sicher, dass das Bild gut in den Bereich passt
+    object-fit: cover;
     border-radius: 30px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%; // Bild auf volle Breite setzen
+        height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
+        max-width: 400px; // Maximalgröße für bessere Lesbarkeit
+    }
 }
 
 .about-me-box {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-start;
+
+    @media screen and (max-width: 768px) {
+        align-items: center; // Zentriert den Text in der mobilen Ansicht
+    }
 }
 
 .about-me-text {
@@ -27,52 +47,56 @@ section {
     border-radius: 30px;
     padding: 32px;
     display: flex;
-    flex-direction: column; // Vertikale Anordnung von Text und Überschrift
-    align-items: flex-start; // Text linksbündig ausrichten
+    flex-direction: column;
+    align-items: flex-start;
     background-color: rgba(61, 207, 182, 0.1);
     border: 2px solid #3DCFB6;
-    font-family: 'Fira Code', monospace; // Schriftart
+    font-family: 'Fira Code', monospace;
+
+    @media screen and (max-width: 768px) {
+        width: 100%; // Textbox passt sich der Breite an
+        max-width: 400px; // Begrenzung für bessere Optik
+        height: auto; // Höhe automatisch anpassen
+        text-align: center; // Zentriert den Text für bessere Lesbarkeit
+    }
 
     h1 {
-        font-size: 64px; // Schriftgröße für die Überschrift
-        font-family: "Fira Code";
-        margin: 0 0 20px 0; // Abstand unter der Überschrift
+        font-size: 64px;
+        margin: 0 0 20px 0;
         color: #3DCFB6;
-        background: none;
     }
 
     p {
-        font-size: 18px; // Schriftgröße für den Text
-        background: none;
+        font-size: 18px;
         color: #FFFFFF;
     }
 
     .description {
         font-size: 18px;
-        line-height: 1.5; // Zeilenhöhe für bessere Lesbarkeit
+        line-height: 1.5;
     }
 
-    // Neue Klasse für Icon-Text-Blöcke
     .about-me-item {
         display: flex;
-        align-items: flex-start; // Vertikale Ausrichtung
-        gap: 10px; // Abstand zwischen Icon und Text
-        margin-bottom: 10px; // Abstand zwischen den Elementen
-        background: none;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column; // Icons über den Text setzen
+            align-items: center; // Icons zentrieren
+        }
 
         .icon {
-            width: 24px; // Einheitliche Größe der Icons
+            width: 24px;
             height: auto;
-            background: none;
         }
 
         span {
             font-size: 18px;
-            line-height: 1.5;
-            background: none;
             color: #FFFFFFCC;
             &:hover {
-                color: #FFFFFF; // Farbe bei Hover auf Weiß ändern
+                color: #FFFFFF;
             }
         }
     }
