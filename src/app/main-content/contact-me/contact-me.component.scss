@@ -44,11 +44,6 @@ a {
     font-weight: bold;
 }
 
-// span {
-//     display: flex;
-//     justify-content: flex-start;
-// }
-
 label {
     display: block;
     font-weight: bold;
@@ -69,6 +64,7 @@ input, textarea {
     margin-bottom: 10px;
     resize: none;
     border-style: none;
+    background: none;
 }
 
 textarea {
@@ -97,4 +93,11 @@ button {
 
 button:hover {
     background: #32B89D;
+}
+
+.error-message {
+    color: darkred;
+    font-size: 14px;
+    font-weight: bold;
+    // margin-top: 5px;
 }

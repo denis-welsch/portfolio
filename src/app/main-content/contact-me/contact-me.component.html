@@ -9,23 +9,24 @@
     <div class="contact-form">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <label for="name">What's your name?</label>
-            <input [(ngModel)]="contactData.name" name="name" type="text" id="name" placeholder="Your name goes here" required>
+            <input [(ngModel)]="contactData.name" name="name" type="text" id="name" placeholder="Your name goes here" required #name="ngModel">
+            <div *ngIf="name.invalid && name.touched" class="error-message">Oops! It seems your name is missing</div>
 
             <label for="email">What's your email?</label>
-            <input [(ngModel)]="contactData.email" name="email" type="email" id="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            <input [(ngModel)]="contactData.email" name="email" type="email" id="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
+            <div *ngIf="email.invalid && email.touched" class="error-message">Hoppla! Your email is required</div>
 
             <label for="message">How can I help you?</label>
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Hello Denis, I am interested in..." required></textarea>
-            @if (!message.valid && message.touched && !message.disabled) {
-                <span>Please enter a message</span>
-            }
+            <textarea [(ngModel)]="contactData.message" name="message" id="message" placeholder="Hello Denis, I am interested in..." required #message="ngModel"></textarea>
+            <div *ngIf="message.invalid && message.touched" class="error-message">What do you need to develop?</div>
 
             <div class="checkbox-container">
                 <input [(ngModel)]="contactData.privacyAccepted" name="privacyAccepted" type="checkbox" id="privacy">
                 <span for="privacy">I've read the <a href="#">privacy policy</a> and agree.</span>
             </div>
 
-            <button type="submit">Say Hello :)</button>
+            <button type="submit" [disabled]="!isFormValid">Say Hello :)</button>
         </form>
     </div>
 </section>
+

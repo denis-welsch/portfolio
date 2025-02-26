@@ -12,14 +12,8 @@ export class PortfolioComponent {
         {
             id: '01',
             title: 'Join',
-            description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'
-                // {name:'Angular', icon: './assets/icons/Angular_Vector.png'},
-                // {name:'TypeScript', icon: './assets/icons/TS_Vector.png'},
-                // {name:'HTML', icon: './assets/icons/HTML_Vector.png'},
-                // {name:'CSS', icon: './assets/icons/CSS_Vector.png'},
-                // {name:'Firebase',icon: './assets/icons/Firebase_Vector.png'}
-            ],
+            description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
             image: './assets/img/portfolio/join.png',
             github: 'https://github.com/yourrepo/join',
             live: 'https://yourliveapp.com/join'
@@ -28,11 +22,7 @@ export class PortfolioComponent {
             id: '02',
             title: 'El Pollo Loco',
             description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-            technologies: ['HTML', 'CSS', 'JavaScript'
-                // {name:'HTML', icon: './assets/icons/HTML_Vector.png'},
-                // {name:'CSS', icon: './assets/icons/CSS_Vector.png'},
-                // {name:'JavaScript', icon: './assets/icons/Javascript_Vector.png'}
-            ],
+            technologies: ['HTML', 'CSS', 'JavaScript'],
             image: './assets/img/portfolio/elPolloLoco.png',
             github: 'https://github.com/Denisator82/El-Pollo-Loco',
             live: 'https://denis-welsch.developerakademie.net/modul12_el_pollo_loco/'
@@ -40,12 +30,8 @@ export class PortfolioComponent {
         {
             id: '03',
             title: 'DABubble',
-            description: 'A Slack Clone for team collaboration...',
-            technologies: ['Angular', 'Firebase', 'TypeScript'
-                // {name:'Angular', icon: './assets/icons/Angular_Vector.png'},
-                // {name:'Firebase',icon: './assets/icons/Firebase_Vector.png'},
-                // {name:'TypeScript', icon: './assets/icons/TS_Vector.png'}
-            ],
+            description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+            technologies: ['Angular', 'Firebase', 'TypeScript'],
             image: './assets/img/portfolio/daBubble.png',
             github: 'https://github.com/yourrepo/dabubble',
             live: 'https://yourliveapp.com/dabubble'
@@ -69,9 +55,16 @@ export class PortfolioComponent {
 
     openLink(url: string): void {
         if (url) {
-        window.open(url, '_blank');
+            window.open(url, '_blank');
         } else {
-        console.error('Keine URL gefunden!');
+            console.error('Keine URL gefunden!');
         }
     }
+
+    openNextProject() {
+        const currentIndex = this.projects.findIndex(project => project.id === this.selectedProject.id);
+        const nextProject = this.projects[(currentIndex + 1) % this.projects.length]; // Zirkuliert durch die Projekte
+        this.selectedProject = nextProject;
+    }
 }
+

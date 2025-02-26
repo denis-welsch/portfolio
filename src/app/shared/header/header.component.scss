@@ -4,6 +4,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: black;
 }
 
 section {
@@ -51,18 +52,7 @@ div {
 }
 
 img {
-    height: 48px; // Beibehaltung des Logos
+    height: 48px;
     max-width: 100%;
-}
-
-// 🌍 **Media Query für Laptop mit max-width: 1440px**
-@media screen and (max-width: 1440px) {
-    section {
-        padding: 0px 50px; // Weniger Padding für kleinere Laptop-Bildschirme
-    }
-    
-    div {
-        gap: 20px; // Leicht reduzierter Abstand zwischen Links
-    }
 }
 

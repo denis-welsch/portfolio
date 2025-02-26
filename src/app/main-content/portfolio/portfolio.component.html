@@ -40,6 +40,9 @@
                     <p class="technologies">{{ selectedProject.technologies.join(', ') }}</p>
                     <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
                     <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
+                    <!-- Next Project Link -->
+                    <a (click)="openNextProject()" class="next-project-link">
+                        Next Project -></a>
                 </div>
                 <div class="modal-right">
                     <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">

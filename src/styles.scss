@@ -7,15 +7,15 @@
     padding: 0;
 }
 
-body {
+.body {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #1C1C1C;
     width: 100%;
     max-width: 1440px;
-    min-height: 100vh; // Falls nötig, um Inhalte vertikal zu zentrieren
-    padding: 0 10px; // Verhindert, dass der Inhalt am Rand klebt
+    min-height: 100vh;
+    padding: 0;
 }
 
 // Schriften

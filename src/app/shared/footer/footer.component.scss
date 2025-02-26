@@ -1,4 +1,4 @@
-footer {
+.footer {
     display: flex;
     justify-content: center;
     background-color: white;
@@ -6,6 +6,7 @@ footer {
     text-align: center;
     width: 100%;
     position: relative;
+    
 }
 
 section {
@@ -15,6 +16,7 @@ section {
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    background-color: black
 }
 
 .footer-left h2 {

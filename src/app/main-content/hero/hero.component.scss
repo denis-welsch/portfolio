@@ -18,8 +18,9 @@ section {
 
 marquee {
     display: flex;
+    justify-content: center;
     margin-top: 50px;
-    max-width: 1480px;
+    max-width: 1440px;
     height: 62px;
     transform: rotate(-3deg);
     padding: 12px 32px;
