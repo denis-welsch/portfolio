@@ -1,9 +1,10 @@
 section {
     background: #1C1C1C;
+    gap: 64px;
 }
 
 section.contact-me {
-    padding: 20px 100px;
+    padding: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -12,11 +13,14 @@ section.contact-me {
     width: 50%;
 }
 
+.contact-me-form-container {
+    display: flex;
+}
+
 .contact-form {
     width: 45%;
     padding: 20px;
 }
-
 
 h1 {
     font-weight: 500;
@@ -51,7 +55,7 @@ label {
     font-size: 24px;
     font-weight: 500;
     color: #3DCFB6;
-    border-width: 1px 0 0px 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
+    border-width: 1px 0 0 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
     border-style: solid; // durchgezogene Linie
     border-color: #3DCFB6; // Aqua-grüne Farbe
 }
@@ -60,8 +64,7 @@ input, textarea {
     font-size: 18px;
     font-family: 'Karla';
     width: 350px;
-    padding: 10px 0px;
-    margin-bottom: 10px;
+    padding: 10px 0;
     resize: none;
     border-style: none;
     background: none;
@@ -74,11 +77,42 @@ textarea {
 .checkbox-container {
     display: flex;
     align-items: center;
-    margin: 10px 0;
-    border-width: 1px 0 0px 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
-    border-style: solid; // durchgezogene Linie
-    border-color: #3DCFB6; // Aqua-grüne Farbe
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    gap: 10px; // Abstand zwischen Checkbox und Text
 }
+
+/* Das unsichtbare Original-Checkbox-Element */
+.checkbox-container input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/* Die visuelle Checkbox */
+.checkbox-container span {
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(61, 207, 182, 1);
+    background-color: rgba(61, 207, 182, 0.2);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.2s;
+}
+
+/* Das Häkchen wird nur angezeigt, wenn die Checkbox aktiv ist */
+.checkbox-container input[type="checkbox"]:checked + span::after {
+    content: "✔";
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
 
 button {
     background: #3DCFB6;
@@ -111,3 +145,7 @@ button:hover {
     border-radius: 5px;
 }
 
+.checkbox-container span::before, 
+.checkbox-container span::after {
+    pointer-events: none;
+}

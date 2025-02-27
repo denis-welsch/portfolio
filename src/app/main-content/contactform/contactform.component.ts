@@ -1,4 +1,3 @@
-// import { HttpClient } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject} from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
@@ -18,9 +17,11 @@ export class ContactformComponent {
     name: "",
     email: "",
     message: "",
+    privacyAccepted: false
   }
 
   mailTest = false;
+  isFormValid = false;
 
   post = {
     endPoint: 'https://denis-welsch.de/sendMail.php',
@@ -28,14 +29,14 @@ export class ContactformComponent {
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
       },
+      responseType: 'text' as const,
     },
   };
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
@@ -46,7 +47,6 @@ export class ContactformComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
   }
