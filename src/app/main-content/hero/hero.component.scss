@@ -1,12 +1,11 @@
 section {
     padding: 0px 100px;
-    min-height: 100vh;
     height: calc(100dvh - 98px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+    background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
     position: relative;
 }
 
@@ -18,13 +17,12 @@ section {
 
 .marquee {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 50px;
     max-width: 1440px;
     height: 62px;
     transform: rotate(-3deg);
     padding: 12px 32px;
-    gap: 56px;
     text-align: center;
     backdrop-filter: blur(5.3px);
     color: #3DCFB6;
@@ -36,13 +34,13 @@ section {
         display: inline-block;
         white-space: nowrap;
         word-spacing: 12px;
-        animation: marquee-animation 90s linear infinite;  // Langsame Animation
+        animation: marquee-animation 45s linear infinite;  // Langsame Animation
         will-change: transform; // Optimierung für die Animation
     }
 
     @keyframes marquee-animation {
         0% {
-            transform: translateX(-1%);
+            transform: translateX(1%);
         }
         100% {
             transform: translateX(-100%);
@@ -69,7 +67,6 @@ h2 {
 div {
     display: flex;
     gap: 48px; // Gap zwischen den Buttons
-    background: none;
 }
 
 .button {

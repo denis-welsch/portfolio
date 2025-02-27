@@ -11,14 +11,21 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   menuOpen = false;
+  currentLanguage = 'en';
 
   constructor(private translate: TranslateService) {}
 
-  changeLanguage(language: string) {
-    this.translate.use(language);
+  changeLanguage() {
+    if (this.currentLanguage === 'en') {
+      this.currentLanguage = 'de';
+    } else {
+      this.currentLanguage = 'en';
+    }
+    this.translate.use(this.currentLanguage);
   }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 }
+
