@@ -1,0 +1,30 @@
+<section id="contact" class="contact-me">
+    <div class="contact-me-container">
+        <h1>Contact me</h1>
+        <h2>Let’s work together</h2>
+        <h3>Got a problem to solve?</h3>
+        <p>Encourage people to contact you and describe what role you are interested in.</p>
+        <p>Need a Frontend developer? <a href="#">Let’s talk!</a></p>
+    </div>
+    <div class="container">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <label for="name">What's your name?</label>
+            <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name goes here" required #name="ngModel">
+            @if (!name.valid && name.touched){
+                <div class="error-message">Oops! It seems your name is missing</div>
+            }
+            <label for="email">What's your email?</label>
+            <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
+            @if (!email.valid && email.touched){
+                <div class="error-message">Hoppla! Your email is required</div>
+            }
+            <label for="message">How can I help you?</label>
+            <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Hello Denis, I am interested in..." required ></textarea>
+            @if (!message.valid && message.touched){
+                <div class="error-message">What do you need to develop?</div>
+            }
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+

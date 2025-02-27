@@ -1,16 +1,16 @@
+// import { HttpClient } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { Component, inject} from '@angular/core';
+import { FormsModule, NgForm} from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-me',
+  selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+  imports: [FormsModule],
+  templateUrl: './contactform.component.html',
+  styleUrls: ['./contactform.component.scss']
 })
-export class ContactMeComponent {
+export class ContactformComponent {
 
   http = inject(HttpClient);
 
@@ -18,14 +18,12 @@ export class ContactMeComponent {
     name: "",
     email: "",
     message: "",
-    privacyAccepted: false
-  };
+  }
 
-  mailTest = true;
-  isFormValid = false;  // Hinzufügen der isFormValid-Eigenschaft
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://denis-welsch.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -48,12 +46,8 @@ export class ContactMeComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
       ngForm.resetForm();
     }
-  }
-
-  // Optional: Du kannst auch hier eine Methode definieren, um den Status des Formulars zu aktualisieren
-  onFormChange(ngForm: NgForm) {
-    this.isFormValid = ngForm.form.valid;
   }
 }
