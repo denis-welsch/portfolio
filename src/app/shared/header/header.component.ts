@@ -10,9 +10,15 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  menuOpen = false;
 
-  constructor(private translate: TranslateService){}
-  changeLanguage(language: string){
+  constructor(private translate: TranslateService) {}
+
+  changeLanguage(language: string) {
     this.translate.use(language);
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 }

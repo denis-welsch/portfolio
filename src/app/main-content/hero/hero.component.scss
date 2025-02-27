@@ -16,7 +16,7 @@ section {
     align-items: center;
 }
 
-marquee {
+.marquee {
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -29,11 +29,28 @@ marquee {
     backdrop-filter: blur(5.3px);
     color: #3DCFB6;
     font-size: 32px;
+    overflow: hidden; // Damit der Text nicht über den Container hinausgeht
+    position: relative;
 
-    &.marquee-text {
+    .marquee-text {
+        display: inline-block;
+        white-space: nowrap;
         word-spacing: 12px;
+        animation: marquee-animation 90s linear infinite;  // Langsame Animation
+        will-change: transform; // Optimierung für die Animation
+    }
+
+    @keyframes marquee-animation {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 }
+
+
 
 h1 {
     font-family: 'Karla';
