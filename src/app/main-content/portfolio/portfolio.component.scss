@@ -1,7 +1,10 @@
 section {
     background: #1C1C1C;
     padding: 0px 100px 100px 100px;
-    height: 581px;
+
+    @media screen and (max-width: 1450px) {
+        padding: 50px; // Weniger Padding auf kleineren Screens
+    }
 }
 
 h2 {
@@ -54,6 +57,25 @@ p {
     border-style: solid; // durchgezogene Linie
     border-color: #3DCFB6; // Aqua-grüne Farbe
     transition: 0.3s;
+
+    @media screen and (max-width: 1450px) {
+        width: 750px;
+    }
+
+    @media screen and (max-width: 880px) {
+        width: 650px;
+    }
+
+    @media screen and (max-width: 780px) {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 250px;
+    }
 }
 
 .project-list li:hover {

@@ -2,19 +2,22 @@ section {
     background: #1C1C1C;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     gap: 40px;
     
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1450px) {
         padding: 50px; // Weniger Padding auf kleineren Screens
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 870px) {
         flex-direction: column; // Stackt die Elemente untereinander
         align-items: center; // Zentriert Inhalte für eine bessere Optik
         gap: 20px; // Reduziert den Abstand für eine kompaktere Ansicht
     }
+}
+#about-me {
+    display: flex;
 }
 
 .profil {
@@ -23,10 +26,22 @@ section {
     object-fit: cover;
     border-radius: 30px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1450px) {
+        width: 100%; // Bild auf volle Breite setzen
+        height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
+        max-width: 500px; // Maximalgröße für bessere Lesbarkeit
+    }
+
+    @media screen and (max-width: 1240px) {
         width: 100%; // Bild auf volle Breite setzen
         height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
         max-width: 400px; // Maximalgröße für bessere Lesbarkeit
+    }
+
+    @media screen and (max-width: 950px) {
+        width: 100%; // Bild auf volle Breite setzen
+        height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
+        max-width: 300px; // Maximalgröße für bessere Lesbarkeit
     }
 }
 
@@ -42,7 +57,7 @@ section {
 }
 
 .about-me-text {
-    width: 568px;
+    width: 80%;
     height: 750px;
     border-radius: 30px;
     padding: 32px;

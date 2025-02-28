@@ -7,6 +7,11 @@ section.contact-me {
     padding: 100px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+        padding: 50px;
+        flex-direction: column;
+    }
 }
 
 .contact-me-container {
@@ -63,7 +68,6 @@ label {
 input, textarea {
     font-size: 18px;
     font-family: 'Karla';
-    width: 350px;
     padding: 10px 0;
     resize: none;
     border-style: none;

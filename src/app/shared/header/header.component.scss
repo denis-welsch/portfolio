@@ -2,11 +2,12 @@ $breakpoint: 720px;
 
 header {
     height: 96px;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background:#1b1b1b;
+    // background:#1b1b1b;
+    background: linear-gradient(0deg, #1C1C1C 100%, #08463B 30%);
 }
 
 .header-main {
@@ -176,6 +177,6 @@ img {
     .dialog.show {
         display: flex;
         justify-content: center;
-        text-align: start;
+        text-align: center;
     }
 }
