@@ -2,22 +2,9 @@ section {
     background: #1C1C1C;
     padding: 100px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 40px;
-    
-    @media screen and (max-width: 1450px) {
-        padding: 50px; // Weniger Padding auf kleineren Screens
-    }
-
-    @media screen and (max-width: 870px) {
-        flex-direction: column; // Stackt die Elemente untereinander
-        align-items: center; // Zentriert Inhalte für eine bessere Optik
-        gap: 20px; // Reduziert den Abstand für eine kompaktere Ansicht
-    }
-}
-#about-me {
-    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    gap: 100px;
 }
 
 .profil {
@@ -25,40 +12,29 @@ section {
     width: 568px;
     object-fit: cover;
     border-radius: 30px;
-
-    @media screen and (max-width: 1450px) {
-        width: 100%; // Bild auf volle Breite setzen
-        height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
-        max-width: 500px; // Maximalgröße für bessere Lesbarkeit
-    }
-
-    @media screen and (max-width: 1240px) {
-        width: 100%; // Bild auf volle Breite setzen
-        height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
-        max-width: 400px; // Maximalgröße für bessere Lesbarkeit
-    }
-
-    @media screen and (max-width: 950px) {
-        width: 100%; // Bild auf volle Breite setzen
-        height: auto; // Automatische Höhe, um Verzerrung zu vermeiden
-        max-width: 300px; // Maximalgröße für bessere Lesbarkeit
-    }
 }
 
 .about-me-box {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
+    align-items: flex-end; // Box nach rechts ausrichten
+    width: 600px;
+}
 
-    @media screen and (max-width: 768px) {
-        align-items: center; // Zentriert den Text in der mobilen Ansicht
-    }
+h1 {
+    font-size: 64px;
+    margin: 0 0 20px 0;
+    color: #3DCFB6;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #3DCFB6;
+    align-self: flex-start; // "Who I Am" links in der Box ausrichten
 }
 
 .about-me-text {
-    width: 80%;
-    height: 750px;
     border-radius: 30px;
     padding: 32px;
     display: flex;
@@ -68,26 +44,7 @@ section {
     border: 2px solid #3DCFB6;
     font-family: 'Fira Code', monospace;
 
-    @media screen and (max-width: 768px) {
-        width: 100%; // Textbox passt sich der Breite an
-        max-width: 400px; // Begrenzung für bessere Optik
-        height: auto; // Höhe automatisch anpassen
-        text-align: center; // Zentriert den Text für bessere Lesbarkeit
-    }
-
-    h1 {
-        font-size: 64px;
-        margin: 0 0 20px 0;
-        color: #3DCFB6;
-    }
-
-    p {
-        font-size: 18px;
-        color: #FFFFFF;
-    }
-
     .description {
-        font-size: 18px;
         line-height: 1.5;
     }
 
@@ -97,28 +54,116 @@ section {
         gap: 10px;
         margin-bottom: 10px;
 
-        @media screen and (max-width: 768px) {
-            flex-direction: column; // Icons über den Text setzen
-            align-items: center; // Icons zentrieren
-        }
-
         .icon {
             width: 24px;
             height: auto;
         }
-
-        span {
-            font-size: 18px;
-            color: #FFFFFFCC;
-            &:hover {
-                color: #FFFFFF;
-            }
-        }
     }
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 24px;
-    color: #3DCFB6;
+p {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+span {
+    font-size: 18px;
+    color: #FFFFFFCC;
+
+    &:hover {
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profil {
+        height: 468px;
+        width: 468px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .profil {
+        height: 368px;
+        width: 368px;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1153px) {
+    section {
+        gap: 50px;
+        padding: 50px;
+    }
+    .about-me-box{
+        width: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .profil {
+        height: auto;
+        width: 90%;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 64px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 479px) {
+    section {
+        padding: 20px
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
 }
