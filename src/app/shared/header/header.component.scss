@@ -1,19 +1,13 @@
-$breakpoint: 720px;
-
 header {
-    height: 96px;
+    height: 128px;
     max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // background:#1b1b1b;
     background: linear-gradient(0deg, #1C1C1C 100%, #08463B 30%);
-}
-
-.header-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 section {
@@ -24,11 +18,17 @@ section {
     width: 100%;
 }
 
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    
 
     button {
         
@@ -93,6 +93,7 @@ a {
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease;
+    margin-bottom: 24px;
 
     &:hover {
         cursor: pointer;
@@ -123,7 +124,7 @@ nav {
 }
 
 img {
-    height: 48px;
+    height: 72px;
     max-width: 100%;
 }
 
@@ -143,20 +144,20 @@ img {
 .dialog {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 60px;
-    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #3DCFB6;
+    top: 85px;
+    right: 50px;
+    background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
     width: 238px;
     height: 252px;
     text-align: center;
-    padding: 40px 77px;
     border-radius: 30px;
     z-index: 500;
     
     .open-dialog {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        justify-content: center;
         
         .nav-link, .translate button {
             color: white;
@@ -167,7 +168,15 @@ img {
     }
 }
 
-@media (max-width: $breakpoint) {
+@media (max-width: 1024px) {
+    section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+}
+
+@media (max-width: 679px) {
     .header-main {
         display: none;
     }
@@ -178,5 +187,17 @@ img {
         display: flex;
         justify-content: center;
         text-align: center;
+    } 
+}
+
+@media (max-width: 479px) {
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .dialog {
+        right: 10px;
     }
 }
+

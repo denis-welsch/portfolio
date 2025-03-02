@@ -1,23 +1,19 @@
-.footer {
+footer {
+    height: 152px;
+    max-width: 100%;
     display: flex;
-    justify-content: center;
-    background-color: white;
-    color: white;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, #1C1C1C 100%, #08463B 30%);
 }
 
 section {
-    max-width: 100%;
-    padding: 20px 100px;
+    padding: 0px 100px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0;
-    background-color: black;
-    max-width: 1440px;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .footer-left h2 {
@@ -31,20 +27,100 @@ section {
 
 .footer-center p {
     color: #3DCFB6;
-    font-size: 14px;
+    font-size: 18px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-right a {
+    font-family: 'Karla';
+    font-size: 16px;
     color: white;
     text-decoration: none;
-    margin-left: 15px;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        color: #3DCFB6;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 110%;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #3DCFB6;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
 }
 
-.footer-right a:hover {
-    text-decoration: underline;
+img {
+    height: 72px;
+    max-width: 100%;
 }
 
-.logo-m {
-    color: #3DCFB6;
-    font-size: 24px;
+@media (max-width: 1024px) {
+    section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
+
+@media (max-width: 679px) {
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-center {
+        width: 100%;
+        text-align: center;
+        order: 3;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+

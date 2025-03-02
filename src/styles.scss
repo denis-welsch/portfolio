@@ -15,9 +15,6 @@
 //     align-items: center;
 // }
 
-
-
-
 // Schriften
 @font-face {
     font-display: swap;
@@ -50,25 +47,4 @@
 
 .fontKarla {
     font-family: "Karla", sans-serif;
-}
-
-@media screen and (max-width: 320px) {
-    body {
-        flex-direction: column;
-        padding: 0 5px; // Etwas weniger Rand auf kleinen Displays
-    }
-
-    h1, h2, h3 {
-        font-size: smaller; // Überschriften verkleinern
-    }
-
-    p {
-        font-size: 14px; // Lesbarkeit auf kleinen Displays verbessern
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        font-size: 14px;
-    }
 }
