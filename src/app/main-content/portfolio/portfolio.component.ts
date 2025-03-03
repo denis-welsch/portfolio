@@ -29,12 +29,12 @@ export class PortfolioComponent {
         },
         {
             id: '03',
-            title: 'DABubble',
-            description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
-            technologies: ['Angular', 'Firebase', 'TypeScript'],
-            image: './assets/img/portfolio/daBubble.png',
-            github: 'https://github.com/yourrepo/dabubble',
-            live: 'https://yourliveapp.com/dabubble'
+            title: 'Pokedex',
+            description: 'Based on the PokéAPI, a straightforward library that offers and organizes Pokémon information.',
+            technologies: ['HTML', 'CSS', 'JavaScript'],
+            image: './assets/img/portfolio/pokedex.png',
+            github: 'https://github.com/Denisator82/pokedex',
+            live: 'https://denis-welsch.developerakademie.net/modul09_pokedex/'
         }
     ];
 
