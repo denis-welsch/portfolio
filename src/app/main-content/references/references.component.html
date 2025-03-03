@@ -1,27 +1,14 @@
-<!-- <section class="references">
-    <h2>What my <span>colleagues</span> say about me</h2>
-    <div class="testimonial-container">
-        <button class="prev">←</button>
-        <div class="testimonial-slider">
-            <div class="testimonial active">
-                <span class="quote">“</span>
-                <p>Lukas has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.</p>
-                <hr>
-                <p class="author">H. Janisch - Team Partner</p>
-            </div>
+<section id="references">
+    <div class="referencesContainer">
+        <h2>What my colleagues say about me</h2>
+        <div class="referenceBox">
+            <button (click)="prevTestimonial()">&laquo; Previous</button>
             <div class="testimonial">
-                <span class="quote">“</span>
-                <p>I had the good fortune of working with Lukas on a project at the Developer Akademie. He always stayed calm, cooperative, and knowledgeable, making sure our team was set up for success. I would work with him again given the chance.</p>
-                <hr>
-                <p class="author">T. Schulz - Frontend Developer</p>
+                <div class="testimonialText">{{ testimonials[currentIndex].text }}</div>
+                <div class="testimonialName">{{ testimonials[currentIndex].name }}</div>
             </div>
-            <div class="testimonial">
-                <span class="quote">“</span>
-                <p>Working with Lukas was a fantastic experience. His coding skills and attention to detail were a key factor in our project's success.</p>
-                <hr>
-                <p class="author">M. Keller - Software Engineer</p>
-            </div>
+            <button (click)="nextTestimonial()">Next &raquo;</button>
         </div>
-        <button class="next">→</button>
     </div>
-</section> -->
+</section>
+

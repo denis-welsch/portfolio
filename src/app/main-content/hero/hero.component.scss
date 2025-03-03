@@ -1,6 +1,7 @@
 section {
     padding: 0px 100px;
-    height: calc(100dvh - 128px);
+    min-height: calc(100vh - 128px);
+    // height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
