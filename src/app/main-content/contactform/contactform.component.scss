@@ -103,8 +103,8 @@ textarea {
 .checkbox-container input[type="checkbox"] {
     opacity: 0;
     position: absolute;
-    width: 0;
-    height: 0;
+    width: 25px;
+    height: 25px;
 }
 
 /* Die visuelle Checkbox */
@@ -128,6 +128,12 @@ textarea {
     color: black;
     font-weight: bold;
 }
+
+// .checkbox-button {
+//     width: 25px;
+//     height: 25px;
+// }
+
 
 
 button {

@@ -6,45 +6,67 @@ section {
     align-items: center;
     flex-direction: column;
     background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
-    position: relative;
+    overflow: hidden;
+    max-width: 1920px;
 }
 
 .main-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Wichtig für vertikale Zentrierung */
+    text-align: center; /* Text zentrieren */
+    width: 100%;
 }
 
 .marquee {
     display: flex;
-    justify-content: space-between;
-    max-width: 80%;
+    align-items: center;
+    width: 100%;
     height: 62px;
     transform: rotate(-3deg);
     padding: 12px 32px;
     text-align: center;
-    backdrop-filter: blur(5.3px);
-    color: #3DCFB6;
+    background: rgba(255, 255, 255, 0.12);
     font-size: 32px;
     overflow: hidden;
     position: absolute;
-    bottom: 25px;
+    bottom: 75px;
+    white-space: nowrap;
+}
 
-    .marquee-text {
-        display: inline-block;
-        white-space: nowrap;
-        word-spacing: 12px;
-        animation: marquee-animation 45s linear infinite;  // Langsame Animation
-        will-change: transform; // Optimierung für die Animation
+.marquee-text-track {
+    display: flex;
+    white-space: nowrap;
+    width: max-content;
+    animation: marquee-move-text 30s linear infinite;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.marquee-text-track span {
+    padding-right: 48px; /* Abstand zwischen den Texten */
+    color: #3DCFB6;
+}
+
+.marquee-text-track span::before {
+    content: "•";
+    padding-right: 48px; /* Abstand zwischen dem Punkt und dem Text */
+}
+
+/* Endlosschleife durch Duplizieren des Inhalts */
+.marquee-text-track::after {
+    content: attr(data-text) " " attr(data-text);
+    display: inline-block;
+}
+
+/* Animation */
+@keyframes marquee-move-text {
+    0% {
+        transform: translateX(0%);
     }
-
-    @keyframes marquee-animation {
-        0% {
-            transform: translateX(1%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -62,9 +84,9 @@ h2 {
     text-align: center;
 }
 
-div {
+.button-distance {
     display: flex;
-    gap: 48px; // Gap zwischen den Buttons
+    gap: 48px;
 }
 
 .button {
@@ -78,14 +100,15 @@ div {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 2px solid #3DCFB6;
-        color: #3DCFB6;
-    }
 }
 
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #3DCFB6;
+    color: #3DCFB6;
+}
+
+/* Responsive Anpassungen */
 @media screen and (max-width: 1440px) {
     section {
         padding: 0px 50px;
@@ -101,9 +124,8 @@ div {
         font-size: 32px;
     }
 
-    marquee {
+    .marquee {
         font-size: 28px;
-        gap: 32px;
     }
 }
 
@@ -120,15 +142,16 @@ div {
         font-size: 28px;
     }
 
-    marquee {
-        font-size: 24px;
-        gap: 24px;
-        max-width: 80%;
+    .marquee {
+        font-size: 21px;
     }
 
-    div {
+    .button-distance {
         gap: 24px;
-        flex-direction: column;
+    }
+
+    .button {
+        font-size: 16px;
     }
 }
 
@@ -141,9 +164,13 @@ div {
         font-size: 24px;
     }
 
-    marquee {
+    .marquee {
         font-size: 18px;
         height: 48px;
+    }
+
+    .button {
+        font-size: 14px;
     }
 }
 
@@ -153,45 +180,110 @@ div {
     }
 
     h2 {
-        font-size: 20px;
-    }
-
-    marquee {
-        font-size: 16px;
-        height: 40px;
+        font-size: 18px;
     }
 
     .button {
-        font-size: 16px;
+        font-size: 12px;
         padding: 8px 16px;
     }
 }
 
+.line-wrapper {
+    display: flex;
+    justify-content: space-between; /* Links und rechts ausrichten */
+    align-items: flex-end; /* Linien unten ausrichten */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 100px; /* Abstand vom Rand */
+    // height: 100vh;
+    pointer-events: none;
+}
 
-// .email-section {
-//     display: flex;
-//     justify-content: flex-end;
-//     transform: translateY(-50%);
-//     text-align: center;
-// }
-// .email-section .email {
-//     writing-mode: vertical-rl;
-//     text-orientation: mixed;
-//     margin-bottom: 10px;
-// }
-// .email-section .icons {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
-// .email-section .icons a {
-//     color: #fff;
-//     text-decoration: none;
-//     margin: 5px 0;
-// }
-// .email-section .line {
-//     width: 1px;
-//     height: 186px;
-//     background-color: #fff;
-//     margin: 10px 0;
-// }
+.line-left-section, .line-right-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.line-left-section {
+    justify-content: flex-start; /* Linie links anordnen */
+}
+
+.line-right-section {
+    justify-content: flex-end; /* Linie rechts anordnen */
+    text-align: center;
+}
+
+.line {
+    width: 2px; /* Dickere Linie für bessere Sichtbarkeit */
+    height: 240px;
+    background-color: #3DCFB6;
+}
+
+.line-left {
+    width: 2px; /* Dickere Linie für bessere Sichtbarkeit */
+    height: 240px;
+    background-color: #3DCFB6;
+    position: absolute;
+    z-index: 1;
+}
+
+.line-right-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end; /* Um die Icons nach unten auszurichten */
+
+    .icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Abstand zwischen den Icons */
+        margin-top: 10px;
+
+    a {
+        position: relative; /* Notwendig, damit das Pseudo-Element relativ zum Link positioniert wird */
+        display: inline-block;
+        transition: color 0.3s ease; /* Übergang für die Farbe */
+        
+        /* Grüner Punkt neben den Icons */
+        &::after {
+            content: ''; /* Kein Text, nur das Pseudo-Element */
+            position: absolute;
+            right: -15px; /* Abstand von rechts */
+            top: 50%; /* Vertikale Zentrierung des Punkts */
+            transform: translateY(-50%); /* Vertikal zentrieren */
+            width: 8px; /* Durchmesser des Kreises */
+            height: 8px; /* Durchmesser des Kreises */
+            background-color: #28a745; /* Grüner Punkt */
+            border-radius: 50%; /* Macht den Punkt rund */
+            opacity: 0; /* Der Punkt ist anfangs unsichtbar */
+            transition: opacity 0.3s ease-in-out; /* Sanfte Einblendung */
+        }
+
+        /* Hover-Effekt für das Icon */
+        &:hover {
+          color: #3DCFB6; /* Türkis beim Hover */
+
+        &::after {
+            opacity: 1; /* Der Punkt erscheint bei Hover */
+            }
+        }
+    }
+}
+
+    .email {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        margin-top: 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #3DCFB6; /* Türkis bei Hover */
+        }
+    }
+}

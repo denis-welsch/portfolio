@@ -25,7 +25,7 @@ export class PortfolioComponent {
             technologies: ['HTML', 'CSS', 'JavaScript'],
             image: './assets/img/portfolio/elPolloLoco.png',
             github: 'https://github.com/Denisator82/El-Pollo-Loco',
-            live: 'https://denis-welsch.developerakademie.net/modul12_el_pollo_loco/'
+            live: 'https://denis-welsch.de/modul_el_pollo_loco/index.html'
         },
         {
             id: '03',
@@ -34,7 +34,7 @@ export class PortfolioComponent {
             technologies: ['HTML', 'CSS', 'JavaScript'],
             image: './assets/img/portfolio/pokedex.png',
             github: 'https://github.com/Denisator82/pokedex',
-            live: 'https://denis-welsch.developerakademie.net/modul09_pokedex/'
+            live: 'https://denis-welsch.de/modul_pokedex/index.html'
         }
     ];
 
