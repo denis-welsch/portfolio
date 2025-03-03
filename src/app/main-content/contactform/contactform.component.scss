@@ -8,15 +8,27 @@ section.contact-me {
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 1024px) {
+    @media (max-width: 1153px) {
         padding: 50px;
+    }
+
+    @media (max-width: 1024px) {
         flex-direction: column;
+    }
+
+    @media (max-width: 479px) {
+        padding: 20px
     }
 }
 
 .contact-me-container {
     width: 50%;
+
+    @media (max-width: 1024px) {
+        width: auto;
+    }
 }
+
 
 .contact-me-form-container {
     display: flex;
@@ -152,4 +164,22 @@ button:hover {
 .checkbox-container span::before, 
 .checkbox-container span::after {
     pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    h1{
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    label{
+        font-size: 18px;
+    }
 }

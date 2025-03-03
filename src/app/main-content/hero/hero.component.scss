@@ -18,8 +18,7 @@ section {
 .marquee {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    max-width: 1400px;
+    max-width: 80%;
     height: 62px;
     transform: rotate(-3deg);
     padding: 12px 32px;
@@ -27,8 +26,9 @@ section {
     backdrop-filter: blur(5.3px);
     color: #3DCFB6;
     font-size: 32px;
-    overflow: hidden; // Damit der Text nicht über den Container hinausgeht
-    position: relative;
+    overflow: hidden;
+    position: absolute;
+    bottom: 25px;
 
     .marquee-text {
         display: inline-block;
@@ -147,7 +147,7 @@ div {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
     h1 {
         font-size: 36px;
     }
