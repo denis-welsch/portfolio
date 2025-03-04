@@ -2,13 +2,13 @@
     <div class="referencesContainer">
         <h2>What my colleagues say about me</h2>
         <div class="referenceBox">
-            <button (click)="prevTestimonial()">&laquo; Previous</button>
             <div class="testimonial">
                 <div class="testimonialText">{{ testimonials[currentIndex].text }}</div>
                 <div class="testimonialName">{{ testimonials[currentIndex].name }}</div>
             </div>
-            <button (click)="nextTestimonial()">Next &raquo;</button>
         </div>
+        <button (click)="prevTestimonial()">&laquo; Previous</button>
+        <button (click)="nextTestimonial()">Next &raquo;</button>
     </div>
 </section>
 

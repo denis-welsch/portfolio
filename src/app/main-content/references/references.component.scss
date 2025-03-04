@@ -4,51 +4,49 @@
     align-items: center;
     flex-direction: column;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background: #1C1C1C;
   
     .referencesContainer {
       text-align: center;
   
       h2 {
+        font-family: 'Fira Code';
         font-size: 2rem;
-        color: #333;
         margin-bottom: 1.5rem;
+        color: #3DCFB6;
       }
-  
+
       .referenceBox {
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 1.5rem;
-        margin: 1rem 0;
-        max-width: 600px;
-  
+        max-width: 520px;
+        border-radius: 30px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-family: 'Fira Code', monospace;
+        background-color: rgba(61, 207, 182, 0.1);
+        border: 2px solid #3DCFB6;
+        }
+
         button {
           cursor: pointer;
           background: none;
           border: none;
           font-size: 1.2rem;
-          color: #007BFF;
           margin: 0 1rem;
-  
-          &:hover {
-            color: #0056b3;
-          }
         }
   
         .testimonial {
           .testimonialText {
             font-size: 1.2rem;
-            color: #333;
             margin-bottom: 1rem;
           }
   
           .testimonialName {
             font-weight: bold;
-            color: #007BFF;
+            display: flex;
+            justify-content: flex-end;
           }
         }
       }
     }
-  }
-  
