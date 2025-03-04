@@ -7,8 +7,10 @@
                 <div class="testimonialName">{{ testimonials[currentIndex].name }}</div>
             </div>
         </div>
-        <button (click)="prevTestimonial()">&laquo; Previous</button>
-        <button (click)="nextTestimonial()">Next &raquo;</button>
+        <div class="prev-next">
+            <button (click)="prevTestimonial()">&laquo; Previous</button>
+            <button (click)="nextTestimonial()">Next &raquo;</button>
+        </div>
     </div>
 </section>
 

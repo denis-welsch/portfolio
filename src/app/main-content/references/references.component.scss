@@ -7,16 +7,15 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0px 100px;
+    padding: 100px;
     background: #1C1C1C;
   
     .referencesContainer {
-      text-align: center;
       
-  
       h2 {
         font-family: 'Fira Code';
-        font-size: 2rem;
+        font-size: 32px;
+        font-weight: 700;
         margin-bottom: 1.5rem;
         color: #3DCFB6;
       }
@@ -46,6 +45,8 @@ section {
           .testimonialText {
             font-size: 1.2rem;
             margin-bottom: 1rem;
+            display: flex;
+            justify-content: flex-start;
           }
   
           .testimonialName {
@@ -56,3 +57,25 @@ section {
         }
       }
     }
+
+.prev-next{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1153px) {
+  #references {
+    padding: 50px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #references {
+    padding: 20px;
+  }
+
+  #references .referencesContainer .referenceBox {
+    height: 480px;
+  }
+}

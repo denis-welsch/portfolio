@@ -12,6 +12,7 @@ section {
 }
 
 .main-section {
+    z-index: 500;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,6 +22,7 @@ section {
 }
 
 .marquee {
+    z-index: 500;
     display: flex;
     align-items: center;
     max-width: 100%;
@@ -116,7 +118,6 @@ h2 {
     display: flex;
     justify-content: space-between; /* Links und rechts ausrichten */
     align-items: flex-end; /* Linien unten ausrichten */
-    pointer-events: none;
     box-sizing: border-box;
     padding: 0 100px;
 }
@@ -132,13 +133,14 @@ h2 {
 }
 
 .line {
-    width: 2px; /* Dickere Linie für bessere Sichtbarkeit */
+    width: 2px;
     height: 240px;
-    background-color: #3DCFB6;
+    background-color: whitesmoke;
+    margin-top: 20px;
 }
 
 .line-left {
-    width: 2px; /* Dickere Linie für bessere Sichtbarkeit */
+    width: 2px;
     height: 240px;
     background-color: #3DCFB6;
     position: absolute;
@@ -156,8 +158,7 @@ h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 20px;
 
         a {
             position: relative;
@@ -173,7 +174,7 @@ h2 {
                 transform: translateY(-50%);
                 width: 8px;
                 height: 8px;
-                background-color: #28a745;
+                background-color: #3DCFB6;
                 border-radius: 50%;
                 opacity: 0;
                 transition: opacity 0.3s ease-in-out;
@@ -187,6 +188,9 @@ h2 {
                 }
             }
         }
+        .email-icon {
+            display: none;
+        }
 
         .email {
             writing-mode: vertical-lr;
@@ -194,18 +198,29 @@ h2 {
             margin-top: 10px;
             text-decoration: none;
             transition: color 0.3s ease;
-
+        
             &:hover {
                 color: #3DCFB6;
             }
         }
-
-        .email-icon {
-            display: none;
-        }
     }
 }
 
+
+
+
+
+.icons a img:nth-child(2) {
+    display: none; /* Das zweite Icon ist standardmäßig unsichtbar */
+}
+
+.icons a:hover img:nth-child(1) {
+    display: none; /* Das erste Icon wird beim Hover unsichtbar */
+}
+
+.icons a:hover img:nth-child(2) {
+    display: block; /* Das zweite Icon wird beim Hover sichtbar */
+}
 
 /* Responsive Anpassungen */
 @media screen and (max-width: 1153px) {
@@ -225,6 +240,29 @@ h2 {
 
     .marquee {
         font-size: 28px;
+    }
+}
+
+@media (max-width:850px) {
+    .line-right-section .icons .email {
+        display: none; /* E-Mail ausblenden */
+    }
+
+    .line-right-section .icons .email-icon {
+        // display: none;
+        display: block; /* Icon stattdessen anzeigen */
+    }
+
+    .email-icon img:nth-child(2) {
+        display: none; /* Das zweite Icon wird standardmäßig ausgeblendet */
+    }
+
+    .email-icon:hover img:nth-child(1) {
+        display: none; /* Das erste Icon wird beim Hover ausgeblendet */
+    }
+
+    .email-icon:hover img:nth-child(2) {
+        display: block; /* Das zweite Icon wird beim Hover angezeigt */
     }
 }
 
@@ -251,15 +289,6 @@ h2 {
 
     .button {
         font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 679px) {
-    .email {
-        display: none; // E-Mail ausblenden
-    }
-    .email-icon {
-        display: block; // Icon stattdessen anzeigen
     }
 }
 

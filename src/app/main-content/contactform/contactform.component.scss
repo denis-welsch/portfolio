@@ -113,7 +113,6 @@ textarea {
     width: 25px;
     height: 25px;
     border: 2px solid rgba(61, 207, 182, 1);
-    background-color: rgba(61, 207, 182, 0.2);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -126,7 +125,7 @@ textarea {
 .checkbox-container input[type="checkbox"]:checked + span::after {
     content: "✔";
     font-size: 18px;
-    color: black;
+    color: #3DCFB6;
     font-weight: bold;
 }
 
@@ -149,12 +148,6 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 
-    // &:hover {
-    //     background-color: rgba(255, 255, 255, 0.1);
-    //     border: 2px solid #3DCFB6;
-    //     color: #3DCFB6;
-    // }
-
     &:disabled {
         background-color: rgba(0, 0, 0, 0.3); /* Dunkler Hintergrund */
         color: rgba(255, 255, 255, 0.5); /* Text etwas heller */
@@ -168,7 +161,6 @@ button {
 
     font-size: 14px;
     font-weight: bold;
-    // margin-top: 5px;
 }
 
 .success-message {
@@ -180,10 +172,6 @@ button {
     border-radius: 5px;
 }
 
-.checkbox-container span::before, 
-.checkbox-container span::after {
-    pointer-events: none;
-}
 
 @media (max-width: 1024px) {
     h1{
