@@ -24,12 +24,16 @@
             @if (!message.valid && message.touched){
                 <div class="error-message">What do you need to develop?</div>
             }
-            <label class="checkbox-container">
-                <input [(ngModel)]="contactData.privacyAccepted" name="privacyAccepted" type="checkbox" id="privacy" required>
+            <label for="privacy" class="checkbox-container">
+                <input [(ngModel)]="contactData.privacyAccepted" name="privacyAccepted" type="checkbox" id="privacy" required #privacy="ngModel">
                 <span class="checkbox-button"></span><br>
                 <br><p>I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</p>
             </label>
-            
+            @if (!privacy.valid && privacy.touched){
+                <div class="error-message">Please accept the privacy policy.</div>
+            }
+
+
             <button type="submit" [disabled]="!contactForm.valid">Say Hello :)</button>
         </form>
     </div>

@@ -35,11 +35,18 @@ export class ContactformComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    if (!this.contactData.privacyAccepted) {
+      // Falls die Checkbox nicht angeklickt wurde, setze das Formular als ungültig
+      this.isFormValid = false;
+      return;
+    }
+  
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.isFormValid = true; // Nach erfolgreichem Senden auf gültig setzen
           },
           error: (error) => {
             console.error(error);
@@ -50,4 +57,5 @@ export class ContactformComponent {
       ngForm.resetForm();
     }
   }
+  
 }

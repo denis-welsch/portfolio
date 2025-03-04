@@ -1,6 +1,7 @@
 section {
     background: #1C1C1C;
     gap: 64px;
+    max-width: 1920px;
 }
 
 section.contact-me {
@@ -22,7 +23,7 @@ section.contact-me {
 }
 
 .contact-me-container {
-    width: 50%;
+    width: 40%;
 
     @media (max-width: 1024px) {
         width: auto;
@@ -134,25 +135,37 @@ textarea {
 //     height: 25px;
 // }
 
-
-
 button {
-    background: #3DCFB6;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    display: inline-block;
+    background-color: rgba(61, 207, 182, 0.1);
+    padding: 10px 24px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 32px;
+    text-decoration: none;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    transition: background-color 0.3s ease;
 
-button:hover {
-    background: #32B89D;
+    // &:hover {
+    //     background-color: rgba(255, 255, 255, 0.1);
+    //     border: 2px solid #3DCFB6;
+    //     color: #3DCFB6;
+    // }
+
+    &:disabled {
+        background-color: rgba(0, 0, 0, 0.3); /* Dunkler Hintergrund */
+        color: rgba(255, 255, 255, 0.5); /* Text etwas heller */
+        cursor: not-allowed; /* Zeigt an, dass der Button nicht klickbar ist */
+        transition: background-color 0.3s ease;
+    }
 }
 
 .error-message {
-    color: darkred;
+    color: rgba(236, 123, 123, 0.8);
+
     font-size: 14px;
     font-weight: bold;
     // margin-top: 5px;
