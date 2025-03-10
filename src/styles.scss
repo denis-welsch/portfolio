@@ -1,19 +1,18 @@
-* {
-    // box-sizing: border-box;
+html {
+    min-height: 100dvh;
     scroll-behavior: smooth;
-    color: #D9D9D9;
-    font-family: "Karla", sans-serif;
-    margin: 0;
-    padding: 0;
+    scroll-padding-top: 128px;
 }
 
-// html, body {
-//     width: 100%;
-//     padding: 0;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+}
 
 // Schriften
 @font-face {
