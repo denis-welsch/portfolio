@@ -1,7 +1,13 @@
 section {
     background: #1C1C1C;
     gap: 64px;
-    max-width: 1920px;
+    max-width: 1440px;
+}
+
+section.contact-me {
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
 }
 
 section.contact {
