@@ -1,15 +1,14 @@
-section {
-    padding: 0px 100px;
-    min-height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
-    overflow: hidden;
-    width: 1440px;
-    position: relative;
-}
+// section {
+//     min-height: 100dvh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
+//     overflow: hidden;
+//     max-width: 1440px;
+//     // position: relative;
+// }
 
 .main-section {
     z-index: 500;
@@ -82,7 +81,6 @@ h1 {
 
 h2 {
     font-family: 'Fira Code';
-    font-weight: 400;
     font-size: 40px;
     text-align: center;
 }

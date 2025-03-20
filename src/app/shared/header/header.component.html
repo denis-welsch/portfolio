@@ -1,38 +1,54 @@
 <header>
-    <section>
-        <nav class="header-main">
-            <div class="button">
-                <button (click)="changeLanguage()" id="lang-btn" [class]="currentLanguage">
-                    <span class="lang en" [class.active]="currentLanguage === 'en'">EN</span>
-                    <span class="lang de" [class.active]="currentLanguage === 'de'">DE</span>
-                </button>
-            </div>
-            <a href="#aboutMe" class="nav-link">About Me</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-        </nav>
-        <img src="./assets/img/logo/Logo_denis_welsch.PNG" alt="Logo">
-        
-        <!-- Burger Menu Button -->
-        <div class="burger-menu" (click)="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="header-content">
+      <nav class="header-main">
+        <div class="button">
+          <button
+            (click)="changeLanguage()"
+            id="lang-btn"
+            [class]="currentLanguage"
+          >
+            <span class="lang en" [class.active]="currentLanguage === 'en'"
+              >EN</span
+            >
+            <span class="lang de" [class.active]="currentLanguage === 'de'"
+              >DE</span
+            >
+          </button>
         </div>
-    </section>
+        <a href="#aboutMe" class="nav-link">About Me</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+      </nav>
+      <img src="./assets/img/logo/Logo_denis_welsch.PNG" alt="Logo" />
 
-    <!-- Dropdown Menü für Mobile Ansicht -->
-    <div class="dialog" [class.show]="menuOpen">
-        <div class="open-dialog">
-            <a href="#aboutMe" class="nav-link">About Me</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <div class="button">
-                <button (click)="changeLanguage()" id="lang-btn" [class]="currentLanguage">
-                    <span class="lang en" [class.active]="currentLanguage === 'en'">EN</span>
-                    <span class="lang de" [class.active]="currentLanguage === 'de'">DE</span>
-                </button>
-            </div>
-        </div>
+      <!-- Burger Menu Button -->
+      <div class="burger-menu" (click)="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+
+  <!-- Dropdown Menü für Mobile Ansicht -->
+  <div class="dialog" [class.show]="menuOpen">
+    <div class="open-dialog">
+      <a href="#aboutMe" class="nav-link">About Me</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <div class="button">
+        <button
+          (click)="changeLanguage()"
+          id="lang-btn"
+          [class]="currentLanguage"
+        >
+          <span class="lang en" [class.active]="currentLanguage === 'en'"
+            >EN</span
+          >
+          <span class="lang de" [class.active]="currentLanguage === 'de'"
+            >DE</span
+          >
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
