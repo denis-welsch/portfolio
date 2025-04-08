@@ -23,12 +23,6 @@
   src: url("./assets/fonts/karla-v31-latin-700.woff2") format("woff2");
 }
 
-.container {
-  max-width: 1440px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 html {
   min-height: 100dvh;
   scroll-behavior: smooth;
@@ -54,4 +48,11 @@ body {
 
 .fontKarla {
   font-family: "Karla", sans-serif;
+}
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
 }
