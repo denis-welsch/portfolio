@@ -1,14 +1,14 @@
-// section {
-//     min-height: 100dvh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
-//     background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
-//     overflow: hidden;
-//     max-width: 1440px;
-//     // position: relative;
-// }
+section {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(56deg, #1C1C1C 45%, #08463B 94%);
+    overflow: hidden;
+    max-width: 1440px;
+    // position: relative;
+}
 
 .main-section {
     z-index: 500;
@@ -323,5 +323,3 @@ h2 {
         padding: 8px 16px;
     }
 }
-
-

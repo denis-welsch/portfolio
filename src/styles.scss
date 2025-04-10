@@ -1,4 +1,4 @@
-// Schriften
+// Fonts
 @font-face {
   font-display: swap;
   font-family: "Fira Code";
@@ -23,36 +23,65 @@
   src: url("./assets/fonts/karla-v31-latin-700.woff2") format("woff2");
 }
 
+:root {
+  --primary-text-color: white;
+  --background-dark: #1c1c1c;
+  --background-accent: darkred;
+  --accent-color: #3dcfb6;
+  --black: #000;
+  --font-family-karla: "Karla", sans-serif;
+  --font-family-fira-code: "Fira Code", monospace;
+  --scroll-padding-top: 128px;
+  --container-max-width: 1440px;
+  --section-padding-horizontal: 100px;
+}
+
+// Global Styles
 html {
+  box-sizing: border-box;
   min-height: 100dvh;
   scroll-behavior: smooth;
-  scroll-padding-top: 128px;
+  scroll-padding-top: var(--scroll-padding-top);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Karla";
-  color: white;
-  background-color: #1c1c1c;
+  font-family: var(--font-family-karla);
+  color: var(--primary-text-color);
+  background-color: var(--background-accent); // for test original (--background-dark)
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100%;
 }
 
-// Klassen für Schriftarten
+// Utility Classes
 .fontFiraCode {
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-family-fira-code);
 }
 
 .fontKarla {
-  font-family: "Karla", sans-serif;
+  font-family: var(--font-family-karla);
 }
 
+// Global Class
 .container {
-display: flex;
-justify-content: center;
-align-items: center;
-box-sizing: border-box;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-padding-horizontal);
+  padding-right: var(--section-padding-horizontal);
+}
+
+// Utility Class for Horizontal Section Padding
+.section-padding {
+  padding-left: var(--section-padding-horizontal);
+  padding-right: var(--section-padding-horizontal);
 }

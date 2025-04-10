@@ -2,7 +2,7 @@
 header {
   position: sticky;
   top: 0;
-  background: linear-gradient(0deg, #1c1c1c 100%, #08463b 30%);
+  background: linear-gradient(0deg, var(--background-dark) 100%, var(--background-accent) 30%);
   width: 100%;
   height: 128px;
   display: flex;
@@ -13,17 +13,13 @@ header {
 
 .header-content {
   width: 100%;
-  max-width: 1440px;
+  max-width: var(--container-max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 100px ;
+  padding: 0 var(--section-padding-horizontal);
 }
-
-// .header-main {
-//   width: 100%;
-// }
 
 .button {
   display: flex;
@@ -33,11 +29,11 @@ header {
   button {
     width: 84px;
     height: 28px;
-    border: 2px solid #3dcfb6;
+    border: 2px solid var(--accent-color);
     border-radius: 20px;
     position: relative;
-    background-color: #000; // Schwarzer Hintergrund
-    color: white;
+    background-color: var(--black);
+    color: var(--primary-text-color);
     font-size: 16px;
     cursor: pointer;
     padding: 0;
@@ -47,7 +43,7 @@ header {
     overflow: hidden;
 
     .lang {
-      font-family: "Fira Code";
+      font-family: var(--font-family-fira-code);
       font-size: 16px;
       font-weight: 700;
       width: 50%;
@@ -62,7 +58,7 @@ header {
       width: 50%;
       height: 100%;
       border-radius: 20px;
-      background-color: #3dcfb6; // Türkis
+      background-color: var(--accent-color);
       transition: all 0.3s ease;
       z-index: 0;
     }
@@ -76,19 +72,19 @@ header {
     }
 
     .lang.active {
-      color: white;
+      color: var(--primary-text-color);
     }
 
     .lang:not(.active) {
-      background-color: rgba(61, 207, 182, 0.1);
+      background-color: rgba(var(--accent-color-rgb), 0.1); // Annahme: Du könntest eine RGB-Variable für Alpha-Anpassungen haben
     }
   }
 }
 
 a {
-  font-family: "Fira Code";
-  font-size: 20px; // Beibehaltung der Größe
-  color: white;
+  font-family: var(--font-family-fira-code);
+  font-size: 20px;
+  color: var(--primary-text-color);
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
@@ -106,7 +102,7 @@ a {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #3dcfb6;
+    background-color: var(--accent-color);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -118,7 +114,7 @@ a {
 
 nav {
   display: flex;
-  gap: 24px; // Beibehaltung des Abstands
+  gap: 24px;
 }
 
 img {
@@ -135,17 +131,17 @@ img {
   div {
     width: 25px;
     height: 3px;
-    background: white;
+    background: var(--primary-text-color);
   }
 }
 
 .dialog {
   display: none;
   position: absolute;
-  border: 2px solid #3dcfb6;
+  border: 2px solid var(--accent-color);
   top: 85px;
   right: 50px;
-  background: linear-gradient(56deg, #1c1c1c 45%, #08463b 94%);
+  background: linear-gradient(56deg, var(--background-dark) 45%, var(--background-accent) 94%);
   width: 238px;
   height: 252px;
   text-align: center;
@@ -157,18 +153,33 @@ img {
     flex-direction: column;
     justify-content: center;
 
-    .nav-link,
-    .translate button {
-      color: white;
+    a,
+    button {
+      color: var(--primary-text-color);
       background: transparent;
       border: none;
       cursor: pointer;
+      padding: 8px 0; // Etwas vertikaler Abstand für die Menüpunkte
+      font-size: 18px; // Anpassung der Schriftgröße im Mobile-Menü
+      text-decoration: none; // Entferne Unterstreichung von Links im Mobile-Menü
+    }
+
+    button {
+      font-size: 16px; // Schriftgröße für den Sprachbutton im Mobile-Menü beibehalten
+      padding: 8px 20px; // Horizontales Padding für den Sprachbutton
+      border: 2px solid var(--accent-color);
+      border-radius: 20px;
+      display: inline-flex; // Um die Spans nebeneinander zu halten
+      justify-content: space-around;
+      align-items: center;
+      width: 84px; // Breite des Buttons beibehalten
+      margin: 16px auto 0; // Zentrierung und etwas Abstand nach oben
     }
   }
 }
 
 @media (max-width: 1153px) {
-  section {
+  .header-content {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -189,7 +200,7 @@ img {
 }
 
 @media (max-width: 479px) {
-  section {
+  .header-content {
     padding-left: 20px;
     padding-right: 20px;
   }
