@@ -24,16 +24,43 @@
 }
 
 :root {
+  /* Basic Color Palette */
+  --primary-color: #3DCFB6;
+  --secondary-color: #1C1C1C;
   --primary-text-color: white;
-  --background-dark: #1c1c1c;
-  --background-accent: darkred;
-  --accent-color: #3dcfb6;
+  --secondary-text-color: #ccc;
+  --primary-background-color: #1C1C1C;
+  --secondary-background-color: #f0f0f0;
+  --test-background-color: darkred;
+
+  /* Functional Colors */
+  --accent-color: var(--primary-color);
+  --success-color: #4CAF50;
+  --error-color: #f44336;
+  --warning-color: #ff9800;
+  --info-color: #2196f3;
+
+  /* Neutral Colors */
   --black: #000;
+  --white: #fff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+
+  /* Keep your existing variables */
   --font-family-karla: "Karla", sans-serif;
   --font-family-fira-code: "Fira Code", monospace;
   --scroll-padding-top: 128px;
   --container-max-width: 1440px;
   --section-padding-horizontal: 100px;
+  --space-medium: 20px;
+  --text-color-light: 
 }
 
 // Global Styles
@@ -55,7 +82,7 @@ body {
   padding: 0;
   font-family: var(--font-family-karla);
   color: var(--primary-text-color);
-  background-color: var(--background-accent); // for test original (--background-dark)
+  background-color: var(--test-background-color);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -76,8 +103,6 @@ body {
   max-width: var(--container-max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--section-padding-horizontal);
-  padding-right: var(--section-padding-horizontal);
 }
 
 // Utility Class for Horizontal Section Padding

@@ -8,6 +8,10 @@ section.contact-me {
     padding: 100px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 479px) {
+    padding: 20px;
+    }
 }
 
 section.contact {
@@ -135,11 +139,6 @@ textarea {
     font-weight: bold;
 }
 
-// .checkbox-button {
-//     width: 25px;
-//     height: 25px;
-// }
-
 button {
     display: inline-block;
     background-color: rgba(61, 207, 182, 0.1);
@@ -196,3 +195,4 @@ button {
         font-size: 18px;
     }
 }
+

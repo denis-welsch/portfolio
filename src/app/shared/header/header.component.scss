@@ -1,8 +1,8 @@
 /* Header */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: linear-gradient(0deg, var(--background-dark) 100%, var(--background-accent) 30%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
   width: 100%;
   height: 128px;
   display: flex;
@@ -165,20 +165,19 @@ img {
     }
 
     button {
-      font-size: 16px; // Schriftgröße für den Sprachbutton im Mobile-Menü beibehalten
-      padding: 8px 20px; // Horizontales Padding für den Sprachbutton
+      font-size: 16px;
       border: 2px solid var(--accent-color);
       border-radius: 20px;
-      display: inline-flex; // Um die Spans nebeneinander zu halten
+      display: inline-flex;
       justify-content: space-around;
       align-items: center;
-      width: 84px; // Breite des Buttons beibehalten
+      width: 85px;
       margin: 16px auto 0; // Zentrierung und etwas Abstand nach oben
     }
   }
 }
 
-@media (max-width: 1153px) {
+@media (max-width: 1400px) {
   .header-content {
     padding-left: 50px;
     padding-right: 50px;
