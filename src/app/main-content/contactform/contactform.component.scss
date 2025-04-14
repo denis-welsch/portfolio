@@ -9,6 +9,10 @@ section.contact-me {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 1400px) {
+        padding: 50px;
+      }
+      
     @media (max-width: 479px) {
     padding: 20px;
     }

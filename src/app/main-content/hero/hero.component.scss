@@ -27,6 +27,7 @@ section#hero {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 500;
 }
 
 .main-section {
@@ -55,7 +56,6 @@ section#hero {
   position: absolute;
   bottom: 55px;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .marquee-text-track {
@@ -136,6 +136,10 @@ h2 {
   align-items: flex-end;
   box-sizing: border-box;
   padding: 0 var(--section-padding-horizontal);
+
+  @media (max-width: 1400px) {
+    padding: 0 50px;
+  }
 }
 
 .line-left-section,

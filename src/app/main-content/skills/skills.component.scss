@@ -1,6 +1,10 @@
 section {
   padding: 50px 100px;
   background: radial-gradient(circle at right, rgba(28,28,28,1) 100%, rgba(8,70,59,1) 30%);
+
+  @media (max-width: 1400px) {
+    padding: 50px;
+  }
 }
 
 .skillContainer {
