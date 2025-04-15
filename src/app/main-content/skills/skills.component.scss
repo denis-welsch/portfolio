@@ -10,7 +10,6 @@ section {
 .skillContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .skillSetText {
@@ -31,8 +30,8 @@ h1 {
   }
 
 h2 {
-    font-weight: 500;
     font-size: 24px;
+    font-weight: 500;
     color: #3DCFB6;
   }
 
@@ -58,19 +57,21 @@ span {
 
 .skillIconBox {
   width: 632px;
-  height: 428px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; // Zentriert Icons in mobiler Ansicht
+  gap: 5px;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .skill {
   height: 116px;
-  width: 116px;
+  width: 104px;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  margin: 0 25px 25px 25px;
   transition: transform 0.2s;
 
   &:hover {
@@ -81,13 +82,14 @@ span {
 .button {
   display: inline-block;
   background-color: rgba(61, 207, 182, 0.1);
-  padding: 10px 24px;
+  padding: 10px 25px;
   border: 2px solid white;
   border-radius: 20px;
   color: white;
+  font-family: var(--font-family-karla);
   font-size: 18px;
   text-align: center;
-  margin-top: 32px;
+  margin-top: 24px;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -99,7 +101,7 @@ span {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1285px) {
 
   p{
       font-size: 16px;
@@ -120,11 +122,14 @@ span {
   span{
     font-size: 16px;
   }
+
+  .skillIconBox {
+    width: 532px;
+  }
 }
 
 @media (max-width: 1153px) {
   section {
-      gap: 50px;
       padding: 50px;
       height: auto;
   }

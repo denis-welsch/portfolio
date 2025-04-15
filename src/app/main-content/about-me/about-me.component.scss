@@ -3,7 +3,6 @@ section {
     padding: 50px 100px;
     display: flex;
     justify-content: space-between;
-    gap: 100px;
     max-width: 1440px;
     width: 100%;
 }
@@ -19,12 +18,11 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-end; // Box nach rechts ausrichten
-    width: 600px;
+    width: 568px;
 }
 
 h1 {
     font-size: 64px;
-    margin: 0 0 20px 0;
     color: #3DCFB6;
 }
 
@@ -58,28 +56,25 @@ h2 {
         .icon {
             width: 24px;
             height: auto;
+            margin-left: -12px;
         }
     }
-}
 
-p {
-    font-size: 18px;
-    color: #FFFFFF;
-}
+    p {
+        font-family: var(--font-family-karla);
+        font-size: 18px;
+        color: var(--primary-text-color);
 
-span {
-    font-size: 18px;
-    color: #FFFFFFCC;
-
-    &:hover {
-        color: #FFFFFF;
     }
-}
-
-@media (max-width: 1470px) {
-    .profil {
-        height: 468px;
-        width: 468px;
+    
+    span {
+        font-family: var(--font-family-karla);
+        font-size: 18px;
+        color: var(--tertiary-text-color);
+    
+        &:hover {
+            color: var(--primary-text-color);
+        }
     }
 }
 
@@ -88,6 +83,12 @@ span {
         gap: 50px;
         padding: 50px;
     }
+
+    .profil {
+        height: 468px;
+        width: 468px;
+    }
+
     .about-me-box {
         width: auto;
     }
