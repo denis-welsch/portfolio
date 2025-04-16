@@ -1,27 +1,36 @@
 <section id="skills">
-  <h2>Technologies</h2><br>
-  <div class="skillContainer">
-    <div class="skillSetText">
-      <h1>Skill Set</h1>
-      <p>
-        A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasise your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.<br><br>
-      </p>
-      <h3>
-        <span style="color: #FFFFFF;">You need</span> <span style="color: #3DCFB6;"> another skill?</span>
-      </h3>
-      <p>
-        Feel free to contact me. I look forward to <br> expanding on my previous knowledge.
-      </p>
-      <a class="button" href="#contact">Let´s Talk</a>
-    </div>
-    <div class="skillIconBox">
-      @for (skill of skills; track skill) {
-        <div class="skill">
-          <img class="image" [src]="skill.logo" [alt]="skill.name">
-          <br>
-          <div class="skillName">{{ skill.name }}</div>
-        </div>
-      }
+  <div class="skill-box-container">
+    <h2>Technologies</h2>
+    <br />
+    <div class="skillContainer">
+      <div class="skillSetText">
+        <h1>Skill Set</h1>
+        <p>
+          A short introduction of your skills. Highlight your experience of
+          using different front-end technologies and emphasise your openness to
+          learning and adapting to new technologies. Show how important it is
+          for you to keep up with the rapid changes in web development.<br /><br />
+        </p>
+        <h3>
+          <span style="color: #ffffff">You need</span>
+          <span style="color: #3dcfb6"> another skill?</span>
+        </h3>
+        <p>
+          Feel free to contact me. I look forward to <br />
+          expanding on my previous knowledge.
+        </p>
+        <a class="button" href="#contact">Let´s Talk</a>
+      </div>
     </div>
   </div>
+    <div class="skillIconBox">
+      @for (skill of skills; track skill) {
+      <div class="skill">
+        <img class="image" [src]="skill.logo" [alt]="skill.name" />
+        <br />
+        <div class="skillName">{{ skill.name }}</div>
+      </div>
+      }
+    </div>
+  
 </section>

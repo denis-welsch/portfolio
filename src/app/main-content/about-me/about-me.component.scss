@@ -18,7 +18,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-end; // Box nach rechts ausrichten
-    width: 568px;
+    width: 47%;
+    margin-top: 50px;
 }
 
 h1 {
@@ -85,8 +86,8 @@ h2 {
     }
 
     .profil {
-        height: 468px;
-        width: 468px;
+        height: 518px;
+        width: 518px;
     }
 
     .about-me-box {
@@ -96,8 +97,8 @@ h2 {
 
 @media (max-width: 1280px) {
     .profil {
-        height: 368px;
-        width: 368px;
+        height: 468px;
+        width: 468px;
     }
 
     p {

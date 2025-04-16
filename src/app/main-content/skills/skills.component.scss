@@ -1,10 +1,20 @@
 section {
   padding: 50px 100px;
   background: radial-gradient(circle at right, rgba(28,28,28,1) 100%, rgba(8,70,59,1) 30%);
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
 
   @media (max-width: 1400px) {
     padding: 50px;
   }
+}
+
+.skill-box-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
 
 .skillContainer {
@@ -40,7 +50,9 @@ h3 {
   }
 
 p {
-    font-size: 18px;
+  font-family: var(--font-family-karla);
+  font-size: 18px;
+  color: var(--primary-text-color);
   }
 
 span {
@@ -56,12 +68,12 @@ span {
 }
 
 .skillIconBox {
-  width: 632px;
+  width: 53%;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   flex-direction: row;
-  justify-content: flex-start;
+  margin-top: 50px;
 }
 
 .skill {
@@ -73,6 +85,7 @@ span {
   text-align: center;
   margin: 0 25px 25px 25px;
   transition: transform 0.2s;
+  font-family: var(--font-family-fira-code);
 
   &:hover {
     transform: scale(1.05);
@@ -101,7 +114,7 @@ span {
   }
 }
 
-@media (max-width: 1285px) {
+@media (max-width: 1280px) {
 
   p{
       font-size: 16px;
@@ -122,15 +135,12 @@ span {
   span{
     font-size: 16px;
   }
-
-  .skillIconBox {
-    width: 532px;
-  }
 }
+
+
 
 @media (max-width: 1153px) {
   section {
-      padding: 50px;
       height: auto;
   }
 }
