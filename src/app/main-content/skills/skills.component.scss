@@ -172,13 +172,24 @@ span {
 
   .skillIconBox {
     width: auto;
-    height: 500px;
     justify-content: space-around;
     padding-top: 50px;
   }
 
   .skillSetText {
     width:auto
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .skill-box-container{
+    width: 100%;
   }
 }
 
@@ -213,7 +224,7 @@ span {
 }
 
 @media (max-width: 390px) {
-  .skillIconBox {
-    height: 600px;
+  .skill {
+    margin: 0;
   }
 }
