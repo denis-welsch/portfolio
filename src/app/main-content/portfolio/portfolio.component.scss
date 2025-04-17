@@ -5,7 +5,7 @@ section {
 
     @media (max-width: 1400px) {
         padding: 50px;
-      }
+    }
 }
 
 h2 {
@@ -26,6 +26,7 @@ h3 {
     font-weight: 700;
     font-size: 24px;
     background: none;
+    margin: 0;
 }
 
 p {
@@ -43,7 +44,15 @@ p {
 .project-list {
     list-style: none;
     padding: 0;
-    width: 50%;
+    width: 70%;
+
+    @media screen and (max-width: 1024px) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
 }
 
 .project-list li {
@@ -51,7 +60,6 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 880px;
     height: 109px;
     padding: 10px;
     border-width: 1px 0 1px 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
@@ -59,34 +67,21 @@ p {
     border-color: #3DCFB6; // Aqua-grüne Farbe
     transition: 0.3s;
 
-    @media screen and (max-width: 1450px) {
-        width: 750px;
-    }
-
-    @media screen and (max-width: 880px) {
-        width: 650px;
-    }
-
-    @media screen and (max-width: 780px) {
-        width: 450px;
+    @media screen and (max-width: 900px) {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        height: auto;
-    }
-
-    @media screen and (max-width: 550px) {
-        width: 350px;
-    }
-
-    @media screen and (max-width: 450px) {
-        width: 250px;
+        justify-content: center;
     }
 }
 
 .project-list li:hover {
     background: #3DCFB64D (30%);
     cursor: pointer;
+}
+
+.preview {
+    margin-left: 10px;
 }
 
 /* Modal */
@@ -205,7 +200,7 @@ p {
     cursor: pointer;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     .preview {
         display: none;
     }

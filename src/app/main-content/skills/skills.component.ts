@@ -16,6 +16,7 @@ export class SkillsComponent {
     { name: 'Material Design', logo: './assets/img/skillSet/Frame.png' },
     { name: 'TypeScript', logo: './assets/img/skillSet/ts.png' },
     { name: 'Angular', logo: './assets/img/skillSet/angular.png' },
+    { name: 'Firebase', logo: './assets/img/skillSet/Firebase.png' },
     { name: 'GIT', logo: './assets/img/skillSet/git.png' },
     { name: 'Rest-Api', logo: './assets/img/skillSet/Api.png' },
     { name: 'Scrum', logo: './assets/img/skillSet/scrum.png' },
