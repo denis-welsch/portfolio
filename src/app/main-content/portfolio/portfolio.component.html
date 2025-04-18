@@ -31,7 +31,7 @@
         <!-- Modal für Projekt-Details -->
         @if (selectedProject) {
             <div class="modal-content" (click)="$event.stopPropagation()">
-                <a class="close" (click)="closeProject()">X</a>
+                
                 <div class="modal-left">
                     <h1>{{ selectedProject.id }}</h1>
                     <h3>{{ selectedProject.title }}</h3>
@@ -41,11 +41,13 @@
                     <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
                     <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
                     <!-- Next Project Link -->
-                    <a (click)="openNextProject()" class="next-project-link">
-                        Next Project -></a>
+                    
                 </div>
                 <div class="modal-right">
+                    <a class="close" (click)="closeProject()">X</a>
                     <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
+                    <a (click)="openNextProject()" class="next-project-link">
+                        Next Project -></a>
                 </div>
             </div>
         }
