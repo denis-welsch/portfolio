@@ -128,6 +128,10 @@ span {
 
 @media (max-width: 1280px) {
 
+  .skill{
+    margin: 0 10px 25px 10px;
+  }
+
   p{
       font-size: 16px;
   }
@@ -152,32 +156,30 @@ span {
 
 
 // @media (max-width: 1153px) {
-//   section {
-//       height: auto;
-//   }
+// //   section {
+// //       height: auto;
+// //   }
+// // }
+
+// // @media (max-width: 1024px) {
+// //   p{
+// //       font-size: 18px;
+// //   }
+
+// //   h1{
+// //       font-size: 64px;
+// //   }
+
+// //   h2{
+// //       font-size: 24px;
+// //   }
+
+// //   h3 {
+// //     font-size: 24px;
+// //   }
+
+  
 // }
-
-@media (max-width: 1024px) {
-  p{
-      font-size: 18px;
-  }
-
-  h1{
-      font-size: 64px;
-  }
-
-  h2{
-      font-size: 24px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  .skill{
-    margin: 0 10px 25px 10px;
-  }
-}
 
 @media (max-width: 870px) {
   .skillContainer {
