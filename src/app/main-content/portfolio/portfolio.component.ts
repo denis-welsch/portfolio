@@ -42,12 +42,13 @@ export class PortfolioComponent {
         {
             id: '03',
             title: 'Pokedex',
-            description: 'Based on the PokéAPI, a straightforward library that offers and organizes Pokémon information.',
-            technologie: ['HTML', 'CSS', 'JavaScript'],
+            description: 'This Pokedex project uses the PokéAPI to fetch and display Pokémon information dynamically with HTML, CSS, and JavaScript.', 
+            technologie: ['HTML', 'CSS', 'JavaScript', 'Rest-Api'],
             technologies: [
                 { name: 'HTML', logo: './assets/img/skillSet/html.svg' },
                 { name: 'CSS', logo: './assets/img/skillSet/css.svg' },
-                { name: 'JavaScript', logo: './assets/img/skillSet/javascript.svg' }
+                { name: 'JavaScript', logo: './assets/img/skillSet/javascript.svg'},
+                { name: 'Rest-API', logo: './assets/img/skillSet/rest-api.svg' }
                 ],
             image: './assets/img/portfolio/pokedex.png',
             github: 'https://github.com/Denisator82/pokedex',
