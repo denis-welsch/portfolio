@@ -13,7 +13,14 @@ export class PortfolioComponent {
             id: '01',
             title: 'Join',
             description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-            technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+            technologie: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+            technologies: [
+                { name: 'Angular', logo: './assets/img/skillSet/angular.svg' },
+                { name: 'TypeScript', logo: './assets/img/skillSet/typescript.svg' },
+                { name: 'HTML', logo: './assets/img/skillSet/html.svg' },
+                { name: 'CSS', logo: './assets/img/skillSet/css.svg' },
+                { name: 'Firebase', logo: './assets/img/skillSet/firebase.svg' }
+                ],
             image: './assets/img/portfolio/join.png',
             github: 'https://github.com/yourrepo/join',
             live: 'https://yourliveapp.com/join'
@@ -22,7 +29,12 @@ export class PortfolioComponent {
             id: '02',
             title: 'El Pollo Loco',
             description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-            technologies: ['HTML', 'CSS', 'JavaScript'],
+            technologie: ['HTML', 'CSS', 'JavaScript'],
+            technologies: [
+                { name: 'HTML', logo: './assets/img/skillSet/html.svg' },
+                { name: 'CSS', logo: './assets/img/skillSet/css.svg' },
+                { name: 'JavaScript', logo: './assets/img/skillSet/javascript.svg' }
+                ],
             image: './assets/img/portfolio/elPolloLoco.png',
             github: 'https://github.com/Denisator82/El-Pollo-Loco',
             live: 'https://denis-welsch.de/modul_el_pollo_loco/index.html'
@@ -31,7 +43,12 @@ export class PortfolioComponent {
             id: '03',
             title: 'Pokedex',
             description: 'Based on the PokéAPI, a straightforward library that offers and organizes Pokémon information.',
-            technologies: ['HTML', 'CSS', 'JavaScript'],
+            technologie: ['HTML', 'CSS', 'JavaScript'],
+            technologies: [
+                { name: 'HTML', logo: './assets/img/skillSet/html.svg' },
+                { name: 'CSS', logo: './assets/img/skillSet/css.svg' },
+                { name: 'JavaScript', logo: './assets/img/skillSet/javascript.svg' }
+                ],
             image: './assets/img/portfolio/pokedex.png',
             github: 'https://github.com/Denisator82/pokedex',
             live: 'https://denis-welsch.de/modul_pokedex/index.html'

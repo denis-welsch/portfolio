@@ -16,7 +16,7 @@
                     (mouseleave)="hoverProject(null)" 
                     (click)="openProject(project)">
                     <h3>{{ project.title }}</h3>
-                    <p class="technologies">{{ project.technologies.join(' | ') }}</p>
+                    <p class="technologies">{{ project.technologie.join(' | ') }}</p>
                 </li>
             }
         </ul>
@@ -37,7 +37,14 @@
                     <h3>{{ selectedProject.title }}</h3>
                     <h4>What is this project about?</h4><br>
                     <p>{{ selectedProject.description }}</p>
-                    <p class="technologies">{{ selectedProject.technologies.join(', ') }}</p>
+                    <div class="technologies">
+                        @for (tech of selectedProject.technologies; track tech) {
+                          <div class="tech-item">
+                            <img [src]="tech.logo" class="tech-logo" alt="{{ tech.name }} Logo">
+                            <span>{{ tech.name }}</span>
+                          </div>
+                        }
+                      </div>
                     <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
                     <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
                     <!-- Next Project Link -->
