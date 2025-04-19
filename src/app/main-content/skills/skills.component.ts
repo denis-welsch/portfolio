@@ -13,13 +13,13 @@ export class SkillsComponent {
     { name: 'HTML', logo: './assets/img/skillSet/html.png' },
     { name: 'CSS', logo: './assets/img/skillSet/css.png' },
     { name: 'JavaScript', logo: './assets/img/skillSet/javascript.png' },
-    { name: 'Material Design', logo: './assets/img/skillSet/Frame.png' },
+    { name: 'Material Design', logo: './assets/img/skillSet/frame.png' },
     { name: 'TypeScript', logo: './assets/img/skillSet/ts.png' },
     { name: 'Angular', logo: './assets/img/skillSet/angular.png' },
     { name: 'Firebase', logo: './assets/img/skillSet/firebase.png' },
     { name: 'GIT', logo: './assets/img/skillSet/git.png' },
-    { name: 'Rest-Api', logo: './assets/img/skillSet/Api.png' },
+    { name: 'Rest-Api', logo: './assets/img/skillSet/api.png' },
     { name: 'Scrum', logo: './assets/img/skillSet/scrum.png' },
-    { name: 'Growth Mindset', logo: './assets/img/skillSet/Tech.png' }
+    { name: 'Growth Mindset', logo: './assets/img/skillSet/tech.png' }
   ];
 }
