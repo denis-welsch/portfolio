@@ -1,6 +1,5 @@
 section {
     background: #1C1C1C;
-    gap: 64px;
     max-width: 1440px;
 }
 
@@ -11,8 +10,7 @@ section.contact-me {
 
     @media (max-width: 1400px) {
         padding: 50px;
-      }
-      
+    }
     @media (max-width: 479px) {
     padding: 20px;
     }
@@ -37,16 +35,13 @@ section.contact {
 }
 
 .contact-me-container {
-    width: 40%;
-
-    @media (max-width: 1024px) {
-        width: auto;
-    }
+    width: 46%;
 }
 
 
 .contact-me-form-container {
     display: flex;
+    width: 46%;
 }
 
 .contact-form {
@@ -54,13 +49,13 @@ section.contact {
     padding: 20px;
 }
 
-h1 {
+h2 {
     font-weight: 500;
     font-size: 24px;
     color: #3DCFB6;
 }
 
-h2 {
+h1 {
     font-family: 'Fira Code';
     font-weight: 700;
     font-size: 64px;
@@ -80,11 +75,17 @@ a {
     font-weight: bold;
 }
 
+p {
+    font-size: 16px;
+    font-family: 'Karla';
+}
+
 label {
     display: block;
     font-weight: bold;
     margin: 10px 0 5px;
     font-size: 24px;
+    font-family: 'Fira Code';
     font-weight: 500;
     color: #3DCFB6;
     border-width: 1px 0 0 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
@@ -183,7 +184,7 @@ button {
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     h1{
         font-size: 18px;
     }
