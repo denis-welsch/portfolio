@@ -170,7 +170,7 @@ section {
         display: inline-block;
         background-color: rgba(61, 207, 182, 0.1);
         padding: 10px 24px;
-        margin-right: 25px;
+        margin: 25px;
         border: 2px solid white;
         border-radius: 20px;
         color: white;
@@ -194,10 +194,10 @@ section {
     @media (max-width: 1280px) {
         
         h1 {
-            font-size: 94px;
+            font-size: 72px;
         }
         h3 {
-            font-size: 48px;
+            font-size: 52px;
         }
         h4 {
             font-size: 18px;
@@ -207,16 +207,6 @@ section {
         }
         button {
             font-size: 16px;
-        }
-    }
-
-    @media (max-width: 1040px) {
-
-        h1 {
-            font-size: 64px;
-        }
-        h3 {
-            font-size: 32px;
         }
     }
 }
@@ -237,10 +227,6 @@ section {
         border-radius: 30px;
         display: block;
     }
-
-    // @media (max-width: 1280px) {
-    //     width: 80%;
-    // }
 
     .close {
         color: white;
@@ -287,8 +273,47 @@ section {
     filter: brightness(0) saturate(100%) invert(55%) sepia(78%) saturate(434%) hue-rotate(125deg) brightness(92%) contrast(92%);
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     .preview {
         display: none;
+    }
+
+    .modal-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .modal-left {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .modal-right {
+        width: 100%;
+        margin-bottom: 50px;
+
+        .next-project-link {
+            position: absolute;
+            bottom: 0;
+            padding-bottom:50px;
+        }
+
+        img {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .modal-content button {
+        margin: 10px;
+        padding: 10px 12px;
     }
 }

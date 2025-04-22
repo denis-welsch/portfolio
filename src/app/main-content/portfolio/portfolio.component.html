@@ -39,22 +39,19 @@
                     <p>{{ selectedProject.description }}</p>
                     <div class="technologies">
                         @for (tech of selectedProject.technologies; track tech) {
-                          <div class="tech-item">
-                            <img [src]="tech.logo" class="tech-logo" alt="{{ tech.name }} Logo">
-                            <span>{{ tech.name }}</span>
-                          </div>
+                            <div class="tech-item">
+                                <img [src]="tech.logo" class="tech-logo" alt="{{ tech.name }} Logo">
+                                <span>{{ tech.name }}</span>
+                            </div>
                         }
-                      </div>
+                    </div>
                     <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
                     <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
-                    <!-- Next Project Link -->
-                    
                 </div>
                 <div class="modal-right">
                     <a class="close" (click)="closeProject()">X</a>
                     <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
-                    <a (click)="openNextProject()" class="next-project-link">
-                        Next Project -></a>
+                    <a (click)="openNextProject()" class="next-project-link">Next Project -></a>
                 </div>
             </div>
         }
