@@ -45,8 +45,10 @@
                             </div>
                         }
                     </div>
-                    <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
-                    <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
+                    <div class="button-link">
+                        <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
+                        <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
+                    </div>
                 </div>
                 <div class="modal-right">
                     <a class="close" (click)="closeProject()">X</a>
