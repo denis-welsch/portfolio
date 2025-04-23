@@ -181,7 +181,6 @@ span {
   }
 
   .skillIconBox {
-    width: auto;
     justify-content: space-around;
   }
 
@@ -199,6 +198,10 @@ span {
 
   .skill-box-container{
     width: 100%;
+  }
+
+  .skillIconBox {
+    width: auto;
   }
 }
 

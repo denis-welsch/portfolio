@@ -11,6 +11,11 @@ section.contact-me {
     @media (max-width: 1400px) {
         padding: 50px;
     }
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
     @media (max-width: 479px) {
     padding: 20px;
     }
@@ -36,12 +41,21 @@ section.contact {
 
 .contact-me-container {
     width: 46%;
+
+    @media (max-width:800px) {
+        width: auto;
+    }
 }
 
 
 .contact-me-form-container {
     display: flex;
     width: 46%;
+
+    @media (max-width:800px) {
+        width: auto;
+        padding-top: 50px;
+    }
 }
 
 .contact-form {
@@ -144,6 +158,10 @@ textarea {
     font-size: 18px;
     color: #3DCFB6;
     font-weight: bold;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -186,11 +204,11 @@ button {
 
 @media (max-width: 1080px) {
     h1{
-        font-size: 18px;
+        font-size: 48px;
     }
 
     h2 {
-        font-size: 48px;
+        font-size: 18px;
     }
 
     h3{
