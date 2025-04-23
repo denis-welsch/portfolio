@@ -107,6 +107,24 @@ label {
     border-color: #3DCFB6; // Aqua-grüne Farbe
 }
 
+@media (max-width: 1080px) {
+    h1{
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    label{
+        font-size: 18px;
+    }
+}
+
 input, textarea {
     font-size: 18px;
     font-family: 'Karla';
@@ -115,11 +133,11 @@ input, textarea {
     resize: none;
     border-style: none;
     background: none;
-}
+    width: 352px;
 
-textarea {
-    height: 100px;
-    color: var(--primary-text-color);
+    @media (max-width: 420px) {
+        width: 252px;
+    }
 }
 
 .checkbox-container {
@@ -128,7 +146,7 @@ textarea {
     cursor: pointer;
     font-size: 18px;
     color: white;
-    gap: 10px; // Abstand zwischen Checkbox und Text
+    gap: 10px;
 }
 
 /* Das unsichtbare Original-Checkbox-Element */
@@ -179,9 +197,9 @@ button {
     transition: background-color 0.3s ease;
 
     &:disabled {
-        background-color: rgba(0, 0, 0, 0.3); /* Dunkler Hintergrund */
-        color: rgba(255, 255, 255, 0.5); /* Text etwas heller */
-        cursor: not-allowed; /* Zeigt an, dass der Button nicht klickbar ist */
+        background-color: rgba(0, 0, 0, 0.3);
+        color: rgba(255, 255, 255, 0.5);
+        cursor: not-allowed;
         transition: background-color 0.3s ease;
     }
 }
