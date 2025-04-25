@@ -10,6 +10,10 @@ section#references {
     padding: 50px;
   }
 
+  @media (max-width: 480px){
+    padding: 20px;
+  }
+
   .referencesContainer {
     display: flex;
     flex-direction: column;
@@ -23,10 +27,14 @@ section#references {
       font-weight: 700;
       margin-bottom: 30px; /* Etwas mehr Abstand zur Box */
       color: #3DCFB6;
+
+      @media (max-width: 800px){
+        font-size:24px;
+      }
     }
 
     .referenceBox {
-      width: 50%;
+      width: 60%;
       display: flex;
       flex-direction: column;
       padding: 32px;
@@ -34,7 +42,14 @@ section#references {
       background-color: rgba(61, 207, 182, 0.1);
       border: 2px solid #3DCFB6;
       margin-bottom: 25px;
-      
+
+      @media(max-width: 800px) {
+        width: 80%;
+      }
+
+      @media(max-width: 420px) {
+        width: 95%;
+      }
     }
 
     .quote-icon {
@@ -43,6 +58,20 @@ section#references {
       position: relative;
       left: -75px;
       top: -50px;
+
+      @media(max-width: 800px){
+
+        left: -55px;
+        top: -45px;
+
+        svg {
+          width: 48px;
+        }
+    }
+
+      // @media(max-width: 480px) {
+      //   display: none;
+      // }
     }
 
     .testimonial {
@@ -113,51 +142,51 @@ section#references {
   }
 }
 
-@media screen and (max-width: 1153px) {
-  section#references {
-    padding: 50px;
-  }
-}
+// @media screen and (max-width: 1153px) {
+//   section#references {
+//     padding: 50px;
+//   }
+// }
 
-@media screen and (max-width: 768px) {
-  .referencesContainer .referenceBox {
-    padding: 20px;
-  }
+// @media screen and (max-width: 768px) {
+//   .referencesContainer .referenceBox {
+//     padding: 20px;
+//   }
 
-  .referencesContainer .testimonial {
-    min-width: 100%; /* Volle Breite auf kleineren Bildschirmen */
-  }
+//   .referencesContainer .testimonial {
+//     min-width: 100%; /* Volle Breite auf kleineren Bildschirmen */
+//   }
 
-  .referencesContainer .quote-icon {
-    font-size: 3em; /* Kleinere Schriftgröße für das Icon auf kleineren Bildschirm */
-    margin-right: 10px;
-  }
-}
+//   .referencesContainer .quote-icon {
+//     font-size: 3em; /* Kleinere Schriftgröße für das Icon auf kleineren Bildschirm */
+//     margin-right: 10px;
+//   }
+// }
 
-@media screen and (max-width: 479px) {
-  section#references {
-    padding: 20px;
-  }
+// @media screen and (max-width: 479px) {
+//   section#references {
+//     padding: 20px;
+//   }
 
-  .referencesContainer h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
+//   .referencesContainer h2 {
+//     font-size: 28px;
+//     margin-bottom: 20px;
+//   }
 
-  .referencesContainer .referenceBox {
-    border-radius: 20px;
-  }
+//   .referencesContainer .referenceBox {
+//     border-radius: 20px;
+//   }
 
-  .navigation {
-    gap: 10px;
-  }
+//   .navigation {
+//     gap: 10px;
+//   }
 
-  .navigation button .arrow-icon {
-    width: 24px;
-  }
+//   .navigation button .arrow-icon {
+//     width: 24px;
+//   }
 
-  .navigation .dots .dot {
-    width: 10px;
-    height: 10px;
-  }
-}
+//   .navigation .dots .dot {
+//     width: 10px;
+//     height: 10px;
+//   }
+// }
