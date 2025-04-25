@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
 })
 export class ReferencesComponent {
   testimonials = [
-    { name: 'John Wayne - Team Partner', text: 'Denis has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project. '},
-    { name: 'Jane Smith - Mentor', text: 'I had the good fortune of working with Denis in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He is super knowledgeable, easy to work with, and I happily work with him again given the chance.'},
-    { name: 'T.Schulz - Frontend Developer', text:'Our project benefited enormously from Denis efficient way of working.'}
+    { name: 'Alex - Team Partner', text: 'Während unseres Projekts erwies Denis sich als sehr engagiertes und zuverlässiges Teammitglied. Stets lösungsorientiert, teilte er bereitwillig sein Wissen und unterstützte bei Herausforderungen. Seine positive Einstellung trug maßgeblich zum Erfolg unserer gemeinsamen Aufgabe bei. Die Zusammenarbeit mit ihm war sehr wertvoll.'},
+    { name: 'Rainer Musch - Frontend Developer', text: 'Denis überzeugt durch außergewöhnliche Detailverliebtheit und höchste Präzision in der Umsetzung von CSS- und SCSS-Strukturen. Mit seinem ausgeprägten Sinn für sauberen, wartbaren Code optimiert er Stylesheets bis zur Perfektion. Seine Arbeit hebt die visuelle Qualität und Performance jedes Projekts deutlich an. Denis ist ein echter Perfektionist im Frontend-Bereich – zuverlässig, effizient und stets mit Blick fürs große Ganze.'},
+    { name: 'M.Schmittay - Team Partner', text:'Die akribische und perfektionistische Arbeitsweise in der Frontend-Entwicklung war eine Bereicherung für unser gemeinsames Projekt. Sein Engagement, seine Zuverlässigkeit und seine lösungsorientierte Art trugen maßgeblich zum Erfolg bei. Seine positive Einstellung und Hilfsbereitschaft machten die Zusammenarbeit sehr angenehm.'}
   ];
   currentIndex = 0;
 
@@ -22,5 +22,9 @@ export class ReferencesComponent {
 
   prevTestimonial() {
     this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+  }
+
+  goToTestimonial(index: number) {
+    this.currentIndex = index;
   }
 }

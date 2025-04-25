@@ -1,91 +1,163 @@
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 100px;
-    background: #1C1C1C;
-
-    @media (max-width: 1400px) {
-      padding: 50px;
-    }
-  
-    .referencesContainer {
-      
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-      h2 {
-        font-family: 'Fira Code';
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        color: #3DCFB6;
-      }
-
-      .referenceBox {
-        max-width: 600px;
-        height: 274px;
-        border-radius: 30px;
-        padding: 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-family: 'Fira Code', monospace;
-        background-color: rgba(61, 207, 182, 0.1);
-        border: 2px solid #3DCFB6;
-        }
-
-        button {
-          cursor: pointer;
-          color: var(--primary-text-color);
-          background: none;
-          border: none;
-          font-size: 1.2rem;
-          margin: 0 1rem;
-        }
-  
-        .testimonial{
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 100%;
-
-
-          .testimonialText {
-            font-size: 1.2rem;
-            display: flex;
-            justify-content: flex-start;
-          }
-  
-          .testimonialName {
-            font-weight: bold;
-            display: flex;
-            justify-content: flex-end;
-          }
-        }
-      }
-    }
-
-.prev-next{
+section#references {
+  padding: 50px;
+  background-color: #1C1C1C;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: 1400px) {
+    padding: 50px;
+  }
+
+  .referencesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Beispielhafte maximale Breite */
+    width: 100%;
+
+    h2 {
+      font-family: 'Fira Code', monospace;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px; /* Etwas mehr Abstand zur Box */
+      color: #3DCFB6;
+    }
+
+    .referenceBox {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 32px;
+      border-radius: 30px;
+      background-color: rgba(61, 207, 182, 0.1);
+      border: 2px solid #3DCFB6;
+      margin-bottom: 25px;
+      
+    }
+
+    .quote-icon {
+      line-height: 1;
+      align-self: flex-start;
+      position: relative;
+      left: -75px;
+      top: -50px;
+    }
+
+    .testimonial {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonialText {
+      font-size: 18px;
+      position: relative;
+      top: -50px;
+    }
+
+    .testimonialName {
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Abstand zwischen Pfeilen und Punkten */
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0; /* Entfernt unnötiges Padding */
+
+        .arrow-icon {
+          width: 30px;
+          height: auto;
+          color: white; /* Standardfarbe Weiß */
+        }
+
+        &:active .arrow-icon {
+          color: #3DCFB6; /* Farbe beim Klicken Grün */
+        }
+
+        .visually-hidden {
+          position: absolute !important;
+          height: 1px;
+          width: 1px;
+          overflow: hidden;
+          clip: rect(1px, 1px, 1px, 1px);
+          white-space: nowrap;
+        }
+      }
+
+      .dots {
+        display: flex;
+        gap: 8px; /* Abstand zwischen den Punkten */
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #666; /* Inaktive Farbe */
+          cursor: pointer;
+
+          &.active {
+            background-color: #3DCFB6; /* Aktive Farbe */
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1153px) {
-  #references {
+  section#references {
     padding: 50px;
   }
 }
 
-@media screen and (max-width: 479px) {
-  #references {
+@media screen and (max-width: 768px) {
+  .referencesContainer .referenceBox {
     padding: 20px;
   }
 
-  #references .referencesContainer .referenceBox {
-    height: 480px;
+  .referencesContainer .testimonial {
+    min-width: 100%; /* Volle Breite auf kleineren Bildschirmen */
+  }
+
+  .referencesContainer .quote-icon {
+    font-size: 3em; /* Kleinere Schriftgröße für das Icon auf kleineren Bildschirm */
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  section#references {
+    padding: 20px;
+  }
+
+  .referencesContainer h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .referencesContainer .referenceBox {
+    border-radius: 20px;
+  }
+
+  .navigation {
+    gap: 10px;
+  }
+
+  .navigation button .arrow-icon {
+    width: 24px;
+  }
+
+  .navigation .dots .dot {
+    width: 10px;
+    height: 10px;
   }
 }
