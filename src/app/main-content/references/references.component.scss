@@ -25,8 +25,8 @@ section {
       }
 
       .referenceBox {
-        max-width: 520px;
-        height: auto;
+        max-width: 600px;
+        height: 274px;
         border-radius: 30px;
         padding: 32px;
         display: flex;
@@ -46,7 +46,11 @@ section {
           margin: 0 1rem;
         }
   
-        .testimonial {
+        .testimonial{
+          display: flex;
+          flex-direction: column;
+
+
           .testimonialText {
             font-size: 1.2rem;
             margin-bottom: 1rem;
