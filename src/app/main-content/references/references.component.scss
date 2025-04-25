@@ -49,11 +49,12 @@ section {
         .testimonial{
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
 
 
           .testimonialText {
             font-size: 1.2rem;
-            margin-bottom: 1rem;
             display: flex;
             justify-content: flex-start;
           }
