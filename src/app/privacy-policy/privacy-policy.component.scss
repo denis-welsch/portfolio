@@ -1,20 +1,32 @@
-.policy {
-    padding: 50px 25px 50px 25px;
+section {
+    background: #1C1C1C;
+    min-height: calc(100dvh - 230px);
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     max-width: 1440px;
+    position: relative;
+
+    @media (max-width: 1400px) {
+        padding: 50px;
+    }
+
+    @media (max-width: 479px) {
+        padding: 20px;
+    }
+}
+
+.policy {
+    position: relative;
+    z-index: 1;
+    margin-top: 128px;
 }
 
 h3 {
     font-size: 27px;
     font-weight: 700;
-}
-
-.top {
-    display: flex;
-    justify-content: space-between;
-
-    img {
-        cursor: pointer;
-    }
 }
 
 p,
