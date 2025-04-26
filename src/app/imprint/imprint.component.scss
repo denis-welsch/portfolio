@@ -1,13 +1,21 @@
 section {
     background: #1C1C1C;
-    padding: 50px 100px;
     min-height: calc(100dvh - 230px);
+    padding: 50px 100px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     max-width: 1440px;
     position: relative;
+
+    @media (max-width: 1400px) {
+        padding: 50px;
+    }
+
+    @media (max-width: 479px) {
+        padding: 20px;
+    }
 }
 
 .legal-notice {
@@ -16,60 +24,18 @@ section {
     margin-top: 128px;
 }
 
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+}
+
 h2 {
     font-size: 27px;
     font-weight: 700;
+    color: var(--secondary-text-color);
 }
 
-p,
-span {
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
+a {
+    color: var(--info-color);
 }
-
-// .top {
-//     display: flex;
-//     justify-content: space-between;
-
-//     img {
-//         cursor: pointer;
-//     }
-// }
-
-// @media (max-width: 1000px) {
-//     h1 {
-//         font-size: 47px;
-//     }
-
-//     h2 {
-//         font-size: 27px;
-//     }
-
-//     h3 {
-//         font-size: 20px;
-//     }
-
-//     h4 {
-//         font-size: 18px;
-//     }
-// }
-
-// @media (max-width: 550px) {
-//     h1 {
-//         font-size: 24px;
-//     }
-
-//     h2 {
-//         font-size: 20px;
-//     }
-
-//     h3 {
-//         font-size: 18px;
-//     }
-
-//     h4 {
-//         font-size: 16px;
-//         font-weight: bold;
-//     }
-// }
