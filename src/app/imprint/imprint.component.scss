@@ -5,37 +5,30 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: center; /* Beibehaltung der Zentrierung für andere potentielle Items */
     max-width: 1440px;
     position: relative;
-
-    @media (max-width: 1400px) {
-        padding: 50px;
-    }
-
-    @media (max-width: 479px) {
-        padding: 20px;
-    }
-}
-
-.legal-notice {
+  }
+  
+  .legal-notice {
     position: relative;
     z-index: 1;
     margin-top: 128px;
-}
-
-h1 {
+    align-self: flex-start; /* HIER DIE ÄNDERUNG */
+  }
+  
+  h1 {
     font-size: 48px;
     font-weight: 700;
     color: var(--secondary-text-color);
-}
-
-h2 {
+  }
+  
+  h2 {
     font-size: 27px;
     font-weight: 700;
     color: var(--secondary-text-color);
-}
-
-a {
+  }
+  
+  a {
     color: var(--info-color);
-}
+  }
