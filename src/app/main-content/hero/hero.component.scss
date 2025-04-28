@@ -9,7 +9,6 @@ section#hero {
 }
 
 .hero-background {
-  // background: linear-gradient(56deg, var(--background-dark) 45%, var(--background-accent) 94%);
   background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
 
   width: 100%;
@@ -105,7 +104,7 @@ h2 {
 
 .button-distance {
   display: flex;
-  gap: 48px;
+  gap: 24px;
   margin-top: 32px;
 }
 
@@ -140,7 +139,7 @@ h2 {
   padding: 0 var(--section-padding-horizontal);
 
   @media (max-width: 1400px) {
-    padding: 0 50px;
+    padding: 0 40px;
   }
 }
 

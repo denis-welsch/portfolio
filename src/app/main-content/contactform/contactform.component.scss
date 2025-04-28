@@ -9,7 +9,7 @@ section.contact-me {
     justify-content: space-between;
 
     @media (max-width: 1400px) {
-        padding: 50px;
+        padding: 40px;
     }
 
     @media (max-width: 800px) {
@@ -34,7 +34,7 @@ section.contact {
         flex-direction: column;
     }
 
-    @media (max-width: 479px) {
+    @media (max-width: 480px) {
         padding: 20px
     }
 }
