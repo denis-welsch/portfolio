@@ -1,4 +1,11 @@
-{
+{   
+    "header": {
+        "about-me": "Über Mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "logo-alt": "Denis Welsch Logo"
+    },
+
     "about-me": {
         "alt": "Über mich",
         "who-i-am": "Wer ich bin",
