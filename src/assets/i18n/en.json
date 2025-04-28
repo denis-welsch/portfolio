@@ -23,6 +23,40 @@
         "logo-alt": "Logo of {{name}}"
     },
 
+    "portfolio": {
+    "title": "Portfolio",
+    "headline": "Featured Projects",
+    "introduction": "Explore a selection of my work here - Interact with",
+    "interaction-hint": "projects to see my skills in action",
+    "preview-alt": "Project Preview",
+    "modal": {
+        "about": "What is this project about?",
+        "github": "GitHub",
+        "live-test": "Live Test",
+        "close": "X",
+        "next-project": "Next Project"
+        }
+    },
+
+    "project-descriptions": {
+    "01": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "02": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+    "03": "This Pokedex project uses the PokéAPI to fetch and display Pokémon information dynamically with HTML, CSS, and JavaScript."
+    },
+
+    "references": {
+        "title": "What my colleagues say about me"
+    },
+
+    "testimonial": {
+        "name1": "Alex - Team Partner",
+        "text1": "During our project, Denis proved to be a very committed and reliable team member. Always solution-oriented, he willingly shared his knowledge and supported us with challenges. His positive attitude contributed significantly to the success of our joint task. Working with him was very valuable.",
+        "name2": "Rainer Musch - Frontend Developer",
+        "text2": "Denis impresses with exceptional attention to detail and the highest precision in implementing CSS and SCSS structures. With his strong sense of clean, maintainable code, he optimizes stylesheets to perfection. His work significantly enhances the visual quality and performance of any project.",
+        "name3": "M.Schmittay - Team Partner",
+        "text3": "His meticulous and perfectionist approach to frontend development was a great asset to our project. His commitment, reliability, and solution-oriented attitude contributed significantly to its success. His positive attitude and willingness to help made the collaboration very pleasant."
+    },
+
     "contact": {
     "title": "Contact",
     "headline": "Let’s work together",
@@ -44,18 +78,5 @@
     "privacy-text-part2": "and agree to the processing of my data as outlined.",
     "privacy-error": "Please accept the privacy policy.",
     "submit-button": "Say Hello :)"
-    },
-
-    "references": {
-        "title": "What my colleagues say about me"
-    },
-
-    "testimonial": {
-        "name1": "Alex - Team Partner",
-        "text1": "During our project, Denis proved to be a very committed and reliable team member. Always solution-oriented, he willingly shared his knowledge and supported us with challenges. His positive attitude contributed significantly to the success of our joint task. Working with him was very valuable.",
-        "name2": "Rainer Musch - Frontend Developer",
-        "text2": "Denis impresses with exceptional attention to detail and the highest precision in implementing CSS and SCSS structures. With his strong sense of clean, maintainable code, he optimizes stylesheets to perfection. His work significantly enhances the visual quality and performance of any project.",
-        "name3": "M.Schmittay - Team Partner",
-        "text3": "His meticulous and perfectionist approach to frontend development was a great asset to our project. His commitment, reliability, and solution-oriented attitude contributed significantly to its success. His positive attitude and willingness to help made the collaboration very pleasant."
     }
 }

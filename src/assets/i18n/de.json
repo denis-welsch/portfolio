@@ -23,27 +23,25 @@
         "logo-alt": "Logo von {{name}}"
     },
 
-    "contact": {
-    "title": "Kontakt",
-    "headline": "Lass uns zusammenarbeiten",
-    "subheadline": "Hast du ein Problem zu lösen?",
-    "introduction": "Ich bin immer offen für interessante Projekte und die Zusammenarbeit mit engagierten Teams. Wenn du eine Idee hast oder Unterstützung im Frontend-Bereich suchst, erzähl mir davon! Gemeinsam können wir etwas Großartiges schaffen.",
-    "call-to-action": "Brauchst du einen Frontend-Entwickler?",
-    "lets-talk-link": "Lass uns reden!",
-    "name-label": "Wie ist dein Name?",
-    "name-placeholder": "Dein Name kommt hierhin",
-    "name-error": "Hoppla! Dein Name fehlt.",
-    "email-label": "Wie ist deine E-Mail-Adresse?",
-    "email-placeholder": "deine-email@email.com",
-    "email-error": "Hoppla! Deine E-Mail-Adresse wird benötigt.",
-    "message-label": "Wie kann ich dir helfen?",
-    "message-placeholder": "Hallo Denis, ich interessiere mich für...",
-    "message-error": "Was möchtest du entwickeln?",
-    "privacy-text-part1": "Ich habe die",
-    "privacy-link": "Datenschutzbestimmungen",
-    "privacy-text-part2": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Richtlinien zu.",
-    "privacy-error": "Bitte akzeptiere die Datenschutzbestimmungen.",
-    "submit-button": "Sag Hallo :)"
+    "portfolio": {
+    "title": "Portfolio",
+    "headline": "Ausgewählte Projekte",
+    "introduction": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit",
+    "interaction-hint": "Projekten, um meine Fähigkeiten in Aktion zu sehen",
+    "preview-alt": "Projekt Vorschau",
+    "modal": {
+        "about": "Worum geht es in diesem Projekt?",
+        "github": "GitHub",
+        "live-test": "Live Test",
+        "close": "X",
+        "next-project": "Nächstes Projekt"
+        }
+    },
+
+    "project-descriptions": {
+    "01": "Aufgabenmanager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+    "02": "Jump-, Run- und Throw-Spiel, basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+    "03": "Dieses Pokedex-Projekt verwendet die PokéAPI, um Pokémon-Informationen dynamisch mit HTML, CSS und JavaScript abzurufen und anzuzeigen."
     },
 
     "references": {
@@ -57,5 +55,28 @@
         "text2": "Denis überzeugt durch außergewöhnliche Detailverliebtheit und höchste Präzision in der Umsetzung von CSS- und SCSS-Strukturen. Mit seinem ausgeprägten Sinn für sauberen, wartbaren Code optimiert er Stylesheets bis zur Perfektion. Seine Arbeit hebt die visuelle Qualität und Performance jedes Projekts deutlich an.",
         "name3": "M.Schmittay - Team Partner",
         "text3": "Die akribische und perfektionistische Arbeitsweise in der Frontend-Entwicklung war eine Bereicherung für unser gemeinsames Projekt. Sein Engagement, seine Zuverlässigkeit und seine lösungsorientierte Art trugen maßgeblich zum Erfolg bei. Seine positive Einstellung und Hilfsbereitschaft machten die Zusammenarbeit sehr angenehm."
+    },
+
+    "contact": {
+        "title": "Kontakt",
+        "headline": "Lass uns zusammenarbeiten",
+        "subheadline": "Hast du ein Problem zu lösen?",
+        "introduction": "Ich bin immer offen für interessante Projekte und die Zusammenarbeit mit engagierten Teams. Wenn du eine Idee hast oder Unterstützung im Frontend-Bereich suchst, erzähl mir davon! Gemeinsam können wir etwas Großartiges schaffen.",
+        "call-to-action": "Brauchst du einen Frontend-Entwickler?",
+        "lets-talk-link": "Lass uns reden!",
+        "name-label": "Wie ist dein Name?",
+        "name-placeholder": "Dein Name kommt hierhin",
+        "name-error": "Hoppla! Dein Name fehlt.",
+        "email-label": "Wie ist deine E-Mail-Adresse?",
+        "email-placeholder": "deine-email@email.com",
+        "email-error": "Hoppla! Deine E-Mail-Adresse wird benötigt.",
+        "message-label": "Wie kann ich dir helfen?",
+        "message-placeholder": "Hallo Denis, ich interessiere mich für...",
+        "message-error": "Was möchtest du entwickeln?",
+        "privacy-text-part1": "Ich habe die",
+        "privacy-link": "Datenschutzbestimmungen",
+        "privacy-text-part2": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Richtlinien zu.",
+        "privacy-error": "Bitte akzeptiere die Datenschutzbestimmungen.",
+        "submit-button": "Sag Hallo :)"
     }
 }

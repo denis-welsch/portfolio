@@ -1,61 +1,72 @@
 <section id="projects">
-    <h2>Portfolio</h2>
-    <h1>Featured Projects</h1>
-    <p>
-        Explore a selection of my work here - Interact with <br> projects to see my skills in action
-    </p>
-    <br>
-    <br>
+  <h2>{{ "portfolio.title" | translate }}</h2>
+  <h1>{{ "portfolio.headline" | translate }}</h1>
+  <p>
+    {{ "portfolio.introduction" | translate }} <br />
+    {{ "portfolio.interaction-hint" | translate }}
+  </p>
+  <br />
+  <br />
+  <div class="portfolio-container">
+    <ul class="project-list">
+      @for (project of projects; track project.id) {
+      <li
+        (mouseenter)="hoverProject(project)"
+        (mouseleave)="hoverProject(null)"
+        (click)="openProject(project)"
+      >
+        <h3>{{ project.title }}</h3>
+        <p class="technologies">{{ project.technologie.join(" | ") }}</p>
+      </li>
+      }
+    </ul>
 
-    <div class="portfolio-container">
-        <!-- Projektliste -->
-        <ul class="project-list">
-            @for (project of projects; track project.id) {
-                <li 
-                    (mouseenter)="hoverProject(project)" 
-                    (mouseleave)="hoverProject(null)" 
-                    (click)="openProject(project)">
-                    <h3>{{ project.title }}</h3>
-                    <p class="technologies">{{ project.technologie.join(' | ') }}</p>
-                </li>
-            }
-        </ul>
-        
-        <!-- Hover-Vorschau -->
-        @if (hoveredProject) {
-            <div class="preview">
-                <img [src]="hoveredProject.image" alt="Project Preview">
-            </div>
-        }
-
-        <!-- Modal für Projekt-Details -->
-        @if (selectedProject) {
-            <div class="modal-content" (click)="$event.stopPropagation()">
-                
-                <div class="modal-left">
-                    <h1>{{ selectedProject.id }}</h1>
-                    <h3>{{ selectedProject.title }}</h3>
-                    <h4>What is this project about?</h4><br>
-                    <p>{{ selectedProject.description }}</p>
-                    <div class="technologies">
-                        @for (tech of selectedProject.technologies; track tech) {
-                            <div class="tech-item">
-                                <img [src]="tech.logo" class="tech-logo" alt="{{ tech.name }} Logo">
-                                <span>{{ tech.name }}</span>
-                            </div>
-                        }
-                    </div>
-                    <div class="button-link">
-                        <button (click)="openLink(selectedProject.github)" class="button">GitHub</button>
-                        <button (click)="openLink(selectedProject.live)" class="button">Live Test</button>
-                    </div>
-                </div>
-                <div class="modal-right">
-                    <a class="close" (click)="closeProject()">X</a>
-                    <img [src]="selectedProject.image" alt="{{ selectedProject.title }}">
-                    <a (click)="openNextProject()" class="next-project-link">Next Project -></a>
-                </div>
-            </div>
-        }
+    @if (hoveredProject) {
+    <div class="preview">
+      <img
+        [src]="hoveredProject.image"
+        alt="{{ 'portfolio.preview-alt' | translate }}"
+      />
     </div>
+    } @if (selectedProject) {
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-left">
+        <h1>{{ selectedProject.id }}</h1>
+        <h3>{{ selectedProject.title }}</h3>
+        <h4>{{ "portfolio.modal.about" | translate }}</h4>
+        <br />
+        <p>{{ "project-descriptions." + selectedProject.id | translate }}</p>
+        <div class="technologies">
+          @for (tech of selectedProject.technologies; track tech) {
+          <div class="tech-item">
+            <img
+              [src]="tech.logo"
+              class="tech-logo"
+              alt="{{ tech.name }} Logo"
+            />
+            <span>{{ tech.name }}</span>
+          </div>
+          }
+        </div>
+        <div class="button-link">
+          <button (click)="openLink(selectedProject.github)" class="button">
+            {{ "portfolio.modal.github" | translate }}
+          </button>
+          <button (click)="openLink(selectedProject.live)" class="button">
+            {{ "portfolio.modal.live-test" | translate }}
+          </button>
+        </div>
+      </div>
+      <div class="modal-right">
+        <a class="close" (click)="closeProject()">{{
+          "portfolio.modal.close" | translate
+        }}</a>
+        <img [src]="selectedProject.image" alt="{{ selectedProject.title }}" />
+        <a (click)="openNextProject()" class="next-project-link"
+          >{{ "portfolio.modal.next-project" | translate }} -></a
+        >
+      </div>
+    </div>
+    }
+  </div>
 </section>

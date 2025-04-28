@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-portfolio',
     standalone: true,
-    imports: [],
+    imports: [TranslatePipe, TranslateDirective],
     templateUrl: './portfolio.component.html',
     styleUrl: './portfolio.component.scss'
 })
@@ -85,4 +86,3 @@ export class PortfolioComponent {
         this.selectedProject = nextProject;
     }
 }
-
