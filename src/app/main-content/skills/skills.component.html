@@ -1,36 +1,33 @@
 <section id="skills">
   <div class="skill-box-container">
-    <h2>Technologies</h2>
+    <h2>{{ 'skills.technologies' | translate }}</h2>
     <br />
     <div class="skillContainer">
       <div class="skillSetText">
-        <h1>Skill Set</h1>
+        <h1>{{ 'skills.skill-set' | translate }}</h1>
         <p>
-          A short introduction of your skills. Highlight your experience of
-          using different front-end technologies and emphasise your openness to
-          learning and adapting to new technologies. Show how important it is
-          for you to keep up with the rapid changes in web development.<br /><br />
+          {{ 'skills.introduction' | translate }}
         </p>
         <h3>
-          <span style="color: #ffffff">You need</span>
-          <span style="color: #3dcfb6"> another skill?</span>
+          <span style="color: #ffffff">{{ 'skills.need' | translate }}</span>
+          <span style="color: #3dcfb6">{{ 'skills.another-skill' | translate }}</span>
         </h3>
         <p>
-          Feel free to contact me. I look forward to <br />
-          expanding on my previous knowledge.
+          {{ 'skills.contact-me' | translate }}
         </p>
-        <a class="button" href="#contact">Let´s Talk</a>
+        <a class="button" href="#contact">{{ 'skills.lets-talk' | translate }}</a>
       </div>
     </div>
   </div>
-    <div class="skillIconBox">
-      @for (skill of skills; track skill) {
+
+  <div class="skillIconBox">
+    @for (skill of skills; track skill) {
       <div class="skill">
-        <img class="image" [src]="skill.logo" [alt]="skill.name" />
+        <img class="image" [src]="skill.logo" [alt]="'skills.logo-alt' | translate: { name: skill.name }" />
         <br />
         <div class="skillName">{{ skill.name }}</div>
       </div>
-      }
-    </div>
-  
+    }
+  </div>
 </section>
+
