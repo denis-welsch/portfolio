@@ -1,6 +1,6 @@
 <section id="references">
     <div class="referencesContainer">
-        <h2>What my colleagues say about me</h2>
+        <h2>{{ 'references.title' | translate }}</h2>
         <div class="referenceBox">
             <div class="quote-icon">
                 <svg width="90" height="64" viewBox="0 0 90 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,8 +8,8 @@
                 </svg>
             </div>
             <div class="testimonial">
-                <div class="testimonialText">{{ testimonials[currentIndex].text }}</div>
-                <div class="testimonialName">{{ testimonials[currentIndex].name }}</div>
+                <div class="testimonialText">{{ testimonials[currentIndex].textKey | translate }}</div>
+                <div class="testimonialName">{{ testimonials[currentIndex].nameKey | translate }}</div>
             </div>
         </div>
         <div class="navigation">

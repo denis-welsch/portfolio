@@ -1,19 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDirective],
   templateUrl: './references.component.html',
   styleUrls: ['./references.component.scss']
 })
 export class ReferencesComponent {
   testimonials = [
-    { name: 'Alex - Team Partner', text: 'Während unseres Projekts erwies Denis sich als sehr engagiertes und zuverlässiges Teammitglied. Stets lösungsorientiert, teilte er bereitwillig sein Wissen und unterstützte bei Herausforderungen. Seine positive Einstellung trug maßgeblich zum Erfolg unserer gemeinsamen Aufgabe bei. Die Zusammenarbeit mit ihm war sehr wertvoll.'},
-    { name: 'Rainer Musch - Frontend Developer', text: 'Denis überzeugt durch außergewöhnliche Detailverliebtheit und höchste Präzision in der Umsetzung von CSS- und SCSS-Strukturen. Mit seinem ausgeprägten Sinn für sauberen, wartbaren Code optimiert er Stylesheets bis zur Perfektion. Seine Arbeit hebt die visuelle Qualität und Performance jedes Projekts deutlich an. Denis ist ein echter Perfektionist im Frontend-Bereich – zuverlässig, effizient und stets mit Blick fürs große Ganze.'},
-    { name: 'M.Schmittay - Team Partner', text:'Die akribische und perfektionistische Arbeitsweise in der Frontend-Entwicklung war eine Bereicherung für unser gemeinsames Projekt. Sein Engagement, seine Zuverlässigkeit und seine lösungsorientierte Art trugen maßgeblich zum Erfolg bei. Seine positive Einstellung und Hilfsbereitschaft machten die Zusammenarbeit sehr angenehm.'}
+    { nameKey: 'testimonial.name1', textKey: 'testimonial.text1' },
+    { nameKey: 'testimonial.name2', textKey: 'testimonial.text2' },
+    { nameKey: 'testimonial.name3', textKey: 'testimonial.text3' }
   ];
+
+
   currentIndex = 0;
 
   nextTestimonial() {

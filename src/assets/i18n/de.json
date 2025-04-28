@@ -21,5 +21,18 @@
         "contact-me": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
         "lets-talk": "Lass uns reden",
         "logo-alt": "Logo von {{name}}"
+    },
+
+    "references": {
+        "title": "Was meine Kollegen über mich sagen"
+    },
+
+    "testimonial": {
+        "name1": "Alex - Team Partner",
+        "text1": "Während unseres Projekts erwies Denis sich als sehr engagiertes und zuverlässiges Teammitglied. Stets lösungsorientiert, teilte er bereitwillig sein Wissen und unterstützte bei Herausforderungen. Seine positive Einstellung trug maßgeblich zum Erfolg unserer gemeinsamen Aufgabe bei. Die Zusammenarbeit mit ihm war sehr wertvoll.",
+        "name2": "Rainer Musch - Frontend Developer",
+        "text2": "Denis überzeugt durch außergewöhnliche Detailverliebtheit und höchste Präzision in der Umsetzung von CSS- und SCSS-Strukturen. Mit seinem ausgeprägten Sinn für sauberen, wartbaren Code optimiert er Stylesheets bis zur Perfektion. Seine Arbeit hebt die visuelle Qualität und Performance jedes Projekts deutlich an.",
+        "name3": "M.Schmittay - Team Partner",
+        "text3": "Die akribische und perfektionistische Arbeitsweise in der Frontend-Entwicklung war eine Bereicherung für unser gemeinsames Projekt. Sein Engagement, seine Zuverlässigkeit und seine lösungsorientierte Art trugen maßgeblich zum Erfolg bei. Seine positive Einstellung und Hilfsbereitschaft machten die Zusammenarbeit sehr angenehm."
     }
 }

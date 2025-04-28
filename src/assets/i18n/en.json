@@ -21,5 +21,18 @@
         "contact-me": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
         "lets-talk": "Let's Talk",
         "logo-alt": "Logo of {{name}}"
+    },
+
+    "references": {
+        "title": "What my colleagues say about me"
+    },
+
+    "testimonial": {
+        "name1": "Alex - Team Partner",
+        "text1": "During our project, Denis proved to be a very committed and reliable team member. Always solution-oriented, he willingly shared his knowledge and supported us with challenges. His positive attitude contributed significantly to the success of our joint task. Working with him was very valuable.",
+        "name2": "Rainer Musch - Frontend Developer",
+        "text2": "Denis impresses with exceptional attention to detail and the highest precision in implementing CSS and SCSS structures. With his strong sense of clean, maintainable code, he optimizes stylesheets to perfection. His work significantly enhances the visual quality and performance of any project.",
+        "name3": "M.Schmittay - Team Partner",
+        "text3": "His meticulous and perfectionist approach to frontend development was a great asset to our project. His commitment, reliability, and solution-oriented attitude contributed significantly to its success. His positive attitude and willingness to help made the collaboration very pleasant."
     }
 }
