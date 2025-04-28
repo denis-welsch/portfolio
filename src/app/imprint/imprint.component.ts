@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe, TranslateDirective],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })

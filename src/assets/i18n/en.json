@@ -100,5 +100,21 @@
     "privacy-text-part2": "and agree to the processing of my data as outlined.",
     "privacy-error": "Please accept the privacy policy.",
     "submit-button": "Say Hello :)"
+    },
+
+    "imprint": {
+    "title": "Imprint",
+    "back-arrow-alt": "Back arrow",
+    "address-line1": "Ringstrasse 38",
+    "address-line2": "51371 Leverkusen",
+    "address-country": "Germany",
+    "contact": "Contact",
+    "email": "Email",
+    "responsible": "Responsible for content",
+    "responsible-name": "Denis Welsch",
+    "responsible-address-line1": "Ringstrasse 38",
+    "responsible-address-line2": "51371 Leverkusen",
+    "responsible-address-country": "Germany",
+    "source": "Source"
     }
 }
