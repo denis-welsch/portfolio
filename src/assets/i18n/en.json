@@ -6,6 +6,21 @@
         "logo-alt": "Denis Welsch Logo"
     },
 
+    "hero": {
+        "title": "Frontend Developer",
+        "check-work": "Check my work",
+        "contact-me": "Contact me",
+        "marquee": {
+            "available-remote": "Open to Remote and On-Site Opportunities",
+            "frontend-dev": "Frontend Developer",
+            "based-leverkusen": "Based in Leverkusen",
+            "open-work": "Open to Work"
+        },
+        "email-icon-alt": "Email",
+        "github-icon-alt": "GitHub",
+        "linkedin-icon-alt": "LinkedIn"
+    },
+
     "about-me": {
         "alt": "About Me",
         "who-i-am": "Who I Am",
