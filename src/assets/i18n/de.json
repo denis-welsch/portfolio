@@ -23,6 +23,29 @@
         "logo-alt": "Logo von {{name}}"
     },
 
+    "contact": {
+    "title": "Kontakt",
+    "headline": "Lass uns zusammenarbeiten",
+    "subheadline": "Hast du ein Problem zu lösen?",
+    "introduction": "Ich bin immer offen für interessante Projekte und die Zusammenarbeit mit engagierten Teams. Wenn du eine Idee hast oder Unterstützung im Frontend-Bereich suchst, erzähl mir davon! Gemeinsam können wir etwas Großartiges schaffen.",
+    "call-to-action": "Brauchst du einen Frontend-Entwickler?",
+    "lets-talk-link": "Lass uns reden!",
+    "name-label": "Wie ist dein Name?",
+    "name-placeholder": "Dein Name kommt hierhin",
+    "name-error": "Hoppla! Dein Name fehlt.",
+    "email-label": "Wie ist deine E-Mail-Adresse?",
+    "email-placeholder": "deine-email@email.com",
+    "email-error": "Hoppla! Deine E-Mail-Adresse wird benötigt.",
+    "message-label": "Wie kann ich dir helfen?",
+    "message-placeholder": "Hallo Denis, ich interessiere mich für...",
+    "message-error": "Was möchtest du entwickeln?",
+    "privacy-text-part1": "Ich habe die",
+    "privacy-link": "Datenschutzbestimmungen",
+    "privacy-text-part2": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Richtlinien zu.",
+    "privacy-error": "Bitte akzeptiere die Datenschutzbestimmungen.",
+    "submit-button": "Sag Hallo :)"
+    },
+
     "references": {
         "title": "Was meine Kollegen über mich sagen"
     },

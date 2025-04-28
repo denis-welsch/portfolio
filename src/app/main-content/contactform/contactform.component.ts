@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject} from '@angular/core';
 import { FormsModule, NgForm} from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, RouterModule, TranslatePipe, TranslateDirective],
   templateUrl: './contactform.component.html',
   styleUrls: ['./contactform.component.scss']
 })
@@ -58,5 +59,4 @@ export class ContactformComponent {
       ngForm.resetForm();
     }
   }
-  
 }
