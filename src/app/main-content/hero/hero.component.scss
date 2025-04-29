@@ -43,18 +43,59 @@ section#hero {
   z-index: 500;
   display: flex;
   align-items: center;
-  max-width: 1440px;
-  width: 80%;
+  max-width: 100vw;
+  width: 100vw;
   height: 62px;
   transform: rotate(-3deg);
   padding: 12px var(--section-padding-horizontal);
   text-align: center;
-  background-color: rgba(var(--primary-text-color-rgb), 0.12);
+  background-color: rgba(128, 128, 128, 0.2); /* Ein mittleres Grau mit leichter Transparenz */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   font-size: 32px;
   overflow: hidden;
   position: absolute;
   bottom: 55px;
   white-space: nowrap;
+  left: 0;
+}
+
+@media (min-width: 1440px) {
+  .marquee {
+    max-width: 1440px;
+    width: 1440px; /* Feste Breite für das Zentrieren */
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+  }
+}
+
+@media screen and (max-width: 1153px) {
+  .marquee {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marquee {
+    font-size: 21px;
+    bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .marquee {
+    font-size: 18px;
+    height: 48px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .marquee {
+    font-size: 16px;
+    bottom: 10px;
+  }
 }
 
 .marquee-text-track {
