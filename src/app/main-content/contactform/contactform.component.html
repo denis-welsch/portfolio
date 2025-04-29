@@ -66,9 +66,9 @@
         <br />
         <p>
           {{ 'contact.privacy-text-part1' | translate }}
-          <a [routerLink]="['privacy-policy']" routerLinkActive="active"
-            >{{ 'contact.privacy-link' | translate }}</a
-          >
+          <a [routerLink]="['privacy-policy']" routerLinkActive="active" fragment="top">
+            {{ 'contact.privacy-link' | translate }}
+          </a>
           {{ 'contact.privacy-text-part2' | translate }}
         </p>
       </div>
