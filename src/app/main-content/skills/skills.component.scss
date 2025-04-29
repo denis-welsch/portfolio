@@ -1,6 +1,6 @@
 section {
   padding: 50px 100px;
-  background: radial-gradient(circle at right, rgba(28,28,28,1) 100%, rgba(8,70,59,1) 30%);
+  background: radial-gradient(circle at right, rgba(28, 28, 28, 1) 100%, rgba(8, 70, 59, 1) 30%);
   display: flex;
   justify-content: space-between;
   max-width: 1440px;
@@ -35,32 +35,31 @@ section {
 }
 
 h1 {
-    font-size: 64px;
-    color: #3DCFB6;
-  }
+  font-size: 64px;
+  color: #3DCFB6;
+}
 
 h2 {
-    font-size: 24px;
-    font-weight: 500;
-    color: #3DCFB6;
-  }
+  font-size: 24px;
+  font-weight: 500;
+  color: #3DCFB6;
+}
 
 h3 {
-    font-size: 24px;
-  }
+  font-size: 24px;
+}
 
 p {
   font-family: var(--font-family-karla);
   font-size: 18px;
   color: var(--primary-text-color);
-  }
+}
 
 span {
   font-size: 24px;
   font-family: 'Fira Code';
   font-weight: 700;
 }
-
 
 .container {
   display: flex;
@@ -73,35 +72,76 @@ span {
   flex-wrap: wrap;
   flex-direction: row;
   margin-top: 50px;
-}
 
-.skill {
-  height: 116px;
-  width: 104px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 22px 25px 22px;
-  transition: transform 0.2s;
-  font-family: var(--font-family-fira-code);
+  .skill {
+    height: 116px;
+    width: 104px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 22px 25px 22px;
+    transition: transform 0.2s;
+    font-family: var(--font-family-fira-code);
+    position: relative;
 
-  &:hover {
-    transform: scale(1.05);
+    &:hover {
+      transform: scale(1.05);
+
+      &.growth-mindset-container .skillName {
+        color: #3dcfb6;
+      }
+
+      &.growth-mindset-container .hover-bubble-icon {
+        opacity: 1;
+        transform: translateY(-20px) scale(1);
+      }
+    }
+
+    .image {
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .skillName {
+      transition: color 0.2s ease-in-out;
+    }
+
+    &.growth-mindset-container .hover-bubble-icon {
+      position: absolute;
+      top: -90px;
+      left: 0%;
+      transform: translateX(0) translateY(0) scale(0.8);
+      width: 175px;
+      height: auto;
+      opacity: 0;
+      z-index: 10;
+      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+      @media (max-width: 700px) {
+        width: 150px;
+        top: -70px;
+        left: 10px;
+      }
+
+      @media (max-width: 480px) {
+        width: 100px;
+        top: -70px;
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 1420px) {
+      margin: 0 15px 25px 15px;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 11px 25px 11px;
+    }
+
+    @media (max-width: 1130px) {
+      margin: 0 8px 25px 8px;
+    }
   }
-
-  @media (max-width:1420px) {
-    margin: 0 15px 25px 15px;
-  }
-
-  @media (max-width:1200px) {
-    margin: 0 11px 25px 11px;
-  }
-
-  @media (max-width:1130px) {
-    margin: 0 8px 25px 8px;
-  }
-
 }
 
 .button {
@@ -127,17 +167,16 @@ span {
 }
 
 @media (max-width: 1280px) {
-
-  .skill{
+  .skill {
     margin: 0 10px 25px 10px;
   }
 
-  h1{
-      font-size: 48px;
+  h1 {
+    font-size: 48px;
   }
 
-  h2{
-      font-size: 18px;
+  h2 {
+    font-size: 18px;
   }
 
   h3 {
@@ -157,18 +196,18 @@ span {
   }
 
   .skillSetText {
-    width:auto
+    width: auto;
   }
 }
 
 @media (max-width: 800px) {
   section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .skill-box-container{
+  .skill-box-container {
     width: 100%;
   }
 
@@ -179,23 +218,23 @@ span {
 
 @media (max-width: 480px) {
   section {
-      padding: 20px
+    padding: 20px;
   }
 
-  p{
+  p {
     font-size: 16px;
   }
 
-  h1{
+  h1 {
     font-size: 32px;
   }
 
-  h2{
+  h2 {
     font-size: 18px;
   }
 
   h3 {
-  font-size: 18px;
+    font-size: 18px;
   }
 
   .image {
@@ -205,10 +244,17 @@ span {
   .skillName {
     font-size: 12px;
   }
+
+  .skillIconBox .skill.growth-mindset-container .hover-bubble-icon {
+    width: 150px; /* Angepasste Größe für kleinere Bildschirme */
+    top: -70px; /* Angepasste Position für kleinere Bildschirme */
+    left: 0%; /* Beibehalten */
+    transform: translateX(0) translateY(0) scale(0.7); /* Angepasste Transformation */
+  }
 }
 
 @media (max-width: 390px) {
-  h1{
+  h1 {
     font-size: 24px;
   }
 

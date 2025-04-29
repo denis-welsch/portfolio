@@ -22,12 +22,29 @@
 
   <div class="skillIconBox">
     @for (skill of skills; track skill) {
+      @if (skill.name === 'Growth Mindset') {
+        <div class="skill growth-mindset-container">
+          <img class="image" [src]="skill.logo" [alt]="'skills.logo-alt' | translate: { name: skill.name }" />
+          <div class="skillName">{{ skill.name }}</div>
+          <img class="hover-bubble-icon" src="./../../../assets/img/skillSet/growthMinsetBubble.png" alt="Growth Mindset Bubble" />
+        </div>
+      } @else {
+        <div class="skill">
+          <img class="image" [src]="skill.logo" [alt]="'skills.logo-alt' | translate: { name: skill.name }" />
+          <div class="skillName">{{ skill.name }}</div>
+        </div>
+      }
+    }
+  </div>
+
+  <!-- <div class="skillIconBox">
+    @for (skill of skills; track skill) {
       <div class="skill">
         <img class="image" [src]="skill.logo" [alt]="'skills.logo-alt' | translate: { name: skill.name }" />
         <br />
         <div class="skillName">{{ skill.name }}</div>
       </div>
     }
-  </div>
+  </div> -->
 </section>
 
