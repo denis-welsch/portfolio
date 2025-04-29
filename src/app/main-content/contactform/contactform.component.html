@@ -11,6 +11,7 @@
   </div>
   <div class="contact-me-form-container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div class="border-line"></div>
       <label for="name">{{ 'contact.name-label' | translate }}</label>
       <input
         [(ngModel)]="contactData.name"
@@ -24,6 +25,7 @@
       @if (!name.valid && name.touched){
       <div class="error-message">{{ 'contact.name-error' | translate }}</div>
       }
+      <div class="border-line"></div>
       <label for="email">{{ 'contact.email-label' | translate }}</label>
       <input
         [(ngModel)]="contactData.email"
@@ -38,6 +40,7 @@
       @if (!email.valid && email.touched){
       <div class="error-message">{{ 'contact.email-error' | translate }}</div>
       }
+      <div class="border-line"></div>
       <label for="message">{{ 'contact.message-label' | translate }}</label>
       <textarea
         #message="ngModel"
@@ -51,6 +54,7 @@
       @if (!message.valid && message.touched){
       <div class="error-message">{{ 'contact.message-error' | translate }}</div>
       }
+      <div class="border-line"></div>
       <div class="checkbox-container">
         <label for="privacy">
           <input

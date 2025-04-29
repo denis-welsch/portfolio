@@ -1,163 +1,170 @@
 section {
-    background: #1C1C1C;
-    max-width: 1440px;
-}
+  background: #1c1c1c;
+  max-width: 1440px;
 
-section.contact-me {
+  &.contact-me {
     padding: 50px 100px;
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 1400px) {
-        padding: 40px;
+      padding: 40px;
     }
 
     @media (max-width: 800px) {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     @media (max-width: 479px) {
-    padding: 20px;
+      padding: 20px;
     }
-}
+  }
 
-section.contact {
+  &.contact {
     padding: 100px;
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 1153px) {
-        padding: 50px;
+      padding: 50px;
     }
 
     @media (max-width: 1024px) {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     @media (max-width: 480px) {
-        padding: 20px
+      padding: 20px;
     }
+  }
 }
 
 .contact-me-container {
-    width: 46%;
+  width: 46%;
 
-    @media (max-width:800px) {
-        width: auto;
-    }
+  @media (max-width: 800px) {
+    width: auto;
+  }
 }
-
 
 .contact-me-form-container {
     display: flex;
+    flex-direction: column; /* Grundausrichtung bleibt Spalte */
     width: 46%;
-
-    @media (max-width:800px) {
-        width: auto;
-        padding-top: 50px;
+  
+    @media (max-width: 800px) {
+      width: auto;
+      padding-top: 50px;
+    }
+  
+    > * {
+      display: flex;
+      align-items: flex-start; /* Oben ausrichten */
+      margin-bottom: 5px; /* Etwas weniger Abstand zwischen Label/Linie und Input */
+      flex-direction: column; /* Label, Linie und Input untereinander */
+    }
+  
+    .border-line {
+      width: 100%; /* Volle Breite des Formularbereichs */
+      height: 1px;
+      background-color: #3DCFB6;
+      margin-bottom: 10px; /* Abstand zur Eingabe */
     }
 }
 
 .contact-form {
-    width: 45%;
-    padding: 20px;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: 24px;
-    color: #3DCFB6;
+  width: 45%;
+  padding: 20px;
 }
 
 h1 {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: 64px;
-    color: #3DCFB6;
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-size: 64px;
+  color: #3dcfb6;
+
+  @media (max-width: 1080px) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: #3dcfb6;
+
+  @media (max-width: 1080px) {
+    font-size: 18px;
+  }
 }
 
 h3 {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: 24px;
-    color: #3DCFB6;
+  font-family: "Fira Code";
+  font-weight: 700;
+  font-size: 24px;
+  color: #3dcfb6;
+
+  @media (max-width: 1080px) {
+    font-size: 18px;
+  }
 }
 
 a {
-    color: #3DCFB6;
-    text-decoration: none;
-    font-weight: bold;
+  color: #3dcfb6;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 p {
-    font-size: 16px;
-    font-family: 'Karla';
+  font-size: 16px;
+  font-family: "Karla";
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    margin: 10px 0 5px;
-    font-size: 24px;
-    font-family: 'Fira Code';
-    font-weight: 500;
-    color: #3DCFB6;
-    border-width: 1px 0 0 0; // obere und untere Ränder 1px, keine linken und rechten Ränder
-    border-style: solid; // durchgezogene Linie
-    border-color: #3DCFB6; // Aqua-grüne Farbe
-}
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  font-size: 24px;
+  font-family: "Fira Code";
+  font-weight: 500;
+  color: #3dcfb6;
 
-@media (max-width: 1080px) {
-    h1{
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    h3{
-        font-size: 18px;
-    }
-
-    label{
-        font-size: 18px;
-    }
-}
-
-input, textarea {
+  @media (max-width: 1080px) {
     font-size: 18px;
-    font-family: 'Karla';
-    color: var(--primary-text-color);
-    padding: 10px 0;
-    resize: none;
-    border-style: none;
-    background: none;
-    width: 352px;
+  }
+}
 
-    @media (max-width: 420px) {
-        width: 252px;
-    }
+input,
+textarea {
+  font-size: 18px;
+  font-family: "Karla";
+  color: var(--primary-text-color);
+  padding: 10px 0;
+  resize: none;
+  border-style: none;
+  background: none;
+  width: 352px;
+
+  @media (max-width: 420px) {
+    width: 252px;
+  }
 }
 
 .checkbox-container {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: white;
-    gap: 10px;
-}
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: white;
+  gap: 10px;
 
-/* Das unsichtbare Original-Checkbox-Element */
-.checkbox-container input[type="checkbox"] {
+  input[type="checkbox"] {
     opacity: 0;
     position: absolute;
     width: 25px;
     height: 25px;
-}
+  }
 
-/* Die visuelle Checkbox */
-.checkbox-container span {
+  span {
     width: 25px;
     height: 25px;
     border: 2px solid rgba(61, 207, 182, 1);
@@ -167,53 +174,59 @@ input, textarea {
     justify-content: center;
     position: relative;
     transition: 0.2s;
-}
 
-/* Das Häkchen wird nur angezeigt, wenn die Checkbox aktiv ist */
-.checkbox-container input[type="checkbox"]:checked + span::after {
-    content: "✔";
-    font-size: 18px;
-    color: #3DCFB6;
-    font-weight: bold;
-    width: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &::after {
+      content: "✔";
+      font-size: 18px;
+      color: #3dcfb6;
+      font-weight: bold;
+      width: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; /* Hinzugefügt: Initial ausblenden */
+    }
+  }
+
+  /* Hinzugefügt: Häkchen nur bei gecheckter Checkbox anzeigen */
+  input[type="checkbox"]:checked + span::after {
+    opacity: 1;
+  }
 }
 
 button {
-    display: inline-block;
-    background-color: rgba(61, 207, 182, 0.1);
-    padding: 10px 24px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 32px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: rgba(61, 207, 182, 0.1);
+  padding: 10px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 32px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-    &:disabled {
-        background-color: rgba(0, 0, 0, 0.3);
-        color: rgba(255, 255, 255, 0.5);
-        cursor: not-allowed;
-        transition: background-color 0.3s ease;
-    }
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+    transition: background-color 0.3s ease;
+  }
 }
 
 .error-message {
-    color: var(--error-color);
-    font-size: 14px;
-    font-weight: bold;
+  color: var(--error-color);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .success-message {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #3DCFB6;
-    color: var(--primary-text-color);;
-    font-weight: bold;
-    border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #3dcfb6;
+  color: var(--primary-text-color);
+  font-weight: bold;
+  border-radius: 5px;
 }
