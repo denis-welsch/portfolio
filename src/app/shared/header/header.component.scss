@@ -201,6 +201,10 @@ img {
     justify-content: center;
     text-align: center;
   }
+
+  header {
+    height: 100px; /* Setze die gewünschte reduzierte Höhe */
+  }
 }
 
 @media (max-width: 479px) {

@@ -31,9 +31,9 @@
 
   <div class="dialog" [class.show]="menuOpen">
     <div class="open-dialog">
-      <a href="#aboutMe" class="nav-link">{{ 'header.about-me' | translate }}</a>
-      <a href="#skills" class="nav-link">{{ 'header.skills' | translate }}</a>
-      <a href="#projects" class="nav-link">{{ 'header.projects' | translate }}</a>
+      <a href="#aboutMe" class="nav-link" (click)="toggleMenu()">{{ 'header.about-me' | translate }}</a>
+      <a href="#skills" class="nav-link" (click)="toggleMenu()">{{ 'header.skills' | translate }}</a>
+      <a href="#projects" class="nav-link" (click)="toggleMenu()">{{ 'header.projects' | translate }}</a>
       <div class="button">
         <button
           (click)="changeLanguage()"
