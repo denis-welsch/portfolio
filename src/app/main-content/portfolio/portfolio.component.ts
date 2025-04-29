@@ -23,8 +23,8 @@ export class PortfolioComponent {
                 { name: 'Firebase', logo: './assets/img/skillSet/firebase.svg' }
                 ],
             image: './assets/img/portfolio/join.png',
-            github: 'https://github.com/yourrepo/join',
-            live: 'https://yourliveapp.com/join'
+            github: 'https://github.com/Denisator82/join',
+            live: 'https://denis-welsch.de/modul_join/index.html'
         },
         {
             id: '02',
