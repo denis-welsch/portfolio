@@ -1,4 +1,4 @@
-<header>
+<header [class.scrolled]="isScrolled">
   <div class="header-content">
     <nav class="header-main">
       <div class="button">
@@ -19,8 +19,9 @@
       <a href="#skills" class="nav-link">{{ 'header.skills' | translate }}</a>
       <a href="#projects" class="nav-link">{{ 'header.projects' | translate }}</a>
     </nav>
-    <img src="./assets/img/logo/Logo_denis_welsch.PNG" alt="{{ 'header.logo-alt' | translate }}" />
-
+    <a href="#hero" class="logo-link">
+      <img src="./assets/img/logo/Logo_denis_welsch.PNG" alt="{{ 'header.logo-alt' | translate }}" />
+    </a>
     <div class="burger-menu" (click)="toggleMenu()">
       <div></div>
       <div></div>

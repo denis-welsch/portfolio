@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,6 +10,7 @@ import { TranslateDirective, TranslatePipe, TranslateService } from '@ngx-transl
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  isScrolled = false;
   menuOpen = false;
   currentLanguage = 'en';
 
@@ -22,6 +23,11 @@ export class HeaderComponent {
       this.currentLanguage = 'en';
     }
     this.translate.use(this.currentLanguage);
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
   }
 
   toggleMenu() {
