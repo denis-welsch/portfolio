@@ -49,7 +49,7 @@ section#hero {
   transform: rotate(-3deg);
   padding: 12px var(--section-padding-horizontal);
   text-align: center;
-  background-color: rgba( 128,128,128,0.2);
+  background-color: rgba(128, 128, 128, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-size: 32px;
@@ -97,20 +97,21 @@ section#hero {
 .marquee-text-track {
   display: flex;
   white-space: nowrap;
-  width: max-content;
-  animation: marquee-move-text 30s linear infinite;
-  max-width: 100%;
+  width: auto; /* Breite passt sich dem doppelten Inhalt an */
+  animation: marquee-move-text 30s linear infinite; /* Behalte deine Geschwindigkeit */
+  max-width: none;
   box-sizing: border-box;
-}
+  transform: translateX(0); /* Startposition sicherstellen */
 
-.marquee-text-track span {
-  padding-right: 48px;
-  color: var(--accent-color);
-}
+  span {
+    padding-right: 48px;
+    color: var(--accent-color);
 
-.marquee-text-track span::before {
-  content: "•";
-  padding-right: 48px;
+    &::before {
+      content: "•";
+      padding-right: 48px;
+    }
+  }
 }
 
 @keyframes marquee-move-text {
@@ -118,7 +119,7 @@ section#hero {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* Animiert bis zur Hälfte der Breite */
   }
 }
 
@@ -260,7 +261,7 @@ h2 {
   animation-name: bounceArrow;
   animation-iteration-count: infinite;
 
-  @media (max-width: 400px){
+  @media (max-width: 400px) {
     margin-bottom: 155px;
   }
 }

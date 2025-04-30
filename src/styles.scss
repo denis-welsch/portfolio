@@ -36,7 +36,6 @@
   --secondary-background-color: #f0f0f0;
   --tertiary-background-color: #08463B;
   --test-background-color: darkred;
-  --body-color: black;
 
   /* Functional Colors */
   --accent-color: var(--primary-color);
@@ -92,7 +91,7 @@ body {
   padding: 0;
   font-family: var(--font-family-karla);
   color: var(--primary-text-color);
-  background-color: var(--body-color);
+  background-color: var(--primary-background-color);
   display: flex;
   flex-direction: column;
   width: 100%;
