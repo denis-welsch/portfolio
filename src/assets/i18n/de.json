@@ -8,8 +8,8 @@
 
     "hero": {
         "title": "Frontend Entwickler",
-        "check-work": "Meine Arbeit ansehen",
-        "contact-me": "Kontaktiere mich",
+        "check-work": "Portfolio",
+        "contact-me": "Schreib mir",
         "marquee": {
             "available-remote": "Offen für Remote und On-Site Möglichkeiten",
             "frontend-dev": "Frontend Entwickler",

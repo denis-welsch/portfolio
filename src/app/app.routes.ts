@@ -8,4 +8,3 @@ export const routes: Routes = [
     { path: 'imprint', component: ImprintComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent } // Route für Datenschutzerklärung hinzufügen
 ];
-
