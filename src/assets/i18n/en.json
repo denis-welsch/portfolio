@@ -216,5 +216,9 @@
             "p12": "The data you send to us via contact requests will remain with us until you request its deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions – in particular statutory retention periods – remain unaffected.",
             "p13": "Source:"
         }
+    },
+
+    "footer": {
+    "legalNotice": "Legal Notice"
     }
 }
