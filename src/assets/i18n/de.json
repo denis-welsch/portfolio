@@ -37,10 +37,10 @@
     "skills": {
         "technologies": "Technologien",
         "skill-set": "Fähigkeiten",
-        "introduction": "Mein technisches Wissen umfasst HTML, CSS, JavaScript, TypeScript, Angular und Firebase. Zusätzlich arbeite ich mit Material Design, Git und Rest-APIs. Agile Methoden wie Scrum und ein Growth Mindset unterstützen mich dabei, Projekte strukturiert, effizient und zukunftsorientiert umzusetzen.",
-        "need": "Brauchst du ",
-        "another-skill": "eine weitere Fähigkeit?",
-        "contact-me": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+        "introduction": "Mein technisches Wissen umfasst HTML, CSS, JavaScript, TypeScript, Angular und Firebase. Zusätzlich arbeite ich mit Material Design, Git und REST-APIs. Agile Methoden wie Scrum und eine wachstumsorientierte Denkweise unterstützen mich dabei, Projekte strukturiert, effizient und zukunftsorientiert umzusetzen.",
+        "need": "Du suchst ",
+        "another-skill": "eine andere Fähigkeit?",
+        "contact-me": "Dann kontaktiere mich gerne – ich freue mich darauf, mein Wissen gezielt zu erweitern.",
         "lets-talk": "Lass uns reden",
         "logo-alt": "Logo von {{name}}"
     },
