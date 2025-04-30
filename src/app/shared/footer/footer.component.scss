@@ -1,8 +1,7 @@
-/* Footer */
 footer {
   width: 100%;
   display: flex;
-  justify-content: center; /* Zentriert den Inhalt */
+  justify-content: center;
 }
 
 .footer-content {
@@ -13,7 +12,7 @@ footer {
   justify-content: space-between;
   padding: 50px var(--section-padding-horizontal);
   box-sizing: border-box;
-  background: linear-gradient(0deg, #1c1c1c 100%, #08463b 30%); /* Hintergrund hier */
+  background: linear-gradient(0deg, #1c1c1c 100%, #08463b 30%);
 }
 
 .footer-left h2 {
@@ -89,19 +88,19 @@ img {
   }
 
   .footer-left {
-    text-align: left; /* Inhalt links ausrichten */
-    margin-bottom: 20px; /* Abstand zum nächsten Block */
+    text-align: left;
+    margin-bottom: 20px;
   }
 
   .footer-right {
-    margin-top: 20px; /* Abstand zum vorherigen Block */
+    margin-top: 20px;
   }
 
   .footer-center {
-    width: 100%; /* Volle Breite für Zentrierung */
-    text-align: center; /* Inhalt zentrieren */
-    order: 3; /* Visuell nach unten schieben */
-    margin-top: 20px; /* Abstand zu den anderen Blöcken */
+    width: 100%;
+    text-align: center;
+    order: 3;
+    margin-top: 20px;
   }
 
   .footer-center p {

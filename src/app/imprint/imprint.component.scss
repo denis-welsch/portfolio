@@ -5,7 +5,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center; /* Beibehaltung der Zentrierung für andere potentielle Items */
+  align-items: center;
   max-width: 1440px;
   position: relative;
 
@@ -22,7 +22,7 @@ section {
   position: relative;
   z-index: 1;
   margin-top: 128px;
-  align-self: flex-start; /* HIER DIE ÄNDERUNG */
+  align-self: flex-start;
 }
 
 h1 {

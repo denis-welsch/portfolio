@@ -18,14 +18,14 @@ section#references {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px; /* Beispielhafte maximale Breite */
+    max-width: 1200px;
     width: 100%;
 
     h2 {
       font-family: 'Fira Code', monospace;
       font-size: 32px;
       font-weight: 700;
-      margin-bottom: 30px; /* Etwas mehr Abstand zur Box */
+      margin-bottom: 30px;
       color: #3DCFB6;
 
       @media (max-width: 800px){
@@ -67,11 +67,7 @@ section#references {
         svg {
           width: 48px;
         }
-    }
-
-      // @media(max-width: 480px) {
-      //   display: none;
-      // }
+      }
     }
 
     .testimonial {
@@ -94,22 +90,21 @@ section#references {
     .navigation {
       display: flex;
       align-items: center;
-      gap: 20px; /* Abstand zwischen Pfeilen und Punkten */
+      gap: 20px;
 
       button {
         background: none;
         border: none;
         cursor: pointer;
-        padding: 0; /* Entfernt unnötiges Padding */
-
+        padding: 0;
         .arrow-icon {
           width: 30px;
           height: auto;
-          color: white; /* Standardfarbe Weiß */
+          color: white;
         }
 
         &:active .arrow-icon {
-          color: #3DCFB6; /* Farbe beim Klicken Grün */
+          color: #3DCFB6;
         }
 
         .visually-hidden {
@@ -124,69 +119,20 @@ section#references {
 
       .dots {
         display: flex;
-        gap: 8px; /* Abstand zwischen den Punkten */
+        gap: 8px;
 
         .dot {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background-color: #666; /* Inaktive Farbe */
+          background-color: #666;
           cursor: pointer;
 
           &.active {
-            background-color: #3DCFB6; /* Aktive Farbe */
+            background-color: #3DCFB6;
           }
         }
       }
     }
   }
 }
-
-// @media screen and (max-width: 1153px) {
-//   section#references {
-//     padding: 50px;
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-//   .referencesContainer .referenceBox {
-//     padding: 20px;
-//   }
-
-//   .referencesContainer .testimonial {
-//     min-width: 100%; /* Volle Breite auf kleineren Bildschirmen */
-//   }
-
-//   .referencesContainer .quote-icon {
-//     font-size: 3em; /* Kleinere Schriftgröße für das Icon auf kleineren Bildschirm */
-//     margin-right: 10px;
-//   }
-// }
-
-// @media screen and (max-width: 479px) {
-//   section#references {
-//     padding: 20px;
-//   }
-
-//   .referencesContainer h2 {
-//     font-size: 28px;
-//     margin-bottom: 20px;
-//   }
-
-//   .referencesContainer .referenceBox {
-//     border-radius: 20px;
-//   }
-
-//   .navigation {
-//     gap: 10px;
-//   }
-
-//   .navigation button .arrow-icon {
-//     width: 24px;
-//   }
-
-//   .navigation .dots .dot {
-//     width: 10px;
-//     height: 10px;
-//   }
-// }

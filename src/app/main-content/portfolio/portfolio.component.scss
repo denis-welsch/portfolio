@@ -99,7 +99,7 @@ section {
         align-items: center;
         height: 109px;
         padding: 10px;
-        border-width: 1px 0; // Kurzschreibweise für oben und unten
+        border-width: 1px 0;
         border-style: solid;
         border-color: #3DCFB6;
         transition: 0.3s;
@@ -111,8 +111,8 @@ section {
             justify-content: center;
         }
 
-        &:hover { // &: bezieht sich auf das Elternelement (li)
-            background: rgba(61, 207, 182, 0.3); // Verwendung von rgba für Transparenz
+        &:hover {
+            background: rgba(61, 207, 182, 0.3);
             cursor: pointer;
             }
     }

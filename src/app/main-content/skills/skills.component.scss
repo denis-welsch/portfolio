@@ -145,6 +145,7 @@ span {
 }
 
 .button {
+  
   display: inline-block;
   background-color: rgba(61, 207, 182, 0.1);
   padding: 10px 25px;
@@ -157,12 +158,45 @@ span {
   margin-top: 24px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid #3DCFB6;
     color: #3DCFB6;
+
+    .button-text {
+      animation: rotateText 0.8s ease-in-out forwards;
+    }
+  }
+
+  .button-text {
+    font-family: var(--font-family-karla);
+    font-size: 18px;
+    display: block;
+    position: relative;
+    transition: transform 0.8s ease-in-out;
+  }
+}
+
+@keyframes rotateText {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -246,10 +280,10 @@ span {
   }
 
   .skillIconBox .skill.growth-mindset-container .hover-bubble-icon {
-    width: 150px; /* Angepasste Größe für kleinere Bildschirme */
-    top: -70px; /* Angepasste Position für kleinere Bildschirme */
-    left: 0%; /* Beibehalten */
-    transform: translateX(0) translateY(0) scale(0.7); /* Angepasste Transformation */
+    width: 150px;
+    top: -70px;
+    left: 0%;
+    transform: translateX(0) translateY(0) scale(0.7);
   }
 }
 
