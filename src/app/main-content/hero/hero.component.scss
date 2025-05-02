@@ -43,11 +43,10 @@ section#hero {
   z-index: 500;
   display: flex;
   align-items: center;
-  max-width: 100vw;
-  width: 100vw;
+  max-width: var(--container-max-width); /* Maximale Breite auf den Container beschränken */
+  width: 99%; /* Sollte jetzt innerhalb der max-width bleiben */
   height: 62px;
   transform: rotate(-3deg);
-  padding: 12px var(--section-padding-horizontal);
   text-align: center;
   background-color: rgba(128, 128, 128, 0.2);
   backdrop-filter: blur(10px);
@@ -55,42 +54,33 @@ section#hero {
   font-size: 32px;
   overflow: hidden;
   position: absolute;
-  bottom: 55px;
+  bottom: 55px; /* Standardwert */
   white-space: nowrap;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
 }
 
-@media (min-width: 1440px) {
+@media screen and (max-width: 1024px) {
   .marquee {
-    max-width: 1440px;
-    width: 1440px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-3deg);
-  }
-}
-@media screen and (max-width: 1153px) {
-  .marquee {
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
   .marquee {
     font-size: 21px;
-    bottom: 40px;
+    bottom: 40px; /* Angepasster bottom-Wert */
   }
 }
 @media screen and (max-width: 480px) {
   .marquee {
     font-size: 18px;
-    height: 48px;
-    bottom: 20px;
+    bottom: 20px; /* Angepasster bottom-Wert */
   }
 }
 @media screen and (max-width: 380px) {
   .marquee {
     font-size: 16px;
-    bottom: 10px;
+    bottom: 10px; /* Angepasster bottom-Wert */
   }
 }
 
