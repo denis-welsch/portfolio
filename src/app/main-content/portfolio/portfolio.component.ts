@@ -24,7 +24,7 @@ export class PortfolioComponent {
                 ],
             image: './assets/img/portfolio/join.png',
             github: 'https://github.com/Denisator82/join',
-            live: 'https://denis-welsch.de/modul_join/index.html'
+            live: 'https://denis-welsch.de/angular-projects/join/index.html'
         },
         {
             id: '02',
