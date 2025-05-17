@@ -23,7 +23,7 @@ export class PortfolioComponent {
                 { name: 'Firebase', logo: './assets/img/skillSet/firebase.svg' }
                 ],
             image: './assets/img/portfolio/join.png',
-            github: 'https://github.com/Denisator82/join',
+            github: 'https://github.com/denis-welsch/join',
             live: 'https://denis-welsch.de/angular-projects/join/index.html'
         },
         {
@@ -37,7 +37,7 @@ export class PortfolioComponent {
                 { name: 'JavaScript', logo: './assets/img/skillSet/javascript.svg' }
                 ],
             image: './assets/img/portfolio/elPolloLoco.png',
-            github: 'https://github.com/Denisator82/El-Pollo-Loco',
+            github: 'https://github.com/denis-welsch/El-Pollo-Loco',
             live: 'https://denis-welsch.de/modul_el_pollo_loco/index.html'
         },
         {
@@ -52,7 +52,7 @@ export class PortfolioComponent {
                 { name: 'Rest-API', logo: './assets/img/skillSet/rest-api.svg' }
                 ],
             image: './assets/img/portfolio/pokedex.png',
-            github: 'https://github.com/Denisator82/pokedex',
+            github: 'https://github.com/denis-welsch/pokedex',
             live: 'https://denis-welsch.de/modul_pokedex/index.html'
         }
     ];
